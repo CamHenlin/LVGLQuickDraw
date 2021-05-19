@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+9dbb8608b3eed7cd63e6f2490d4b2654 CMakeFiles/LVGLQuickDraw_APPL
+f8812da05d89065367a3ae88e096c64b LVGLQuickDraw.bin
+1e0ab4c60c14020d6a1559aab9d803e5 Sample.r.rsrc.bin
