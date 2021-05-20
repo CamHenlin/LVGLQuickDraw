@@ -19,7 +19,7 @@ extern "C" {
 
 /*Testing of dependencies*/
 #if LV_USE_LINEMETER == 0
-#error "lv_gauge: lv_linemeter is required. Enable it in lv_conf.h (LV_USE_LINEMETER  1) "
+#error "lv_gauge: lv_linemeter is required. Enable it in lv_conf.h (LV_USE_LINEMETER 1)"
 #endif
 
 #include "../lv_core/lv_obj.h"
@@ -112,7 +112,7 @@ static inline void lv_gauge_set_range(lv_obj_t * gauge, int32_t min, int32_t max
  */
 static inline void lv_gauge_set_critical_value(lv_obj_t * gauge, int32_t value)
 {
-    lv_linemeter_set_value(gauge, value);
+    lv_linemeter_set_value(gauge, value - 1);
 }
 
 /**
@@ -246,7 +246,7 @@ static inline uint16_t lv_gauge_get_angle_offset(lv_obj_t * gauge)
  * @return pointer to an `lv_img_dsc_t` variable or a path to an image
  *        (not an `lv_img` object). `NULL` if not used.
  */
-const void * lv_gauge_get_needle_img(lv_obj_t * gauge, const void * img, lv_coord_t pivot_x, lv_coord_t pivot_y);
+const void * lv_gauge_get_needle_img(lv_obj_t * gauge);
 
 /**
  * Get the X coordinate of the rotation center of the needle image

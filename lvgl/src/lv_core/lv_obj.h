@@ -16,11 +16,12 @@ extern "C" {
 #include "../lv_conf_internal.h"
 
 #include <stddef.h>
-#include <MacTypes.h>
+#include <stdbool.h>
 #include "lv_style.h"
 #include "../lv_misc/lv_types.h"
 #include "../lv_misc/lv_area.h"
 #include "../lv_misc/lv_color.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_hal/lv_hal.h"
 #include "../lv_draw/lv_draw_rect.h"
 #include "../lv_draw/lv_draw_label.h"
@@ -42,16 +43,18 @@ extern "C" {
 
 #define LV_MAX_ANCESTOR_NUM 8
 
-#define LV_EXT_CLICK_AREA_OFF   0
-#define LV_EXT_CLICK_AREA_TINY  1
-#define LV_EXT_CLICK_AREA_FULL  2
+#define LV_EXT_CLICK_AREA_OFF  0
+#define LV_EXT_CLICK_AREA_TINY 1
+#define LV_EXT_CLICK_AREA_FULL 2
+
+#define _LV_OBJ_PART_VIRTUAL_FIRST 0x01
+#define _LV_OBJ_PART_REAL_FIRST    0x40
 
 /**********************
  *      TYPEDEFS
  **********************/
 
 struct _lv_obj_t;
-
 
 /** Design modes */
 enum {
@@ -60,7 +63,6 @@ enum {
     LV_DESIGN_COVER_CHK, /**< Check if the object fully covers the 'mask_p' area */
 };
 typedef uint8_t lv_design_mode_t;
-
 
 /** Design results */
 enum {
@@ -90,7 +92,7 @@ enum {
     LV_EVENT_DRAG_BEGIN,
     LV_EVENT_DRAG_END,
     LV_EVENT_DRAG_THROW_BEGIN,
-    LV_EVENT_GESTURE,           /**< The object has been getture*/
+    LV_EVENT_GESTURE,           /**< The object has been gesture*/
     LV_EVENT_KEY,
     LV_EVENT_FOCUSED,
     LV_EVENT_DEFOCUSED,
@@ -101,6 +103,7 @@ enum {
     LV_EVENT_APPLY,  /**< "Ok", "Apply" or similar specific button has clicked*/
     LV_EVENT_CANCEL, /**< "Close", "Cancel" or similar specific button has clicked*/
     LV_EVENT_DELETE, /**< Object is being deleted */
+    _LV_EVENT_LAST /** Number of events*/
 };
 typedef uint8_t lv_event_t; /**< Type of event being sent to the object. */
 
@@ -158,7 +161,7 @@ typedef struct {
     lv_coord_t yofs;
     lv_align_t align;
     uint8_t auto_realign : 1;
-    uint8_t origo_align : 1; /**< 1: the origo (center of the object) was aligned with
+    uint8_t mid_align : 1; /**< 1: the origo (center of the object) was aligned with
                                 `lv_obj_align_origo`*/
 } lv_realign_t;
 #endif
@@ -174,6 +177,7 @@ enum {
     LV_PROTECT_PRESS_LOST = 0x10,  /**< If the `indev` was pressing this object but swiped out while
                                       pressing do not search other object.*/
     LV_PROTECT_CLICK_FOCUS = 0x20, /**< Prevent focusing the object by clicking on it*/
+    LV_PROTECT_EVENT_TO_DISABLED = 0x40, /**< Pass events even to disabled objects*/
 };
 typedef uint8_t lv_protect_t;
 
@@ -200,7 +204,7 @@ typedef struct _lv_obj_t {
     lv_design_cb_t design_cb; /**< Object type specific design function*/
 
     void * ext_attr;            /**< Object type specific extended data*/
-    lv_style_list_t  style_list;
+    lv_style_list_t style_list;
 
 #if LV_USE_EXT_CLICK_AREA == LV_EXT_CLICK_AREA_TINY
     uint8_t ext_click_pad_hor; /**< Extra click padding in horizontal direction */
@@ -209,7 +213,7 @@ typedef struct _lv_obj_t {
     lv_area_t ext_click_pad;   /**< Extra click padding area. */
 #endif
 
-    lv_coord_t ext_draw_pad; /**< EXTtend the size in every direction for drawing. */
+    lv_coord_t ext_draw_pad; /**< EXTend the size in every direction for drawing. */
 
     /*Attributes and states*/
     uint8_t click           : 1; /**< 1: Can be pressed by an input device*/
@@ -220,7 +224,8 @@ typedef struct _lv_obj_t {
     uint8_t top             : 1; /**< 1: If the object or its children is clicked it goes to the foreground*/
     uint8_t parent_event    : 1; /**< 1: Send the object's events to the parent too. */
     uint8_t adv_hittest     : 1; /**< 1: Use advanced hit-testing (slower) */
-    uint8_t gesture_parent : 1;  /**< 1: Parent will be gesture instead*/
+    uint8_t gesture_parent  : 1; /**< 1: Parent will be gesture instead*/
+    uint8_t focus_parent    : 1; /**< 1: Parent will be focused instead*/
 
     lv_drag_dir_t drag_dir  : 3; /**<  Which directions the object can be dragged in */
     lv_bidi_dir_t base_dir  : 2; /**< Base direction of texts related to this object */
@@ -245,8 +250,8 @@ typedef struct _lv_obj_t {
 
 enum {
     LV_OBJ_PART_MAIN,
-    _LV_OBJ_PART_VIRTUAL_LAST = 0x01,
-    _LV_OBJ_PART_REAL_LAST =    0x40,
+    _LV_OBJ_PART_VIRTUAL_LAST = _LV_OBJ_PART_VIRTUAL_FIRST,
+    _LV_OBJ_PART_REAL_LAST =    _LV_OBJ_PART_REAL_FIRST,
     LV_OBJ_PART_ALL = 0xFF,
 };
 
@@ -260,7 +265,7 @@ typedef struct {
 
 typedef struct {
     lv_point_t * point;
-    Boolean result;
+    bool result;
 } lv_hit_test_info_t;
 
 typedef struct {
@@ -281,7 +286,6 @@ typedef struct {
  * Init. the 'lv' library.
  */
 void lv_init(void);
-
 
 /**
  * Deinit the 'lv' library
@@ -333,7 +337,6 @@ void lv_obj_del_async(struct _lv_obj_t * obj);
  */
 void lv_obj_clean(lv_obj_t * obj);
 
-
 /**
  * Mark an area of an object as invalid.
  * This area will be redrawn by 'lv_refr_task'
@@ -347,6 +350,21 @@ void lv_obj_invalidate_area(const lv_obj_t * obj, const lv_area_t * area);
  * @param obj pointer to an object
  */
 void lv_obj_invalidate(const lv_obj_t * obj);
+
+/**
+ * Tell whether an area of an object is visible (even partially) now or not
+ * @param obj pointer to an object
+ * @param area the are to check. The visible part of the area will be written back here.
+ * @return true: visible; false: not visible (hidden, out of parent, on other screen, etc)
+ */
+bool lv_obj_area_is_visible(const lv_obj_t * obj, lv_area_t * area);
+
+/**
+ * Tell whether an object is visible (even partially) now or not
+ * @param obj pointer to an object
+ * @return true: visible; false: not visible (hidden, out of parent, on other screen, etc)
+ */
+bool lv_obj_is_visible(const lv_obj_t * obj);
 
 /*=====================
  * Setter functions
@@ -439,7 +457,7 @@ void lv_obj_set_height_fit(lv_obj_t * obj, lv_coord_t h);
 
 /**
  * Set the width of an object by taking the left and right margin into account.
- * The object width will be `obj_w = w - margon_left - margin_right`
+ * The object width will be `obj_w = w - margin_left - margin_right`
  * @param obj pointer to an object
  * @param w new height including margins
  */
@@ -447,7 +465,7 @@ void lv_obj_set_width_margin(lv_obj_t * obj, lv_coord_t w);
 
 /**
  * Set the height of an object by taking the top and bottom margin into account.
- * The object height will be `obj_h = h - margon_top - margin_bottom`
+ * The object height will be `obj_h = h - margin_top - margin_bottom`
  * @param obj pointer to an object
  * @param h new height including margins
  */
@@ -464,6 +482,24 @@ void lv_obj_set_height_margin(lv_obj_t * obj, lv_coord_t h);
 void lv_obj_align(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_coord_t x_ofs, lv_coord_t y_ofs);
 
 /**
+ * Align an object to an other object horizontally.
+ * @param obj pointer to an object to align
+ * @param base pointer to an object (if NULL the parent is used). 'obj' will be aligned to it.
+ * @param align type of alignment (see 'lv_align_t' enum)
+ * @param x_ofs x coordinate offset after alignment
+ */
+void lv_obj_align_x(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_coord_t x_ofs);
+
+/**
+ * Align an object to an other object vertically.
+ * @param obj pointer to an object to align
+ * @param base pointer to an object (if NULL the parent is used). 'obj' will be aligned to it.
+ * @param align type of alignment (see 'lv_align_t' enum)
+ * @param y_ofs y coordinate offset after alignment
+ */
+void lv_obj_align_y(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_coord_t y_ofs);
+
+/**
  * Align an object to an other object.
  * @param obj pointer to an object to align
  * @param base pointer to an object (if NULL the parent is used). 'obj' will be aligned to it.
@@ -471,7 +507,25 @@ void lv_obj_align(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_co
  * @param x_ofs x coordinate offset after alignment
  * @param y_ofs y coordinate offset after alignment
  */
-void lv_obj_align_origo(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_coord_t x_ofs, lv_coord_t y_ofs);
+void lv_obj_align_mid(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_coord_t x_ofs, lv_coord_t y_ofs);
+
+/**
+ * Align an object's middle point to an other object horizontally.
+ * @param obj pointer to an object to align
+ * @param base pointer to an object (if NULL the parent is used). 'obj' will be aligned to it.
+ * @param align type of alignment (see 'lv_align_t' enum)
+ * @param x_ofs x coordinate offset after alignment
+ */
+void lv_obj_align_mid_x(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_coord_t x_ofs);
+
+/**
+ * Align an object's middle point to an other object vertically.
+ * @param obj pointer to an object to align
+ * @param base pointer to an object (if NULL the parent is used). 'obj' will be aligned to it.
+ * @param align type of alignment (see 'lv_align_t' enum)
+ * @param y_ofs y coordinate offset after alignment
+ */
+void lv_obj_align_mid_y(lv_obj_t * obj, const lv_obj_t * base, lv_align_t align, lv_coord_t y_ofs);
 
 /**
  * Realign the object based on the last `lv_obj_align` parameters.
@@ -485,7 +539,7 @@ void lv_obj_realign(lv_obj_t * obj);
  * @param obj pointer to an object
  * @param en true: enable auto realign; false: disable auto realign
  */
-void lv_obj_set_auto_realign(lv_obj_t * obj, Boolean en);
+void lv_obj_set_auto_realign(lv_obj_t * obj, bool en);
 
 /**
  * Set the size of an extended clickable area
@@ -502,7 +556,7 @@ void lv_obj_set_ext_click_area(lv_obj_t * obj, lv_coord_t left, lv_coord_t right
  *--------------------*/
 
 /**
- * Add a new stye to the style list of an object.
+ * Add a new style to the style list of an object.
  * @param obj pointer to an object
  * @param part the part of the object which style property should be set.
  * E.g. `LV_OBJ_PART_MAIN`, `LV_BTN_PART_MAIN`, `LV_SLIDER_PART_KNOB`
@@ -511,11 +565,20 @@ void lv_obj_set_ext_click_area(lv_obj_t * obj, lv_coord_t left, lv_coord_t right
 void lv_obj_add_style(lv_obj_t * obj, uint8_t part, lv_style_t * style);
 
 /**
+ * Remove a style from the style list of an object.
+ * @param obj pointer to an object
+ * @param part the part of the object which style property should be set.
+ * E.g. `LV_OBJ_PART_MAIN`, `LV_BTN_PART_MAIN`, `LV_SLIDER_PART_KNOB`
+ * @param style pointer to a style to remove
+ */
+void lv_obj_remove_style(lv_obj_t * obj, uint8_t part, lv_style_t * style);
+
+/**
  * Reset a style to the default (empty) state.
  * Release all used memories and cancel pending related transitions.
  * Typically used in `LV_SIGN_CLEAN_UP.
  * @param obj pointer to an object
- * @param part the part of the object which style list should be reseted.
+ * @param part the part of the object which style list should be reset.
  * E.g. `LV_OBJ_PART_MAIN`, `LV_BTN_PART_MAIN`, `LV_SLIDER_PART_KNOB`
  */
 void lv_obj_clean_style_list(lv_obj_t * obj, uint8_t part);
@@ -525,7 +588,7 @@ void lv_obj_clean_style_list(lv_obj_t * obj, uint8_t part);
  * Release all used memories and cancel pending related transitions.
  * Also notifies the object about the style change.
  * @param obj pointer to an object
- * @param part the part of the object which style list should be reseted.
+ * @param part the part of the object which style list should be reset.
  * E.g. `LV_OBJ_PART_MAIN`, `LV_BTN_PART_MAIN`, `LV_SLIDER_PART_KNOB`
  */
 void lv_obj_reset_style_list(lv_obj_t * obj, uint8_t part);
@@ -535,7 +598,7 @@ void lv_obj_reset_style_list(lv_obj_t * obj, uint8_t part);
  * @param obj pointer to an object
  * @param prop `LV_STYLE_PROP_ALL` or an `LV_STYLE_...` property. It is used to optimize what needs to be refreshed.
  */
-void lv_obj_refresh_style(lv_obj_t * obj, lv_style_property_t prop);
+void lv_obj_refresh_style(lv_obj_t * obj, uint8_t part, lv_style_property_t prop);
 
 /**
  * Notify all object if a style is modified
@@ -609,9 +672,16 @@ void _lv_obj_set_style_local_ptr(lv_obj_t * obj, uint8_t type, lv_style_property
  * E.g. `LV_STYLE_TEXT_FONT | (LV_STATE_PRESSED << LV_STYLE_STATE_POS)`
  * @note shouldn't be used directly. Use the specific property remove functions instead.
  *       For example: `lv_obj_style_remove_border_opa()`
- * @return true: the property was found and removed; false: teh property was not found
+ * @return true: the property was found and removed; false: the property was not found
  */
-Boolean lv_obj_remove_style_local_prop(lv_obj_t * obj, uint8_t part, lv_style_property_t prop);
+bool lv_obj_remove_style_local_prop(lv_obj_t * obj, uint8_t part, lv_style_property_t prop);
+
+/**
+ * Enable/disable the use of style cache for an object
+ * @param obj pointer to an object
+ * @param dis true: disable; false: enable (re-enable)
+ */
+void _lv_obj_disable_style_caching(lv_obj_t * obj, bool dis);
 
 /*-----------------
  * Attribute set
@@ -622,21 +692,21 @@ Boolean lv_obj_remove_style_local_prop(lv_obj_t * obj, uint8_t part, lv_style_pr
  * @param obj pointer to an object
  * @param en true: hide the object
  */
-void lv_obj_set_hidden(lv_obj_t * obj, Boolean en);
+void lv_obj_set_hidden(lv_obj_t * obj, bool en);
 
 /**
  * Set whether advanced hit-testing is enabled on an object
  * @param obj pointer to an object
  * @param en true: advanced hit-testing is enabled
  */
-void lv_obj_set_adv_hittest(lv_obj_t * obj, Boolean en);
+void lv_obj_set_adv_hittest(lv_obj_t * obj, bool en);
 
 /**
  * Enable or disable the clicking of an object
  * @param obj pointer to an object
  * @param en true: make the object clickable
  */
-void lv_obj_set_click(lv_obj_t * obj, Boolean en);
+void lv_obj_set_click(lv_obj_t * obj, bool en);
 
 /**
  * Enable to bring this object to the foreground if it
@@ -644,14 +714,14 @@ void lv_obj_set_click(lv_obj_t * obj, Boolean en);
  * @param obj pointer to an object
  * @param en true: enable the auto top feature
  */
-void lv_obj_set_top(lv_obj_t * obj, Boolean en);
+void lv_obj_set_top(lv_obj_t * obj, bool en);
 
 /**
  * Enable the dragging of an object
  * @param obj pointer to an object
- * @param en true: make the object dragable
+ * @param en true: make the object draggable
  */
-void lv_obj_set_drag(lv_obj_t * obj, Boolean en);
+void lv_obj_set_drag(lv_obj_t * obj, bool en);
 
 /**
  * Set the directions an object can be dragged in
@@ -665,7 +735,7 @@ void lv_obj_set_drag_dir(lv_obj_t * obj, lv_drag_dir_t drag_dir);
  * @param obj pointer to an object
  * @param en true: enable the drag throw
  */
-void lv_obj_set_drag_throw(lv_obj_t * obj, Boolean en);
+void lv_obj_set_drag_throw(lv_obj_t * obj, bool en);
 
 /**
  * Enable to use parent for drag related operations.
@@ -673,7 +743,15 @@ void lv_obj_set_drag_throw(lv_obj_t * obj, Boolean en);
  * @param obj pointer to an object
  * @param en true: enable the 'drag parent' for the object
  */
-void lv_obj_set_drag_parent(lv_obj_t * obj, Boolean en);
+void lv_obj_set_drag_parent(lv_obj_t * obj, bool en);
+
+/**
+* Enable to use parent for focus state.
+* When object is focused the parent will get the state instead (visual only)
+* @param obj pointer to an object
+* @param en true: enable the 'focus parent' for the object
+*/
+void lv_obj_set_focus_parent(lv_obj_t * obj, bool en);
 
 /**
 * Enable to use parent for gesture related operations.
@@ -681,17 +759,18 @@ void lv_obj_set_drag_parent(lv_obj_t * obj, Boolean en);
 * @param obj pointer to an object
 * @param en true: enable the 'gesture parent' for the object
 */
-void lv_obj_set_gesture_parent(lv_obj_t * obj, Boolean en);
+void lv_obj_set_gesture_parent(lv_obj_t * obj, bool en);
 
 /**
  * Propagate the events to the parent too
  * @param obj pointer to an object
  * @param en true: enable the event propagation
  */
-void lv_obj_set_parent_event(lv_obj_t * obj, Boolean en);
+void lv_obj_set_parent_event(lv_obj_t * obj, bool en);
 
 /**
  * Set the base direction of the object
+ * @note This only works if LV_USE_BIDI is enabled.
  * @param obj pointer to an object
  * @param dir the new base direction. `LV_BIDI_DIR_LTR/RTL/AUTO/INHERIT`
  */
@@ -765,6 +844,19 @@ void lv_obj_set_event_cb(lv_obj_t * obj, lv_event_cb_t event_cb);
 lv_res_t lv_event_send(lv_obj_t * obj, lv_event_t event, const void * data);
 
 /**
+ * Send LV_EVENT_REFRESH event to an object
+ * @param obj point to an object. (Can NOT be NULL)
+ * @return LV_RES_OK: success, LV_RES_INV: to object become invalid (e.g. deleted) due to this event.
+ */
+lv_res_t lv_event_send_refresh(lv_obj_t * obj);
+
+/**
+ * Send LV_EVENT_REFRESH event to an object and all of its children
+ * @param obj pointer to an object or NULL to refresh all objects of all displays
+ */
+void lv_event_send_refresh_recursive(lv_obj_t * obj);
+
+/**
  * Call an event function with an object, event, and data.
  * @param event_xcb an event callback function. If `NULL` `LV_RES_OK` will return without any actions.
  *        (the 'x' in the argument name indicates that its not a fully generic function because it not follows
@@ -789,7 +881,6 @@ const void * lv_event_get_data(void);
  * @param signal_cb the new signal function
  */
 void lv_obj_set_signal_cb(lv_obj_t * obj, lv_signal_cb_t signal_cb);
-
 
 /**
  * Send an event to the object
@@ -838,7 +929,6 @@ lv_obj_t * lv_obj_get_screen(const lv_obj_t * obj);
 
 /**
  * Get the display of an object
- * @param scr pointer to an object
  * @return pointer the object's display
  */
 lv_disp_t * lv_obj_get_disp(const lv_obj_t * obj);
@@ -947,7 +1037,7 @@ lv_coord_t lv_obj_get_height_fit(const lv_obj_t * obj);
 
 /**
  * Get the height of an object by taking the top and bottom margin into account.
- * The returned height will be `obj_h + margon_top + margin_bottom`
+ * The returned height will be `obj_h + margin_top + margin_bottom`
  * @param obj pointer to an object
  * @return the height including thee margins
  */
@@ -955,7 +1045,7 @@ lv_coord_t lv_obj_get_height_margin(lv_obj_t * obj);
 
 /**
  * Get the width of an object by taking the left and right margin into account.
- * The returned width will be `obj_w + margon_left + margin_right`
+ * The returned width will be `obj_w + margin_left + margin_right`
  * @param obj pointer to an object
  * @return the height including thee margins
  */
@@ -966,7 +1056,7 @@ lv_coord_t lv_obj_get_width_margin(lv_obj_t * obj);
  * Take paddings into account.
  * @param obj pointer to an object
  * @param div indicates how many columns are assumed.
- * If 1 the width will be set the the parent's width
+ * If 1 the width will be set the parent's width
  * If 2 only half parent width - inner padding of the parent
  * If 3 only third parent width - 2 * inner padding of the parent
  * @param span how many columns are combined
@@ -979,7 +1069,7 @@ lv_coord_t lv_obj_get_width_grid(lv_obj_t * obj, uint8_t div, uint8_t span);
  * Take paddings into account.
  * @param obj pointer to an object
  * @param div indicates how many rows are assumed.
- * If 1 the height will be set the the parent's height
+ * If 1 the height will be set the parent's height
  * If 2 only half parent height - inner padding of the parent
  * If 3 only third parent height - 2 * inner padding of the parent
  * @param span how many rows are combined
@@ -990,9 +1080,9 @@ lv_coord_t lv_obj_get_height_grid(lv_obj_t * obj, uint8_t div, uint8_t span);
 /**
  * Get the automatic realign property of the object.
  * @param obj pointer to an object
- * @return  true: auto realign is enabled; false: auto realign is disabled
+ * @return true: auto realign is enabled; false: auto realign is disabled
  */
-Boolean lv_obj_get_auto_realign(const lv_obj_t * obj);
+bool lv_obj_get_auto_realign(const lv_obj_t * obj);
 
 /**
  * Get the left padding of extended clickable area
@@ -1034,7 +1124,7 @@ lv_coord_t lv_obj_get_ext_draw_pad(const lv_obj_t * obj);
  *---------------*/
 
 /**
- * Get the style list of an obejct's part.
+ * Get the style list of an object's part.
  * @param obj pointer to an object.
  * @param part part the part of the object which style list should be get.
  * E.g. `LV_OBJ_PART_MAIN`, `LV_BTN_PART_MAIN`, `LV_SLIDER_PART_KNOB`
@@ -1115,7 +1205,6 @@ const void * _lv_obj_get_style_ptr(const lv_obj_t * obj, uint8_t part, lv_style_
  */
 lv_style_t * lv_obj_get_local_style(lv_obj_t * obj, uint8_t part);
 
-
 #include "lv_obj_style_dec.h"
 
 /*-----------------
@@ -1127,35 +1216,35 @@ lv_style_t * lv_obj_get_local_style(lv_obj_t * obj, uint8_t part);
  * @param obj pointer to an object
  * @return true: the object is hidden
  */
-Boolean lv_obj_get_hidden(const lv_obj_t * obj);
+bool lv_obj_get_hidden(const lv_obj_t * obj);
 
 /**
  * Get whether advanced hit-testing is enabled on an object
  * @param obj pointer to an object
  * @return true: advanced hit-testing is enabled
  */
-Boolean lv_obj_get_adv_hittest(const lv_obj_t * obj);
+bool lv_obj_get_adv_hittest(const lv_obj_t * obj);
 
 /**
  * Get the click enable attribute of an object
  * @param obj pointer to an object
  * @return true: the object is clickable
  */
-Boolean lv_obj_get_click(const lv_obj_t * obj);
+bool lv_obj_get_click(const lv_obj_t * obj);
 
 /**
  * Get the top enable attribute of an object
  * @param obj pointer to an object
  * @return true: the auto top feature is enabled
  */
-Boolean lv_obj_get_top(const lv_obj_t * obj);
+bool lv_obj_get_top(const lv_obj_t * obj);
 
 /**
  * Get the drag enable attribute of an object
  * @param obj pointer to an object
- * @return true: the object is dragable
+ * @return true: the object is draggable
  */
-Boolean lv_obj_get_drag(const lv_obj_t * obj);
+bool lv_obj_get_drag(const lv_obj_t * obj);
 
 /**
  * Get the directions an object can be dragged
@@ -1169,28 +1258,35 @@ lv_drag_dir_t lv_obj_get_drag_dir(const lv_obj_t * obj);
  * @param obj pointer to an object
  * @return true: drag throw is enabled
  */
-Boolean lv_obj_get_drag_throw(const lv_obj_t * obj);
+bool lv_obj_get_drag_throw(const lv_obj_t * obj);
 
 /**
  * Get the drag parent attribute of an object
  * @param obj pointer to an object
  * @return true: drag parent is enabled
  */
-Boolean lv_obj_get_drag_parent(const lv_obj_t * obj);
+bool lv_obj_get_drag_parent(const lv_obj_t * obj);
+
+/**
+* Get the focus parent attribute of an object
+* @param obj pointer to an object
+* @return true: focus parent is enabled
+*/
+bool lv_obj_get_focus_parent(const lv_obj_t * obj);
 
 /**
  * Get the drag parent attribute of an object
  * @param obj pointer to an object
  * @return true: drag parent is enabled
  */
-Boolean lv_obj_get_parent_event(const lv_obj_t * obj);
+bool lv_obj_get_parent_event(const lv_obj_t * obj);
 
 /**
 * Get the gesture parent attribute of an object
 * @param obj pointer to an object
 * @return true: gesture parent is enabled
 */
-Boolean lv_obj_get_gesture_parent(const lv_obj_t * obj);
+bool lv_obj_get_gesture_parent(const lv_obj_t * obj);
 
 lv_bidi_dir_t lv_obj_get_base_dir(const lv_obj_t * obj);
 
@@ -1207,8 +1303,7 @@ uint8_t lv_obj_get_protect(const lv_obj_t * obj);
  * @param prot protect bits to test ('OR'ed values of `lv_protect_t`)
  * @return false: none of the given bits are set, true: at least one bit is set
  */
-Boolean lv_obj_is_protected(const lv_obj_t * obj, uint8_t prot);
-
+bool lv_obj_is_protected(const lv_obj_t * obj, uint8_t prot);
 
 lv_state_t lv_obj_get_state(const lv_obj_t * obj, uint8_t part);
 
@@ -1245,7 +1340,7 @@ lv_event_cb_t lv_obj_get_event_cb(const lv_obj_t * obj);
  * @param obj object to check
  * @param point screen-space point
  */
-Boolean lv_obj_is_point_on_coords(lv_obj_t * obj, const lv_point_t * point);
+bool lv_obj_is_point_on_coords(lv_obj_t * obj, const lv_point_t * point);
 
 /**
  * Hit-test an object given a particular point in screen space.
@@ -1253,7 +1348,7 @@ Boolean lv_obj_is_point_on_coords(lv_obj_t * obj, const lv_point_t * point);
  * @param point screen-space point
  * @return true if the object is considered under the point
  */
-Boolean lv_obj_hittest(lv_obj_t * obj, lv_point_t * point);
+bool lv_obj_hittest(lv_obj_t * obj, lv_point_t * point);
 
 /**
  * Get the ext pointer
@@ -1307,7 +1402,14 @@ void * lv_obj_get_group(const lv_obj_t * obj);
  * @param obj pointer to an object
  * @return true: the object is focused, false: the object is not focused or not in a group
  */
-Boolean lv_obj_is_focused(const lv_obj_t * obj);
+bool lv_obj_is_focused(const lv_obj_t * obj);
+
+/**
+ * Get the really focused object by taking `focus_parent` into account.
+ * @param obj the start object
+ * @return the object to really focus
+ */
+lv_obj_t * lv_obj_get_focused_obj(const lv_obj_t * obj);
 
 /*-------------------
  * OTHER FUNCTIONS
@@ -1339,7 +1441,7 @@ void lv_obj_init_draw_line_dsc(lv_obj_t * obj, uint8_t part, lv_draw_line_dsc_t 
 
 /**
  * Get the required extra size (around the object's part) to draw shadow, outline, value etc.
- * @param obj poinr to an object
+ * @param obj pointer to an object
  * @param part part of the object
  */
 lv_coord_t lv_obj_get_draw_rect_ext_pad_size(lv_obj_t * obj, uint8_t part);
@@ -1360,6 +1462,22 @@ void lv_obj_fade_in(lv_obj_t * obj, uint32_t time, uint32_t delay);
  */
 void lv_obj_fade_out(lv_obj_t * obj, uint32_t time, uint32_t delay);
 
+/**
+ * Check if any object has a given type
+ * @param obj pointer to an object
+ * @param obj_type type of the object. (e.g. "lv_btn")
+ * @return true: valid
+ */
+bool lv_debug_check_obj_type(const lv_obj_t * obj, const char * obj_type);
+
+/**
+ * Check if any object is still "alive", and part of the hierarchy
+ * @param obj pointer to an object
+ * @param obj_type type of the object. (e.g. "lv_btn")
+ * @return true: valid
+ */
+bool lv_debug_check_obj_valid(const lv_obj_t * obj);
+
 /**********************
  *      MACROS
  **********************/
@@ -1369,7 +1487,7 @@ void lv_obj_fade_out(lv_obj_t * obj, uint32_t time, uint32_t delay);
  * Will be expanded to: `static void <name> (lv_obj_t * obj, lv_event_t e)`
  *
  * Examples:
- * LV_EVENT_CB_DECLARE(my_event1);  //Protoype declaration
+ * LV_EVENT_CB_DECLARE(my_event1);  //Prototype declaration
  *
  * LV_EVENT_CB_DECLARE(my_event1)
  * {
@@ -1379,6 +1497,29 @@ void lv_obj_fade_out(lv_obj_t * obj, uint32_t time, uint32_t delay);
  * }
  */
 #define LV_EVENT_CB_DECLARE(name) static void name(lv_obj_t * obj, lv_event_t e)
+
+#if LV_USE_DEBUG
+
+# ifndef LV_DEBUG_IS_OBJ
+#  define LV_DEBUG_IS_OBJ(obj_p, obj_type) (lv_debug_check_null(obj_p) &&      \
+                                            lv_debug_check_obj_valid(obj_p) && \
+                                            lv_debug_check_obj_type(obj_p, obj_type))
+# endif
+
+# if LV_USE_ASSERT_OBJ
+#  ifndef LV_ASSERT_OBJ
+#   define LV_ASSERT_OBJ(obj_p, obj_type) LV_DEBUG_ASSERT(LV_DEBUG_IS_OBJ(obj_p, obj_type), "Invalid object", obj_p);
+#  endif
+# else /* LV_USE_ASSERT_OBJ == 0 */
+#  if LV_USE_ASSERT_NULL /*Use at least LV_ASSERT_NULL if enabled*/
+#    define LV_ASSERT_OBJ(obj_p, obj_type) LV_ASSERT_NULL(obj_p)
+#  else
+#    define LV_ASSERT_OBJ(obj_p, obj_type)
+#  endif
+# endif
+#else
+# define LV_ASSERT_OBJ(obj, obj_type)
+#endif
 
 #ifdef __cplusplus
 } /* extern "C" */

@@ -9,7 +9,7 @@
 #include "lv_calendar.h"
 #if LV_USE_CALENDAR != 0
 
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_draw/lv_draw.h"
 #include "../lv_hal/lv_hal_indev.h"
 #include "../lv_misc/lv_utils.h"
@@ -38,15 +38,14 @@ typedef uint8_t day_draw_state_t;
 static lv_design_res_t lv_calendar_design(lv_obj_t * calendar, const lv_area_t * clip_area, lv_design_mode_t mode);
 static lv_res_t lv_calendar_signal(lv_obj_t * calendar, lv_signal_t sign, void * param);
 static lv_style_list_t * lv_calendar_get_style(lv_obj_t * calendar, uint8_t part);
-static Boolean calculate_touched_day(lv_obj_t * calendar, const lv_point_t * touched_point);
+static bool calculate_touched_day(lv_obj_t * calendar, const lv_point_t * touched_point);
 static lv_coord_t get_header_height(lv_obj_t * calendar);
 static lv_coord_t get_day_names_height(lv_obj_t * calendar);
 static void draw_header(lv_obj_t * calendar, const lv_area_t * mask);
 static void draw_day_names(lv_obj_t * calendar, const lv_area_t * mask);
 static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area);
-static uint8_t get_day_of_week(uint32_t year, uint32_t month, uint32_t day);
-static Boolean is_highlighted(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day);
-static Boolean is_pressed(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day);
+static bool is_highlighted(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day);
+static bool is_pressed(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day);
 static const char * get_day_name(lv_obj_t * calendar, uint8_t day);
 static const char * get_month_name(lv_obj_t * calendar, int32_t month);
 static uint8_t get_month_length(int32_t year, int32_t month);
@@ -57,7 +56,11 @@ static uint8_t is_leap_year(uint32_t year);
  **********************/
 static lv_signal_cb_t ancestor_signal;
 static lv_design_cb_t ancestor_design;
+#if LV_CALENDAR_WEEK_STARTS_MONDAY != 0
+static const char * day_name[7]    = {"Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"};
+#else
 static const char * day_name[7]    = {"Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"};
+#endif
 static const char * month_name[12] = {"January", "February", "March",     "April",   "May",      "June",
                                       "July",    "August",   "September", "October", "November", "December"
                                      };
@@ -115,7 +118,6 @@ lv_obj_t * lv_calendar_create(lv_obj_t * par, const lv_obj_t * copy)
     ext->month_names            = NULL;
 
     ext->btn_pressing = 0;
-
 
     lv_style_list_init(&ext->style_date_nums);
     lv_style_list_init(&ext->style_day_names);
@@ -213,7 +215,7 @@ void lv_calendar_set_showed_date(lv_obj_t * calendar, lv_calendar_date_t * showe
 }
 
 /**
- * Set the the highlighted dates
+ * Set the highlighted dates
  * @param calendar pointer to a calendar object
  * @param highlighted pointer to an `lv_calendar_date_t` array containing the dates. ONLY A POINTER
  * WILL BE SAVED! CAN'T BE LOCAL ARRAY.
@@ -296,7 +298,7 @@ lv_calendar_date_t * lv_calendar_get_showed_date(const lv_obj_t * calendar)
 }
 
 /**
- * Get the the pressed date.
+ * Get the pressed date.
  * @param calendar pointer to a calendar object
  * @return pointer to an `lv_calendar_date_t` variable containing the pressed date.
  * `NULL` if not date pressed (e.g. the header)
@@ -310,7 +312,7 @@ lv_calendar_date_t * lv_calendar_get_pressed_date(const lv_obj_t * calendar)
 }
 
 /**
- * Get the the highlighted dates
+ * Get the highlighted dates
  * @param calendar pointer to a calendar object
  * @return pointer to an `lv_calendar_date_t` array containing the dates.
  */
@@ -359,6 +361,27 @@ const char ** lv_calendar_get_month_names(const lv_obj_t * calendar)
 
     lv_calendar_ext_t * ext = lv_obj_get_ext_attr(calendar);
     return ext->month_names;
+}
+
+/**
+ * Get the day of the week
+ * @param year a year
+ * @param month a month (1..12)
+ * @param day a day (1..31)
+ * @return [0..6] which means [Sun..Sat] or [Mon..Sun] depending on LV_CALENDAR_WEEK_STARTS_MONDAY
+ */
+uint8_t lv_calendar_get_day_of_week(uint32_t year, uint32_t month, uint32_t day)
+{
+    uint32_t a = month < 3 ? 1 : 0;
+    uint32_t b = year - a;
+
+#if LV_CALENDAR_WEEK_STARTS_MONDAY
+    uint32_t day_of_week = (day + (31 * (month - 2 + 12 * a) / 12) + b + (b / 4) - (b / 100) + (b / 400) - 1) % 7;
+#else
+    uint32_t day_of_week = (day + (31 * (month - 2 + 12 * a) / 12) + b + (b / 4) - (b / 100) + (b / 400)) % 7;
+#endif
+
+    return day_of_week;
 }
 
 /*=====================
@@ -515,6 +538,7 @@ static lv_res_t lv_calendar_signal(lv_obj_t * calendar, lv_signal_t sign, void *
         lv_obj_invalidate(calendar);
     }
     else if(sign == LV_SIGNAL_CONTROL) {
+#if LV_USE_GROUP
         uint8_t c               = *((uint8_t *)param);
         lv_calendar_ext_t * ext = lv_obj_get_ext_attr(calendar);
         if(c == LV_KEY_RIGHT || c == LV_KEY_UP) {
@@ -537,6 +561,7 @@ static lv_res_t lv_calendar_signal(lv_obj_t * calendar, lv_signal_t sign, void *
             }
             lv_obj_invalidate(calendar);
         }
+#endif
     }
 
     return res;
@@ -554,7 +579,6 @@ static lv_style_list_t * lv_calendar_get_style(lv_obj_t * calendar, uint8_t part
 
     lv_calendar_ext_t * ext = lv_obj_get_ext_attr(calendar);
     lv_style_list_t * style_dsc_p;
-
 
     switch(part) {
         case LV_CALENDAR_PART_BG:
@@ -584,7 +608,7 @@ static lv_style_list_t * lv_calendar_get_style(lv_obj_t * calendar, uint8_t part
  * @return true: days part of calendar is touched and its related date is put in pressed date
  * false: the point is out of days part area.
  */
-static Boolean calculate_touched_day(lv_obj_t * calendar, const lv_point_t * touched_point)
+static bool calculate_touched_day(lv_obj_t * calendar, const lv_point_t * touched_point)
 {
     lv_area_t days_area;
     lv_area_copy(&days_area, &calendar->coords);
@@ -611,22 +635,22 @@ static Boolean calculate_touched_day(lv_obj_t * calendar, const lv_point_t * tou
         uint8_t i_pos           = 0;
         i_pos                   = (y_pos * 7) + x_pos;
         lv_calendar_ext_t * ext = lv_obj_get_ext_attr(calendar);
-        if(i_pos < get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1)) {
+        if(i_pos < lv_calendar_get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1)) {
             ext->pressed_date.year  = ext->showed_date.year - (ext->showed_date.month == 1 ? 1 : 0);
             ext->pressed_date.month = ext->showed_date.month == 1 ? 12 : (ext->showed_date.month - 1);
             ext->pressed_date.day   = get_month_length(ext->pressed_date.year, ext->pressed_date.month) -
-                                      get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1) + 1 + i_pos;
+                                      lv_calendar_get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1) + 1 + i_pos;
         }
-        else if(i_pos < (get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1) +
+        else if(i_pos < (lv_calendar_get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1) +
                          get_month_length(ext->showed_date.year, ext->showed_date.month))) {
             ext->pressed_date.year  = ext->showed_date.year;
             ext->pressed_date.month = ext->showed_date.month;
-            ext->pressed_date.day   = i_pos + 1 - get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1);
+            ext->pressed_date.day   = i_pos + 1 - lv_calendar_get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1);
         }
         else if(i_pos < 42) {
             ext->pressed_date.year  = ext->showed_date.year + (ext->showed_date.month == 12 ? 1 : 0);
             ext->pressed_date.month = ext->showed_date.month == 12 ? 1 : (ext->showed_date.month + 1);
-            ext->pressed_date.day   = i_pos + 1 - get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1) -
+            ext->pressed_date.day   = i_pos + 1 - lv_calendar_get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1) -
                                       get_month_length(ext->showed_date.year, ext->showed_date.month);
         }
         return true;
@@ -644,8 +668,10 @@ static Boolean calculate_touched_day(lv_obj_t * calendar, const lv_point_t * tou
 static lv_coord_t get_header_height(lv_obj_t * calendar)
 {
     const lv_font_t * font = lv_obj_get_style_text_font(calendar, LV_CALENDAR_PART_HEADER);
-    lv_style_int_t top = lv_obj_get_style_pad_top(calendar, LV_CALENDAR_PART_HEADER);
-    lv_style_int_t bottom = lv_obj_get_style_pad_bottom(calendar, LV_CALENDAR_PART_HEADER);
+    lv_style_int_t top = lv_obj_get_style_margin_top(calendar, LV_CALENDAR_PART_HEADER) +
+                         lv_obj_get_style_pad_top(calendar, LV_CALENDAR_PART_HEADER);
+    lv_style_int_t bottom = lv_obj_get_style_margin_bottom(calendar, LV_CALENDAR_PART_HEADER) +
+                            lv_obj_get_style_pad_bottom(calendar, LV_CALENDAR_PART_HEADER);
 
     return lv_font_get_line_height(font) + top + bottom;
 }
@@ -671,7 +697,6 @@ static lv_coord_t get_day_names_height(lv_obj_t * calendar)
  */
 static void draw_header(lv_obj_t * calendar, const lv_area_t * mask)
 {
-    lv_style_int_t header_top = lv_obj_get_style_pad_top(calendar, LV_CALENDAR_PART_HEADER);
     lv_style_int_t header_left = lv_obj_get_style_pad_left(calendar, LV_CALENDAR_PART_HEADER);
     lv_style_int_t header_right = lv_obj_get_style_pad_right(calendar, LV_CALENDAR_PART_HEADER);
     const lv_font_t * font = lv_obj_get_style_text_font(calendar, LV_CALENDAR_PART_HEADER);
@@ -681,8 +706,9 @@ static void draw_header(lv_obj_t * calendar, const lv_area_t * mask)
     lv_area_t header_area;
     header_area.x1 = calendar->coords.x1;
     header_area.x2 = calendar->coords.x2;
-    header_area.y1 = calendar->coords.y1 + header_top;
-    header_area.y2 = header_area.y1 + lv_font_get_line_height(font);
+    header_area.y1 = calendar->coords.y1 + lv_obj_get_style_margin_top(calendar, LV_CALENDAR_PART_HEADER);
+    header_area.y2 = header_area.y1 + lv_obj_get_style_pad_top(calendar, LV_CALENDAR_PART_HEADER) +
+                     lv_font_get_line_height(font) + lv_obj_get_style_pad_bottom(calendar, LV_CALENDAR_PART_HEADER);
 
     lv_draw_rect_dsc_t header_rect_dsc;
     lv_draw_rect_dsc_init(&header_rect_dsc);
@@ -699,11 +725,14 @@ static void draw_header(lv_obj_t * calendar, const lv_area_t * mask)
     strcpy(&txt_buf[5], get_month_name(calendar, ext->showed_date.month));
 
     calendar->state = LV_STATE_DEFAULT;
+    _lv_obj_disable_style_caching(calendar, true);
 
     lv_draw_label_dsc_t label_dsc;
     lv_draw_label_dsc_init(&label_dsc);
     lv_obj_init_draw_label_dsc(calendar, LV_CALENDAR_PART_HEADER, &label_dsc);
     label_dsc.flag = LV_TXT_FLAG_CENTER;
+    header_area.y1 += lv_obj_get_style_pad_top(calendar, LV_CALENDAR_PART_HEADER);
+    header_area.y2 -= lv_obj_get_style_pad_bottom(calendar, LV_CALENDAR_PART_HEADER);
     lv_draw_label(&header_area, mask, &label_dsc, txt_buf, NULL);
 
     calendar->state = state_ori;    /*Restore the state*/
@@ -732,6 +761,7 @@ static void draw_header(lv_obj_t * calendar, const lv_area_t * mask)
     lv_draw_label(&header_area, mask, &label_dsc, LV_SYMBOL_RIGHT, NULL);
 
     calendar->state = state_ori;    /*Restore the state*/
+    _lv_obj_disable_style_caching(calendar, false);
 }
 
 /**
@@ -770,7 +800,7 @@ static void draw_day_names(lv_obj_t * calendar, const lv_area_t * mask)
     lv_draw_label_dsc_t label_dsc;
     lv_draw_label_dsc_init(&label_dsc);
     lv_obj_init_draw_label_dsc(calendar, LV_CALENDAR_PART_DAY_NAMES, &label_dsc);
-    label_dsc.flag = LV_TXT_FLAG_CENTER;
+    label_dsc.flag = LV_TXT_FLAG_CENTER | LV_TXT_FLAG_EXPAND;
 
     uint32_t i;
     for(i = 0; i < 7; i++) {
@@ -804,6 +834,7 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
     /*The state changes without re-caching the styles, disable the use of cache*/
     lv_state_t state_ori = calendar->state;
     calendar->state = LV_STATE_DEFAULT;
+    _lv_obj_disable_style_caching(calendar, true);
 
     lv_state_t month_state = LV_STATE_DISABLED;
 
@@ -813,7 +844,7 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
     lv_coord_t box_h      = (days_h - 5 * date_inner) / 6;
     lv_coord_t box_size = LV_MATH_MIN(box_w, box_h);
 
-    uint8_t month_start_day = get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1);
+    uint8_t month_start_day = lv_calendar_get_day_of_week(ext->showed_date.year, ext->showed_date.month, 1);
 
     day_draw_state_t draw_state;
 
@@ -830,7 +861,7 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
         month_state = LV_STATE_DISABLED;
     }
 
-    Boolean month_of_today_shown = false;
+    bool month_of_today_shown = false;
     if(ext->showed_date.year == ext->today.year && ext->showed_date.month == ext->today.month) {
         month_of_today_shown = true;
     }
@@ -850,6 +881,7 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
 
         if(box_area.y1 > clip_area->y2) {
             calendar->state = state_ori;
+            _lv_obj_disable_style_caching(calendar, false);
             return;
         }
 
@@ -893,7 +925,7 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
             if(prev_state != day_state) {
                 lv_draw_rect_dsc_init(&rect_dsc);
                 lv_draw_label_dsc_init(&label_dsc);
-                label_dsc.flag = LV_TXT_FLAG_CENTER;
+                label_dsc.flag = LV_TXT_FLAG_CENTER | LV_TXT_FLAG_EXPAND;
 
                 calendar->state = day_state;
                 lv_obj_init_draw_label_dsc(calendar, LV_CALENDAR_PART_DATE, &label_dsc);
@@ -908,7 +940,6 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
             box_area.x1 = label_area.x1;
             box_area.x2 = label_area.x2;
 
-
             lv_draw_rect(&box_area, clip_area, &rect_dsc);
 
             /*Write the day's number*/
@@ -920,7 +951,7 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
         }
     }
     calendar->state = state_ori;
-
+    _lv_obj_disable_style_caching(calendar, false);
 
 }
 
@@ -929,14 +960,13 @@ static void draw_dates(lv_obj_t * calendar, const lv_area_t * clip_area)
  * @param calendar pointer to a calendar object
  * @param draw_state which month is drawn (previous, active, next)
  * @param year a year
- * @param month a  month [1..12]
+ * @param month a month [1..12]
  * @param day a day [1..31]
  * @return true: highlighted
  */
-static Boolean is_highlighted(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day)
+static bool is_highlighted(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day)
 {
     lv_calendar_ext_t * ext = lv_obj_get_ext_attr(calendar);
-
 
     if(draw_state == DAY_DRAW_PREV_MONTH) {
         year -= month == 1 ? 1 : 0;
@@ -963,14 +993,13 @@ static Boolean is_highlighted(lv_obj_t * calendar, day_draw_state_t draw_state, 
  * @param calendar pointer to a calendar object
  * @param draw_state which month is drawn (previous, active, next)
  * @param year a year
- * @param month a  month [1..12]
+ * @param month a month [1..12]
  * @param day a day [1..31]
  * @return true: highlighted
  */
-static Boolean is_pressed(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day)
+static bool is_pressed(lv_obj_t * calendar, day_draw_state_t draw_state, int32_t year, int32_t month, int32_t day)
 {
     lv_calendar_ext_t * ext = lv_obj_get_ext_attr(calendar);
-
 
     if(draw_state == DAY_DRAW_PREV_MONTH) {
         year -= month == 1 ? 1 : 0;
@@ -1050,23 +1079,6 @@ static uint8_t get_month_length(int32_t year, int32_t month)
 static uint8_t is_leap_year(uint32_t year)
 {
     return (year % 4) || ((year % 100 == 0) && (year % 400)) ? 0 : 1;
-}
-
-/**
- * Get the day of the week
- * @param year a year
- * @param month a  month
- * @param day a day
- * @return [0..6] which means [Sun..Sat]
- */
-static uint8_t get_day_of_week(uint32_t year, uint32_t month, uint32_t day)
-{
-    uint32_t a = month < 3 ? 1 : 0;
-    uint32_t b = year - a;
-
-    uint32_t day_of_week = (day + (31 * (month - 2 + 12 * a) / 12) + b + (b / 4) - (b / 100) + (b / 400)) % 7;
-
-    return day_of_week;
 }
 
 #endif

@@ -1,5 +1,5 @@
 /**
- * @file lv_ll.c
+ * @file lv_ll.h
  * Handle linked lists. The nodes are dynamically allocated by the 'lv_mem' module.
  */
 
@@ -16,7 +16,7 @@ extern "C" {
 #include "lv_mem.h"
 #include <stdint.h>
 #include <stddef.h>
-#include <MacTypes.h>
+#include <stdbool.h>
 
 /*********************
  *      DEFINES
@@ -71,7 +71,7 @@ void * _lv_ll_ins_tail(lv_ll_t * ll_p);
 
 /**
  * Remove the node 'node_p' from 'll_p' linked list.
- * It does not free the the memory of node.
+ * It does not free the memory of node.
  * @param ll_p pointer to the linked list of 'node_p'
  * @param node_p pointer to node in 'll_p' linked list
  */
@@ -91,7 +91,7 @@ void _lv_ll_clear(lv_ll_t * ll_p);
  * @param head true: be the head in the new list
  *             false be the head in the new list
  */
-void _lv_ll_chg_list(lv_ll_t * ll_ori_p, lv_ll_t * ll_new_p, void * node, Boolean head);
+void _lv_ll_chg_list(lv_ll_t * ll_ori_p, lv_ll_t * ll_new_p, void * node, bool head);
 
 /**
  * Return with head node of the linked list
@@ -139,7 +139,7 @@ void lv_ll_swap(lv_ll_t * ll_p, void * n1_p, void * n2_p);
  */
 
 /**
- * Move a nodw before an other node in the same linked list
+ * Move a node before an other node in the same linked list
  * @param ll_p pointer to a linked list
  * @param n_act pointer to node to move
  * @param n_after pointer to a node which should be after `n_act`
@@ -151,7 +151,7 @@ void _lv_ll_move_before(lv_ll_t * ll_p, void * n_act, void * n_after);
  * @param ll_p pointer to a linked list
  * @return true: the linked list is empty; false: not empty
  */
-Boolean _lv_ll_is_empty(lv_ll_t * ll_p);
+bool _lv_ll_is_empty(lv_ll_t * ll_p);
 
 /**********************
  *      MACROS

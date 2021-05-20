@@ -9,13 +9,9 @@
 #include "lv_group.h"
 #if LV_USE_GROUP != 0
 #include <stddef.h>
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_themes/lv_theme.h"
 #include "../lv_misc/lv_gc.h"
-
-#if defined(LV_GC_INCLUDE)
-    #include LV_GC_INCLUDE
-#endif /* LV_ENABLE_GC */
 
 /*********************
  *      DEFINES
@@ -85,7 +81,7 @@ lv_group_t * lv_group_create(void)
  */
 void lv_group_del(lv_group_t * group)
 {
-    /*Defocus the the currently focused object*/
+    /*Defocus the currently focused object*/
     if(group->obj_focus != NULL) {
         (*group->obj_focus)->signal_cb(*group->obj_focus, LV_SIGNAL_DEFOCUS, NULL);
         lv_obj_invalidate(*group->obj_focus);
@@ -149,7 +145,6 @@ void lv_group_remove_obj(lv_obj_t * obj)
 {
     lv_group_t * g = obj->group_p;
     if(g == NULL) return;
-    if(g->obj_focus == NULL) return; /*Just to be sure (Not possible if there is at least one object in the group)*/
 
     /*Focus on the next object*/
     if(*g->obj_focus == obj) {
@@ -190,7 +185,7 @@ void lv_group_remove_obj(lv_obj_t * obj)
  */
 void lv_group_remove_all_objs(lv_group_t * group)
 {
-    /*Defocus the the currently focused object*/
+    /*Defocus the currently focused object*/
     if(group->obj_focus != NULL) {
         (*group->obj_focus)->signal_cb(*group->obj_focus, LV_SIGNAL_DEFOCUS, NULL);
         lv_obj_invalidate(*group->obj_focus);
@@ -218,7 +213,7 @@ void lv_group_focus_obj(lv_obj_t * obj)
 
     if(g->frozen != 0) return;
 
-    if(obj == *g->obj_focus) return;
+    if(g->obj_focus != NULL && obj == *g->obj_focus) return;
 
     /*On defocus edit mode must be leaved*/
     lv_group_set_editing(g, false);
@@ -242,7 +237,7 @@ void lv_group_focus_obj(lv_obj_t * obj)
                 if(res != LV_RES_OK) return;
                 lv_obj_invalidate(*g->obj_focus);
 
-                /*If the object or its parent has `top == true` bring it to the foregorund*/
+                /*If the object or its parent has `top == true` bring it to the foreground*/
                 obj_to_foreground(*g->obj_focus);
             }
             break;
@@ -273,7 +268,7 @@ void lv_group_focus_prev(lv_group_t * group)
  * @param group pointer to a group
  * @param en true: freeze, false: release freezing (normal mode)
  */
-void lv_group_focus_freeze(lv_group_t * group, Boolean en)
+void lv_group_focus_freeze(lv_group_t * group, bool en)
 {
     if(en == false)
         group->frozen = 0;
@@ -318,7 +313,7 @@ void lv_group_set_focus_cb(lv_group_t * group, lv_group_focus_cb_t focus_cb)
  * @param group pointer to group
  * @param edit: true: edit mode; false: navigate mode
  */
-void lv_group_set_editing(lv_group_t * group, Boolean edit)
+void lv_group_set_editing(lv_group_t * group, bool edit)
 {
     if(group == NULL) return;
     uint8_t en_val = edit ? 1 : 0;
@@ -332,9 +327,9 @@ void lv_group_set_editing(lv_group_t * group, Boolean edit)
         focused->signal_cb(focused, LV_SIGNAL_FOCUS, NULL); /*Focus again to properly leave/open edit/navigate mode*/
         lv_res_t res = lv_event_send(*group->obj_focus, LV_EVENT_FOCUSED, NULL);
         if(res != LV_RES_OK) return;
-    }
 
-    lv_obj_invalidate(focused);
+        lv_obj_invalidate(focused);
+    }
 }
 
 /**
@@ -342,7 +337,7 @@ void lv_group_set_editing(lv_group_t * group, Boolean edit)
  * @param group pointer to group
  * @param en: true: enable `click_focus`
  */
-void lv_group_set_click_focus(lv_group_t * group, Boolean en)
+void lv_group_set_click_focus(lv_group_t * group, bool en)
 {
     group->click_focus = en ? 1 : 0;
 }
@@ -357,7 +352,7 @@ void lv_group_set_refocus_policy(lv_group_t * group, lv_group_refocus_policy_t p
  * @param group pointer to group
  * @param en: true: enable `wrap`
  */
-void lv_group_set_wrap(lv_group_t * group, Boolean en)
+void lv_group_set_wrap(lv_group_t * group, bool en)
 {
     group->wrap = en ? 1 : 0;
 }
@@ -403,7 +398,7 @@ lv_group_focus_cb_t lv_group_get_focus_cb(const lv_group_t * group)
  * @param group pointer to group
  * @return true: edit mode; false: navigate mode
  */
-Boolean lv_group_get_editing(const lv_group_t * group)
+bool lv_group_get_editing(const lv_group_t * group)
 {
     if(!group) return false;
     return group->editing ? true : false;
@@ -414,7 +409,7 @@ Boolean lv_group_get_editing(const lv_group_t * group)
  * @param group pointer to group
  * @return true: `click_focus` is enabled; false: disabled
  */
-Boolean lv_group_get_click_focus(const lv_group_t * group)
+bool lv_group_get_click_focus(const lv_group_t * group)
 {
     if(!group) return false;
     return group->click_focus ? true : false;
@@ -425,7 +420,7 @@ Boolean lv_group_get_click_focus(const lv_group_t * group)
  * @param group pointer to group
  * @param en: true: wrapping enabled; false: wrapping disabled
  */
-Boolean lv_group_get_wrap(lv_group_t * group)
+bool lv_group_get_wrap(lv_group_t * group)
 {
     if(!group) return false;
     return group->wrap ? true : false;
@@ -456,8 +451,8 @@ static void focus_next_core(lv_group_t * group, void * (*begin)(const lv_ll_t *)
 
     lv_obj_t ** obj_next     = group->obj_focus;
     lv_obj_t ** obj_sentinel = NULL;
-    Boolean can_move            = true;
-    Boolean can_begin           = true;
+    bool can_move            = true;
+    bool can_begin           = true;
 
     for(;;) {
         if(obj_next == NULL) {
@@ -488,8 +483,9 @@ static void focus_next_core(lv_group_t * group, void * (*begin)(const lv_ll_t *)
         can_move = true;
 
         if(obj_next == NULL) continue;
+        if(lv_obj_get_state(*obj_next, LV_OBJ_PART_MAIN) & LV_STATE_DISABLED) continue;
 
-        /*Hidden objects don't receive focus*/
+        /*Hidden and disabled objects don't receive focus*/
         if(!lv_obj_get_hidden(*obj_next)) break;
     }
 
@@ -508,7 +504,7 @@ static void focus_next_core(lv_group_t * group, void * (*begin)(const lv_ll_t *)
     lv_res_t res = lv_event_send(*group->obj_focus, LV_EVENT_FOCUSED, NULL);
     if(res != LV_RES_OK) return;
 
-    /*If the object or its parent has `top == true` bring it to the foregorund*/
+    /*If the object or its parent has `top == true` bring it to the foreground*/
     obj_to_foreground(*group->obj_focus);
 
     lv_obj_invalidate(*group->obj_focus);

@@ -190,6 +190,60 @@ SerialHelper.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/SerialHelper.c.s
 .PHONY : SerialHelper.c.s
 
+lv_drivers/display/GC9A01.obj: lv_drivers/display/GC9A01.c.obj
+
+.PHONY : lv_drivers/display/GC9A01.obj
+
+# target to build an object file
+lv_drivers/display/GC9A01.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.obj
+.PHONY : lv_drivers/display/GC9A01.c.obj
+
+lv_drivers/display/GC9A01.i: lv_drivers/display/GC9A01.c.i
+
+.PHONY : lv_drivers/display/GC9A01.i
+
+# target to preprocess a source file
+lv_drivers/display/GC9A01.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.i
+.PHONY : lv_drivers/display/GC9A01.c.i
+
+lv_drivers/display/GC9A01.s: lv_drivers/display/GC9A01.c.s
+
+.PHONY : lv_drivers/display/GC9A01.s
+
+# target to generate assembly for a file
+lv_drivers/display/GC9A01.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.s
+.PHONY : lv_drivers/display/GC9A01.c.s
+
+lv_drivers/display/ILI9341.obj: lv_drivers/display/ILI9341.c.obj
+
+.PHONY : lv_drivers/display/ILI9341.obj
+
+# target to build an object file
+lv_drivers/display/ILI9341.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.obj
+.PHONY : lv_drivers/display/ILI9341.c.obj
+
+lv_drivers/display/ILI9341.i: lv_drivers/display/ILI9341.c.i
+
+.PHONY : lv_drivers/display/ILI9341.i
+
+# target to preprocess a source file
+lv_drivers/display/ILI9341.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.i
+.PHONY : lv_drivers/display/ILI9341.c.i
+
+lv_drivers/display/ILI9341.s: lv_drivers/display/ILI9341.c.s
+
+.PHONY : lv_drivers/display/ILI9341.s
+
+# target to generate assembly for a file
+lv_drivers/display/ILI9341.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.s
+.PHONY : lv_drivers/display/ILI9341.c.s
+
 lv_drivers/display/R61581.obj: lv_drivers/display/R61581.c.obj
 
 .PHONY : lv_drivers/display/R61581.obj
@@ -325,6 +379,33 @@ lv_drivers/display/UC1610.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.s
 .PHONY : lv_drivers/display/UC1610.c.s
 
+lv_drivers/display/drm.obj: lv_drivers/display/drm.c.obj
+
+.PHONY : lv_drivers/display/drm.obj
+
+# target to build an object file
+lv_drivers/display/drm.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.obj
+.PHONY : lv_drivers/display/drm.c.obj
+
+lv_drivers/display/drm.i: lv_drivers/display/drm.c.i
+
+.PHONY : lv_drivers/display/drm.i
+
+# target to preprocess a source file
+lv_drivers/display/drm.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.i
+.PHONY : lv_drivers/display/drm.c.i
+
+lv_drivers/display/drm.s: lv_drivers/display/drm.c.s
+
+.PHONY : lv_drivers/display/drm.s
+
+# target to generate assembly for a file
+lv_drivers/display/drm.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.s
+.PHONY : lv_drivers/display/drm.c.s
+
 lv_drivers/display/fbdev.obj: lv_drivers/display/fbdev.c.obj
 
 .PHONY : lv_drivers/display/fbdev.obj
@@ -378,6 +459,33 @@ lv_drivers/display/monitor.s: lv_drivers/display/monitor.c.s
 lv_drivers/display/monitor.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.s
 .PHONY : lv_drivers/display/monitor.c.s
+
+lv_drivers/gtkdrv/gtkdrv.obj: lv_drivers/gtkdrv/gtkdrv.c.obj
+
+.PHONY : lv_drivers/gtkdrv/gtkdrv.obj
+
+# target to build an object file
+lv_drivers/gtkdrv/gtkdrv.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.obj
+.PHONY : lv_drivers/gtkdrv/gtkdrv.c.obj
+
+lv_drivers/gtkdrv/gtkdrv.i: lv_drivers/gtkdrv/gtkdrv.c.i
+
+.PHONY : lv_drivers/gtkdrv/gtkdrv.i
+
+# target to preprocess a source file
+lv_drivers/gtkdrv/gtkdrv.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.i
+.PHONY : lv_drivers/gtkdrv/gtkdrv.c.i
+
+lv_drivers/gtkdrv/gtkdrv.s: lv_drivers/gtkdrv/gtkdrv.c.s
+
+.PHONY : lv_drivers/gtkdrv/gtkdrv.s
+
+# target to generate assembly for a file
+lv_drivers/gtkdrv/gtkdrv.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.s
+.PHONY : lv_drivers/gtkdrv/gtkdrv.c.s
 
 lv_drivers/indev/AD_touch.obj: lv_drivers/indev/AD_touch.c.obj
 
@@ -594,6 +702,33 @@ lv_drivers/indev/mousewheel.s: lv_drivers/indev/mousewheel.c.s
 lv_drivers/indev/mousewheel.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.s
 .PHONY : lv_drivers/indev/mousewheel.c.s
+
+lv_drivers/win32drv/win32drv.obj: lv_drivers/win32drv/win32drv.c.obj
+
+.PHONY : lv_drivers/win32drv/win32drv.obj
+
+# target to build an object file
+lv_drivers/win32drv/win32drv.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.obj
+.PHONY : lv_drivers/win32drv/win32drv.c.obj
+
+lv_drivers/win32drv/win32drv.i: lv_drivers/win32drv/win32drv.c.i
+
+.PHONY : lv_drivers/win32drv/win32drv.i
+
+# target to preprocess a source file
+lv_drivers/win32drv/win32drv.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.i
+.PHONY : lv_drivers/win32drv/win32drv.c.i
+
+lv_drivers/win32drv/win32drv.s: lv_drivers/win32drv/win32drv.c.s
+
+.PHONY : lv_drivers/win32drv/win32drv.s
+
+# target to generate assembly for a file
+lv_drivers/win32drv/win32drv.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.s
+.PHONY : lv_drivers/win32drv/win32drv.c.s
 
 lv_drivers/win_drv.obj: lv_drivers/win_drv.c.obj
 
@@ -3376,113 +3511,86 @@ lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.s
 .PHONY : lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.s
 
-lvgl/porting/lv_port_disp_template.obj: lvgl/porting/lv_port_disp_template.c.obj
+lvgl/examples/porting/lv_port_disp_template.obj: lvgl/examples/porting/lv_port_disp_template.c.obj
 
-.PHONY : lvgl/porting/lv_port_disp_template.obj
-
-# target to build an object file
-lvgl/porting/lv_port_disp_template.c.obj:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.obj
-.PHONY : lvgl/porting/lv_port_disp_template.c.obj
-
-lvgl/porting/lv_port_disp_template.i: lvgl/porting/lv_port_disp_template.c.i
-
-.PHONY : lvgl/porting/lv_port_disp_template.i
-
-# target to preprocess a source file
-lvgl/porting/lv_port_disp_template.c.i:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.i
-.PHONY : lvgl/porting/lv_port_disp_template.c.i
-
-lvgl/porting/lv_port_disp_template.s: lvgl/porting/lv_port_disp_template.c.s
-
-.PHONY : lvgl/porting/lv_port_disp_template.s
-
-# target to generate assembly for a file
-lvgl/porting/lv_port_disp_template.c.s:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.s
-.PHONY : lvgl/porting/lv_port_disp_template.c.s
-
-lvgl/porting/lv_port_fs_template.obj: lvgl/porting/lv_port_fs_template.c.obj
-
-.PHONY : lvgl/porting/lv_port_fs_template.obj
+.PHONY : lvgl/examples/porting/lv_port_disp_template.obj
 
 # target to build an object file
-lvgl/porting/lv_port_fs_template.c.obj:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.obj
-.PHONY : lvgl/porting/lv_port_fs_template.c.obj
+lvgl/examples/porting/lv_port_disp_template.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.obj
+.PHONY : lvgl/examples/porting/lv_port_disp_template.c.obj
 
-lvgl/porting/lv_port_fs_template.i: lvgl/porting/lv_port_fs_template.c.i
+lvgl/examples/porting/lv_port_disp_template.i: lvgl/examples/porting/lv_port_disp_template.c.i
 
-.PHONY : lvgl/porting/lv_port_fs_template.i
+.PHONY : lvgl/examples/porting/lv_port_disp_template.i
 
 # target to preprocess a source file
-lvgl/porting/lv_port_fs_template.c.i:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.i
-.PHONY : lvgl/porting/lv_port_fs_template.c.i
+lvgl/examples/porting/lv_port_disp_template.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.i
+.PHONY : lvgl/examples/porting/lv_port_disp_template.c.i
 
-lvgl/porting/lv_port_fs_template.s: lvgl/porting/lv_port_fs_template.c.s
+lvgl/examples/porting/lv_port_disp_template.s: lvgl/examples/porting/lv_port_disp_template.c.s
 
-.PHONY : lvgl/porting/lv_port_fs_template.s
+.PHONY : lvgl/examples/porting/lv_port_disp_template.s
 
 # target to generate assembly for a file
-lvgl/porting/lv_port_fs_template.c.s:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.s
-.PHONY : lvgl/porting/lv_port_fs_template.c.s
+lvgl/examples/porting/lv_port_disp_template.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.s
+.PHONY : lvgl/examples/porting/lv_port_disp_template.c.s
 
-lvgl/porting/lv_port_indev_template.obj: lvgl/porting/lv_port_indev_template.c.obj
+lvgl/examples/porting/lv_port_fs_template.obj: lvgl/examples/porting/lv_port_fs_template.c.obj
 
-.PHONY : lvgl/porting/lv_port_indev_template.obj
+.PHONY : lvgl/examples/porting/lv_port_fs_template.obj
 
 # target to build an object file
-lvgl/porting/lv_port_indev_template.c.obj:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.obj
-.PHONY : lvgl/porting/lv_port_indev_template.c.obj
+lvgl/examples/porting/lv_port_fs_template.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.obj
+.PHONY : lvgl/examples/porting/lv_port_fs_template.c.obj
 
-lvgl/porting/lv_port_indev_template.i: lvgl/porting/lv_port_indev_template.c.i
+lvgl/examples/porting/lv_port_fs_template.i: lvgl/examples/porting/lv_port_fs_template.c.i
 
-.PHONY : lvgl/porting/lv_port_indev_template.i
+.PHONY : lvgl/examples/porting/lv_port_fs_template.i
 
 # target to preprocess a source file
-lvgl/porting/lv_port_indev_template.c.i:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.i
-.PHONY : lvgl/porting/lv_port_indev_template.c.i
+lvgl/examples/porting/lv_port_fs_template.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.i
+.PHONY : lvgl/examples/porting/lv_port_fs_template.c.i
 
-lvgl/porting/lv_port_indev_template.s: lvgl/porting/lv_port_indev_template.c.s
+lvgl/examples/porting/lv_port_fs_template.s: lvgl/examples/porting/lv_port_fs_template.c.s
 
-.PHONY : lvgl/porting/lv_port_indev_template.s
+.PHONY : lvgl/examples/porting/lv_port_fs_template.s
 
 # target to generate assembly for a file
-lvgl/porting/lv_port_indev_template.c.s:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.s
-.PHONY : lvgl/porting/lv_port_indev_template.c.s
+lvgl/examples/porting/lv_port_fs_template.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.s
+.PHONY : lvgl/examples/porting/lv_port_fs_template.c.s
 
-lvgl/src/lv_core/lv_debug.obj: lvgl/src/lv_core/lv_debug.c.obj
+lvgl/examples/porting/lv_port_indev_template.obj: lvgl/examples/porting/lv_port_indev_template.c.obj
 
-.PHONY : lvgl/src/lv_core/lv_debug.obj
+.PHONY : lvgl/examples/porting/lv_port_indev_template.obj
 
 # target to build an object file
-lvgl/src/lv_core/lv_debug.c.obj:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.obj
-.PHONY : lvgl/src/lv_core/lv_debug.c.obj
+lvgl/examples/porting/lv_port_indev_template.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.obj
+.PHONY : lvgl/examples/porting/lv_port_indev_template.c.obj
 
-lvgl/src/lv_core/lv_debug.i: lvgl/src/lv_core/lv_debug.c.i
+lvgl/examples/porting/lv_port_indev_template.i: lvgl/examples/porting/lv_port_indev_template.c.i
 
-.PHONY : lvgl/src/lv_core/lv_debug.i
+.PHONY : lvgl/examples/porting/lv_port_indev_template.i
 
 # target to preprocess a source file
-lvgl/src/lv_core/lv_debug.c.i:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.i
-.PHONY : lvgl/src/lv_core/lv_debug.c.i
+lvgl/examples/porting/lv_port_indev_template.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.i
+.PHONY : lvgl/examples/porting/lv_port_indev_template.c.i
 
-lvgl/src/lv_core/lv_debug.s: lvgl/src/lv_core/lv_debug.c.s
+lvgl/examples/porting/lv_port_indev_template.s: lvgl/examples/porting/lv_port_indev_template.c.s
 
-.PHONY : lvgl/src/lv_core/lv_debug.s
+.PHONY : lvgl/examples/porting/lv_port_indev_template.s
 
 # target to generate assembly for a file
-lvgl/src/lv_core/lv_debug.c.s:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.s
-.PHONY : lvgl/src/lv_core/lv_debug.c.s
+lvgl/examples/porting/lv_port_indev_template.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.s
+.PHONY : lvgl/examples/porting/lv_port_indev_template.c.s
 
 lvgl/src/lv_core/lv_disp.obj: lvgl/src/lv_core/lv_disp.c.obj
 
@@ -4023,6 +4131,60 @@ lvgl/src/lv_font/lv_font_fmt_txt.s: lvgl/src/lv_font/lv_font_fmt_txt.c.s
 lvgl/src/lv_font/lv_font_fmt_txt.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.s
 .PHONY : lvgl/src/lv_font/lv_font_fmt_txt.c.s
+
+lvgl/src/lv_font/lv_font_loader.obj: lvgl/src/lv_font/lv_font_loader.c.obj
+
+.PHONY : lvgl/src/lv_font/lv_font_loader.obj
+
+# target to build an object file
+lvgl/src/lv_font/lv_font_loader.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.obj
+.PHONY : lvgl/src/lv_font/lv_font_loader.c.obj
+
+lvgl/src/lv_font/lv_font_loader.i: lvgl/src/lv_font/lv_font_loader.c.i
+
+.PHONY : lvgl/src/lv_font/lv_font_loader.i
+
+# target to preprocess a source file
+lvgl/src/lv_font/lv_font_loader.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.i
+.PHONY : lvgl/src/lv_font/lv_font_loader.c.i
+
+lvgl/src/lv_font/lv_font_loader.s: lvgl/src/lv_font/lv_font_loader.c.s
+
+.PHONY : lvgl/src/lv_font/lv_font_loader.s
+
+# target to generate assembly for a file
+lvgl/src/lv_font/lv_font_loader.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.s
+.PHONY : lvgl/src/lv_font/lv_font_loader.c.s
+
+lvgl/src/lv_font/lv_font_montserrat_10.obj: lvgl/src/lv_font/lv_font_montserrat_10.c.obj
+
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_10.obj
+
+# target to build an object file
+lvgl/src/lv_font/lv_font_montserrat_10.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.obj
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_10.c.obj
+
+lvgl/src/lv_font/lv_font_montserrat_10.i: lvgl/src/lv_font/lv_font_montserrat_10.c.i
+
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_10.i
+
+# target to preprocess a source file
+lvgl/src/lv_font/lv_font_montserrat_10.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.i
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_10.c.i
+
+lvgl/src/lv_font/lv_font_montserrat_10.s: lvgl/src/lv_font/lv_font_montserrat_10.c.s
+
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_10.s
+
+# target to generate assembly for a file
+lvgl/src/lv_font/lv_font_montserrat_10.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.s
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_10.c.s
 
 lvgl/src/lv_font/lv_font_montserrat_12.obj: lvgl/src/lv_font/lv_font_montserrat_12.c.obj
 
@@ -4591,6 +4753,33 @@ lvgl/src/lv_font/lv_font_montserrat_48.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.s
 .PHONY : lvgl/src/lv_font/lv_font_montserrat_48.c.s
 
+lvgl/src/lv_font/lv_font_montserrat_8.obj: lvgl/src/lv_font/lv_font_montserrat_8.c.obj
+
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_8.obj
+
+# target to build an object file
+lvgl/src/lv_font/lv_font_montserrat_8.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.obj
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_8.c.obj
+
+lvgl/src/lv_font/lv_font_montserrat_8.i: lvgl/src/lv_font/lv_font_montserrat_8.c.i
+
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_8.i
+
+# target to preprocess a source file
+lvgl/src/lv_font/lv_font_montserrat_8.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.i
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_8.c.i
+
+lvgl/src/lv_font/lv_font_montserrat_8.s: lvgl/src/lv_font/lv_font_montserrat_8.c.s
+
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_8.s
+
+# target to generate assembly for a file
+lvgl/src/lv_font/lv_font_montserrat_8.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.s
+.PHONY : lvgl/src/lv_font/lv_font_montserrat_8.c.s
+
 lvgl/src/lv_font/lv_font_simsun_16_cjk.obj: lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj
 
 .PHONY : lvgl/src/lv_font/lv_font_simsun_16_cjk.obj
@@ -4618,6 +4807,33 @@ lvgl/src/lv_font/lv_font_simsun_16_cjk.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.s
 .PHONY : lvgl/src/lv_font/lv_font_simsun_16_cjk.c.s
 
+lvgl/src/lv_font/lv_font_unscii_16.obj: lvgl/src/lv_font/lv_font_unscii_16.c.obj
+
+.PHONY : lvgl/src/lv_font/lv_font_unscii_16.obj
+
+# target to build an object file
+lvgl/src/lv_font/lv_font_unscii_16.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.obj
+.PHONY : lvgl/src/lv_font/lv_font_unscii_16.c.obj
+
+lvgl/src/lv_font/lv_font_unscii_16.i: lvgl/src/lv_font/lv_font_unscii_16.c.i
+
+.PHONY : lvgl/src/lv_font/lv_font_unscii_16.i
+
+# target to preprocess a source file
+lvgl/src/lv_font/lv_font_unscii_16.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.i
+.PHONY : lvgl/src/lv_font/lv_font_unscii_16.c.i
+
+lvgl/src/lv_font/lv_font_unscii_16.s: lvgl/src/lv_font/lv_font_unscii_16.c.s
+
+.PHONY : lvgl/src/lv_font/lv_font_unscii_16.s
+
+# target to generate assembly for a file
+lvgl/src/lv_font/lv_font_unscii_16.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.s
+.PHONY : lvgl/src/lv_font/lv_font_unscii_16.c.s
+
 lvgl/src/lv_font/lv_font_unscii_8.obj: lvgl/src/lv_font/lv_font_unscii_8.c.obj
 
 .PHONY : lvgl/src/lv_font/lv_font_unscii_8.obj
@@ -4644,6 +4860,87 @@ lvgl/src/lv_font/lv_font_unscii_8.s: lvgl/src/lv_font/lv_font_unscii_8.c.s
 lvgl/src/lv_font/lv_font_unscii_8.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.s
 .PHONY : lvgl/src/lv_font/lv_font_unscii_8.c.s
+
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp.obj: lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp.obj
+
+# target to build an object file
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj
+
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp.i: lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.i
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp.i
+
+# target to preprocess a source file
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.i
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.i
+
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp.s: lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.s
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp.s
+
+# target to generate assembly for a file
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.s
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.s
+
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.obj: lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.obj
+
+# target to build an object file
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj
+
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.i: lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.i
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.i
+
+# target to preprocess a source file
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.i
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.i
+
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.s: lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.s
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.s
+
+# target to generate assembly for a file
+lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.s
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.s
+
+lvgl/src/lv_gpu/lv_gpu_nxp_vglite.obj: lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_vglite.obj
+
+# target to build an object file
+lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj
+
+lvgl/src/lv_gpu/lv_gpu_nxp_vglite.i: lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.i
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_vglite.i
+
+# target to preprocess a source file
+lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.i
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.i
+
+lvgl/src/lv_gpu/lv_gpu_nxp_vglite.s: lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.s
+
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_vglite.s
+
+# target to generate assembly for a file
+lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.s
+.PHONY : lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.s
 
 lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.obj: lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj
 
@@ -4887,6 +5184,33 @@ lvgl/src/lv_misc/lv_color.s: lvgl/src/lv_misc/lv_color.c.s
 lvgl/src/lv_misc/lv_color.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.s
 .PHONY : lvgl/src/lv_misc/lv_color.c.s
+
+lvgl/src/lv_misc/lv_debug.obj: lvgl/src/lv_misc/lv_debug.c.obj
+
+.PHONY : lvgl/src/lv_misc/lv_debug.obj
+
+# target to build an object file
+lvgl/src/lv_misc/lv_debug.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.obj
+.PHONY : lvgl/src/lv_misc/lv_debug.c.obj
+
+lvgl/src/lv_misc/lv_debug.i: lvgl/src/lv_misc/lv_debug.c.i
+
+.PHONY : lvgl/src/lv_misc/lv_debug.i
+
+# target to preprocess a source file
+lvgl/src/lv_misc/lv_debug.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.i
+.PHONY : lvgl/src/lv_misc/lv_debug.c.i
+
+lvgl/src/lv_misc/lv_debug.s: lvgl/src/lv_misc/lv_debug.c.s
+
+.PHONY : lvgl/src/lv_misc/lv_debug.s
+
+# target to generate assembly for a file
+lvgl/src/lv_misc/lv_debug.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.s
+.PHONY : lvgl/src/lv_misc/lv_debug.c.s
 
 lvgl/src/lv_misc/lv_fs.obj: lvgl/src/lv_misc/lv_fs.c.obj
 
@@ -6319,6 +6643,33 @@ lvgl/tests/lv_test_core/lv_test_core.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.s
 .PHONY : lvgl/tests/lv_test_core/lv_test_core.c.s
 
+lvgl/tests/lv_test_core/lv_test_font_loader.obj: lvgl/tests/lv_test_core/lv_test_font_loader.c.obj
+
+.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.obj
+
+# target to build an object file
+lvgl/tests/lv_test_core/lv_test_font_loader.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.obj
+.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.obj
+
+lvgl/tests/lv_test_core/lv_test_font_loader.i: lvgl/tests/lv_test_core/lv_test_font_loader.c.i
+
+.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.i
+
+# target to preprocess a source file
+lvgl/tests/lv_test_core/lv_test_font_loader.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.i
+.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.i
+
+lvgl/tests/lv_test_core/lv_test_font_loader.s: lvgl/tests/lv_test_core/lv_test_font_loader.c.s
+
+.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.s
+
+# target to generate assembly for a file
+lvgl/tests/lv_test_core/lv_test_font_loader.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.s
+.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.s
+
 lvgl/tests/lv_test_core/lv_test_obj.obj: lvgl/tests/lv_test_core/lv_test_obj.c.obj
 
 .PHONY : lvgl/tests/lv_test_core/lv_test_obj.obj
@@ -6373,6 +6724,87 @@ lvgl/tests/lv_test_core/lv_test_style.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.s
 .PHONY : lvgl/tests/lv_test_core/lv_test_style.c.s
 
+lvgl/tests/lv_test_fonts/font_1.obj: lvgl/tests/lv_test_fonts/font_1.c.obj
+
+.PHONY : lvgl/tests/lv_test_fonts/font_1.obj
+
+# target to build an object file
+lvgl/tests/lv_test_fonts/font_1.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.obj
+.PHONY : lvgl/tests/lv_test_fonts/font_1.c.obj
+
+lvgl/tests/lv_test_fonts/font_1.i: lvgl/tests/lv_test_fonts/font_1.c.i
+
+.PHONY : lvgl/tests/lv_test_fonts/font_1.i
+
+# target to preprocess a source file
+lvgl/tests/lv_test_fonts/font_1.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.i
+.PHONY : lvgl/tests/lv_test_fonts/font_1.c.i
+
+lvgl/tests/lv_test_fonts/font_1.s: lvgl/tests/lv_test_fonts/font_1.c.s
+
+.PHONY : lvgl/tests/lv_test_fonts/font_1.s
+
+# target to generate assembly for a file
+lvgl/tests/lv_test_fonts/font_1.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.s
+.PHONY : lvgl/tests/lv_test_fonts/font_1.c.s
+
+lvgl/tests/lv_test_fonts/font_2.obj: lvgl/tests/lv_test_fonts/font_2.c.obj
+
+.PHONY : lvgl/tests/lv_test_fonts/font_2.obj
+
+# target to build an object file
+lvgl/tests/lv_test_fonts/font_2.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.obj
+.PHONY : lvgl/tests/lv_test_fonts/font_2.c.obj
+
+lvgl/tests/lv_test_fonts/font_2.i: lvgl/tests/lv_test_fonts/font_2.c.i
+
+.PHONY : lvgl/tests/lv_test_fonts/font_2.i
+
+# target to preprocess a source file
+lvgl/tests/lv_test_fonts/font_2.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.i
+.PHONY : lvgl/tests/lv_test_fonts/font_2.c.i
+
+lvgl/tests/lv_test_fonts/font_2.s: lvgl/tests/lv_test_fonts/font_2.c.s
+
+.PHONY : lvgl/tests/lv_test_fonts/font_2.s
+
+# target to generate assembly for a file
+lvgl/tests/lv_test_fonts/font_2.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.s
+.PHONY : lvgl/tests/lv_test_fonts/font_2.c.s
+
+lvgl/tests/lv_test_fonts/font_3.obj: lvgl/tests/lv_test_fonts/font_3.c.obj
+
+.PHONY : lvgl/tests/lv_test_fonts/font_3.obj
+
+# target to build an object file
+lvgl/tests/lv_test_fonts/font_3.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.obj
+.PHONY : lvgl/tests/lv_test_fonts/font_3.c.obj
+
+lvgl/tests/lv_test_fonts/font_3.i: lvgl/tests/lv_test_fonts/font_3.c.i
+
+.PHONY : lvgl/tests/lv_test_fonts/font_3.i
+
+# target to preprocess a source file
+lvgl/tests/lv_test_fonts/font_3.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.i
+.PHONY : lvgl/tests/lv_test_fonts/font_3.c.i
+
+lvgl/tests/lv_test_fonts/font_3.s: lvgl/tests/lv_test_fonts/font_3.c.s
+
+.PHONY : lvgl/tests/lv_test_fonts/font_3.s
+
+# target to generate assembly for a file
+lvgl/tests/lv_test_fonts/font_3.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.s
+.PHONY : lvgl/tests/lv_test_fonts/font_3.c.s
+
 lvgl/tests/lv_test_main.obj: lvgl/tests/lv_test_main.c.obj
 
 .PHONY : lvgl/tests/lv_test_main.obj
@@ -6400,32 +6832,32 @@ lvgl/tests/lv_test_main.c.s:
 	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.s
 .PHONY : lvgl/tests/lv_test_main.c.s
 
-lvgl/tests/lv_test_objx/lv_test_cont.obj: lvgl/tests/lv_test_objx/lv_test_cont.c.obj
+lvgl/tests/lv_test_widgets/lv_test_label.obj: lvgl/tests/lv_test_widgets/lv_test_label.c.obj
 
-.PHONY : lvgl/tests/lv_test_objx/lv_test_cont.obj
+.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.obj
 
 # target to build an object file
-lvgl/tests/lv_test_objx/lv_test_cont.c.obj:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.obj
-.PHONY : lvgl/tests/lv_test_objx/lv_test_cont.c.obj
+lvgl/tests/lv_test_widgets/lv_test_label.c.obj:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.obj
+.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.obj
 
-lvgl/tests/lv_test_objx/lv_test_cont.i: lvgl/tests/lv_test_objx/lv_test_cont.c.i
+lvgl/tests/lv_test_widgets/lv_test_label.i: lvgl/tests/lv_test_widgets/lv_test_label.c.i
 
-.PHONY : lvgl/tests/lv_test_objx/lv_test_cont.i
+.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_objx/lv_test_cont.c.i:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.i
-.PHONY : lvgl/tests/lv_test_objx/lv_test_cont.c.i
+lvgl/tests/lv_test_widgets/lv_test_label.c.i:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.i
+.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.i
 
-lvgl/tests/lv_test_objx/lv_test_cont.s: lvgl/tests/lv_test_objx/lv_test_cont.c.s
+lvgl/tests/lv_test_widgets/lv_test_label.s: lvgl/tests/lv_test_widgets/lv_test_label.c.s
 
-.PHONY : lvgl/tests/lv_test_objx/lv_test_cont.s
+.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_objx/lv_test_cont.c.s:
-	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.s
-.PHONY : lvgl/tests/lv_test_objx/lv_test_cont.c.s
+lvgl/tests/lv_test_widgets/lv_test_label.c.s:
+	$(MAKE) -f CMakeFiles/LVGLQuickDraw.dir/build.make CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.s
+.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.s
 
 # Help Target
 help:
@@ -6443,6 +6875,12 @@ help:
 	@echo "... SerialHelper.obj"
 	@echo "... SerialHelper.i"
 	@echo "... SerialHelper.s"
+	@echo "... lv_drivers/display/GC9A01.obj"
+	@echo "... lv_drivers/display/GC9A01.i"
+	@echo "... lv_drivers/display/GC9A01.s"
+	@echo "... lv_drivers/display/ILI9341.obj"
+	@echo "... lv_drivers/display/ILI9341.i"
+	@echo "... lv_drivers/display/ILI9341.s"
 	@echo "... lv_drivers/display/R61581.obj"
 	@echo "... lv_drivers/display/R61581.i"
 	@echo "... lv_drivers/display/R61581.s"
@@ -6458,12 +6896,18 @@ help:
 	@echo "... lv_drivers/display/UC1610.obj"
 	@echo "... lv_drivers/display/UC1610.i"
 	@echo "... lv_drivers/display/UC1610.s"
+	@echo "... lv_drivers/display/drm.obj"
+	@echo "... lv_drivers/display/drm.i"
+	@echo "... lv_drivers/display/drm.s"
 	@echo "... lv_drivers/display/fbdev.obj"
 	@echo "... lv_drivers/display/fbdev.i"
 	@echo "... lv_drivers/display/fbdev.s"
 	@echo "... lv_drivers/display/monitor.obj"
 	@echo "... lv_drivers/display/monitor.i"
 	@echo "... lv_drivers/display/monitor.s"
+	@echo "... lv_drivers/gtkdrv/gtkdrv.obj"
+	@echo "... lv_drivers/gtkdrv/gtkdrv.i"
+	@echo "... lv_drivers/gtkdrv/gtkdrv.s"
 	@echo "... lv_drivers/indev/AD_touch.obj"
 	@echo "... lv_drivers/indev/AD_touch.i"
 	@echo "... lv_drivers/indev/AD_touch.s"
@@ -6488,6 +6932,9 @@ help:
 	@echo "... lv_drivers/indev/mousewheel.obj"
 	@echo "... lv_drivers/indev/mousewheel.i"
 	@echo "... lv_drivers/indev/mousewheel.s"
+	@echo "... lv_drivers/win32drv/win32drv.obj"
+	@echo "... lv_drivers/win32drv/win32drv.i"
+	@echo "... lv_drivers/win32drv/win32drv.s"
 	@echo "... lv_drivers/win_drv.obj"
 	@echo "... lv_drivers/win_drv.i"
 	@echo "... lv_drivers/win_drv.s"
@@ -6797,18 +7244,15 @@ help:
 	@echo "... lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.obj"
 	@echo "... lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.i"
 	@echo "... lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.s"
-	@echo "... lvgl/porting/lv_port_disp_template.obj"
-	@echo "... lvgl/porting/lv_port_disp_template.i"
-	@echo "... lvgl/porting/lv_port_disp_template.s"
-	@echo "... lvgl/porting/lv_port_fs_template.obj"
-	@echo "... lvgl/porting/lv_port_fs_template.i"
-	@echo "... lvgl/porting/lv_port_fs_template.s"
-	@echo "... lvgl/porting/lv_port_indev_template.obj"
-	@echo "... lvgl/porting/lv_port_indev_template.i"
-	@echo "... lvgl/porting/lv_port_indev_template.s"
-	@echo "... lvgl/src/lv_core/lv_debug.obj"
-	@echo "... lvgl/src/lv_core/lv_debug.i"
-	@echo "... lvgl/src/lv_core/lv_debug.s"
+	@echo "... lvgl/examples/porting/lv_port_disp_template.obj"
+	@echo "... lvgl/examples/porting/lv_port_disp_template.i"
+	@echo "... lvgl/examples/porting/lv_port_disp_template.s"
+	@echo "... lvgl/examples/porting/lv_port_fs_template.obj"
+	@echo "... lvgl/examples/porting/lv_port_fs_template.i"
+	@echo "... lvgl/examples/porting/lv_port_fs_template.s"
+	@echo "... lvgl/examples/porting/lv_port_indev_template.obj"
+	@echo "... lvgl/examples/porting/lv_port_indev_template.i"
+	@echo "... lvgl/examples/porting/lv_port_indev_template.s"
 	@echo "... lvgl/src/lv_core/lv_disp.obj"
 	@echo "... lvgl/src/lv_core/lv_disp.i"
 	@echo "... lvgl/src/lv_core/lv_disp.s"
@@ -6869,6 +7313,12 @@ help:
 	@echo "... lvgl/src/lv_font/lv_font_fmt_txt.obj"
 	@echo "... lvgl/src/lv_font/lv_font_fmt_txt.i"
 	@echo "... lvgl/src/lv_font/lv_font_fmt_txt.s"
+	@echo "... lvgl/src/lv_font/lv_font_loader.obj"
+	@echo "... lvgl/src/lv_font/lv_font_loader.i"
+	@echo "... lvgl/src/lv_font/lv_font_loader.s"
+	@echo "... lvgl/src/lv_font/lv_font_montserrat_10.obj"
+	@echo "... lvgl/src/lv_font/lv_font_montserrat_10.i"
+	@echo "... lvgl/src/lv_font/lv_font_montserrat_10.s"
 	@echo "... lvgl/src/lv_font/lv_font_montserrat_12.obj"
 	@echo "... lvgl/src/lv_font/lv_font_montserrat_12.i"
 	@echo "... lvgl/src/lv_font/lv_font_montserrat_12.s"
@@ -6932,12 +7382,27 @@ help:
 	@echo "... lvgl/src/lv_font/lv_font_montserrat_48.obj"
 	@echo "... lvgl/src/lv_font/lv_font_montserrat_48.i"
 	@echo "... lvgl/src/lv_font/lv_font_montserrat_48.s"
+	@echo "... lvgl/src/lv_font/lv_font_montserrat_8.obj"
+	@echo "... lvgl/src/lv_font/lv_font_montserrat_8.i"
+	@echo "... lvgl/src/lv_font/lv_font_montserrat_8.s"
 	@echo "... lvgl/src/lv_font/lv_font_simsun_16_cjk.obj"
 	@echo "... lvgl/src/lv_font/lv_font_simsun_16_cjk.i"
 	@echo "... lvgl/src/lv_font/lv_font_simsun_16_cjk.s"
+	@echo "... lvgl/src/lv_font/lv_font_unscii_16.obj"
+	@echo "... lvgl/src/lv_font/lv_font_unscii_16.i"
+	@echo "... lvgl/src/lv_font/lv_font_unscii_16.s"
 	@echo "... lvgl/src/lv_font/lv_font_unscii_8.obj"
 	@echo "... lvgl/src/lv_font/lv_font_unscii_8.i"
 	@echo "... lvgl/src/lv_font/lv_font_unscii_8.s"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_pxp.obj"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_pxp.i"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_pxp.s"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.obj"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.i"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.s"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_vglite.obj"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_vglite.i"
+	@echo "... lvgl/src/lv_gpu/lv_gpu_nxp_vglite.s"
 	@echo "... lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.obj"
 	@echo "... lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.i"
 	@echo "... lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.s"
@@ -6965,6 +7430,9 @@ help:
 	@echo "... lvgl/src/lv_misc/lv_color.obj"
 	@echo "... lvgl/src/lv_misc/lv_color.i"
 	@echo "... lvgl/src/lv_misc/lv_color.s"
+	@echo "... lvgl/src/lv_misc/lv_debug.obj"
+	@echo "... lvgl/src/lv_misc/lv_debug.i"
+	@echo "... lvgl/src/lv_misc/lv_debug.s"
 	@echo "... lvgl/src/lv_misc/lv_fs.obj"
 	@echo "... lvgl/src/lv_misc/lv_fs.i"
 	@echo "... lvgl/src/lv_misc/lv_fs.s"
@@ -7124,18 +7592,30 @@ help:
 	@echo "... lvgl/tests/lv_test_core/lv_test_core.obj"
 	@echo "... lvgl/tests/lv_test_core/lv_test_core.i"
 	@echo "... lvgl/tests/lv_test_core/lv_test_core.s"
+	@echo "... lvgl/tests/lv_test_core/lv_test_font_loader.obj"
+	@echo "... lvgl/tests/lv_test_core/lv_test_font_loader.i"
+	@echo "... lvgl/tests/lv_test_core/lv_test_font_loader.s"
 	@echo "... lvgl/tests/lv_test_core/lv_test_obj.obj"
 	@echo "... lvgl/tests/lv_test_core/lv_test_obj.i"
 	@echo "... lvgl/tests/lv_test_core/lv_test_obj.s"
 	@echo "... lvgl/tests/lv_test_core/lv_test_style.obj"
 	@echo "... lvgl/tests/lv_test_core/lv_test_style.i"
 	@echo "... lvgl/tests/lv_test_core/lv_test_style.s"
+	@echo "... lvgl/tests/lv_test_fonts/font_1.obj"
+	@echo "... lvgl/tests/lv_test_fonts/font_1.i"
+	@echo "... lvgl/tests/lv_test_fonts/font_1.s"
+	@echo "... lvgl/tests/lv_test_fonts/font_2.obj"
+	@echo "... lvgl/tests/lv_test_fonts/font_2.i"
+	@echo "... lvgl/tests/lv_test_fonts/font_2.s"
+	@echo "... lvgl/tests/lv_test_fonts/font_3.obj"
+	@echo "... lvgl/tests/lv_test_fonts/font_3.i"
+	@echo "... lvgl/tests/lv_test_fonts/font_3.s"
 	@echo "... lvgl/tests/lv_test_main.obj"
 	@echo "... lvgl/tests/lv_test_main.i"
 	@echo "... lvgl/tests/lv_test_main.s"
-	@echo "... lvgl/tests/lv_test_objx/lv_test_cont.obj"
-	@echo "... lvgl/tests/lv_test_objx/lv_test_cont.i"
-	@echo "... lvgl/tests/lv_test_objx/lv_test_cont.s"
+	@echo "... lvgl/tests/lv_test_widgets/lv_test_label.obj"
+	@echo "... lvgl/tests/lv_test_widgets/lv_test_label.i"
+	@echo "... lvgl/tests/lv_test_widgets/lv_test_label.s"
 .PHONY : help
 
 

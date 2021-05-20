@@ -10,7 +10,7 @@
 #include "lv_cpicker.h"
 #if LV_USE_CPICKER != 0
 
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_draw/lv_draw_arc.h"
 #include "../lv_themes/lv_theme.h"
 #include "../lv_core/lv_indev.h"
@@ -48,6 +48,13 @@
 
 #define TRI_OFFSET 2
 
+/* The OUTER_MASK_WIDTH define is required to assist with the placing of a mask over the outer ring of the widget as when the
+ * multicoloured radial lines are calculated for the outer ring of the widget their lengths are jittering because of the
+ * integer based arithmetic. From tests the maximum delta was found to be 2 so the current value is set to 3 to achieve
+ * appropriate masking.
+ */
+#define OUTER_MASK_WIDTH 3
+
 /**********************
  *      TYPEDEFS
  **********************/
@@ -58,7 +65,7 @@
 static lv_design_res_t lv_cpicker_design(lv_obj_t * cpicker, const lv_area_t * clip_area, lv_design_mode_t mode);
 static lv_res_t lv_cpicker_signal(lv_obj_t * cpicker, lv_signal_t sign, void * param);
 static lv_style_list_t * lv_cpicker_get_style(lv_obj_t * cpicker, uint8_t part);
-static Boolean lv_cpicker_hit(lv_obj_t * cpicker, const lv_point_t * p);
+static bool lv_cpicker_hit(lv_obj_t * cpicker, const lv_point_t * p);
 
 static void draw_rect_grad(lv_obj_t * cpicker, const lv_area_t * mask);
 static void draw_disc_grad(lv_obj_t * cpicker, const lv_area_t * mask);
@@ -144,7 +151,7 @@ lv_obj_t * lv_cpicker_create(lv_obj_t * par, const lv_obj_t * copy)
 
         lv_style_list_copy(&ext->knob.style_list, &copy_ext->knob.style_list);
         /*Refresh the style with new signal function*/
-        lv_obj_refresh_style(cpicker, LV_STYLE_PROP_ALL);
+        lv_obj_refresh_style(cpicker, LV_OBJ_PART_ALL, LV_STYLE_PROP_ALL);
     }
     refr_knob_pos(cpicker);
 
@@ -182,7 +189,7 @@ void lv_cpicker_set_type(lv_obj_t * cpicker, lv_cpicker_type_t type)
  * @param hue current selected hue [0..360]
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_hue(lv_obj_t * cpicker, uint16_t hue)
+bool lv_cpicker_set_hue(lv_obj_t * cpicker, uint16_t hue)
 {
     lv_color_hsv_t hsv = lv_cpicker_get_hsv(cpicker);
     hsv.h = hue;
@@ -195,7 +202,7 @@ Boolean lv_cpicker_set_hue(lv_obj_t * cpicker, uint16_t hue)
  * @param saturation current selected saturation [0..100]
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_saturation(lv_obj_t * cpicker, uint8_t saturation)
+bool lv_cpicker_set_saturation(lv_obj_t * cpicker, uint8_t saturation)
 {
     lv_color_hsv_t hsv = lv_cpicker_get_hsv(cpicker);
     hsv.s = saturation;
@@ -208,7 +215,7 @@ Boolean lv_cpicker_set_saturation(lv_obj_t * cpicker, uint8_t saturation)
  * @param val current selected value [0..100]
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_value(lv_obj_t * cpicker, uint8_t val)
+bool lv_cpicker_set_value(lv_obj_t * cpicker, uint8_t val)
 {
     lv_color_hsv_t hsv = lv_cpicker_get_hsv(cpicker);
     hsv.v = val;
@@ -221,7 +228,7 @@ Boolean lv_cpicker_set_value(lv_obj_t * cpicker, uint8_t val)
  * @param color current selected hsv
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_hsv(lv_obj_t * cpicker, lv_color_hsv_t hsv)
+bool lv_cpicker_set_hsv(lv_obj_t * cpicker, lv_color_hsv_t hsv)
 {
     LV_ASSERT_OBJ(cpicker, LV_OBJX_NAME);
 
@@ -237,9 +244,7 @@ Boolean lv_cpicker_set_hsv(lv_obj_t * cpicker, lv_color_hsv_t hsv)
 
     refr_knob_pos(cpicker);
 
-    if(ext->type == LV_CPICKER_TYPE_DISC) {
-        lv_obj_invalidate(cpicker);
-    }
+    lv_obj_invalidate(cpicker);
 
     return true;
 }
@@ -250,7 +255,7 @@ Boolean lv_cpicker_set_hsv(lv_obj_t * cpicker, lv_color_hsv_t hsv)
  * @param color current selected color
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_color(lv_obj_t * cpicker, lv_color_t color)
+bool lv_cpicker_set_color(lv_obj_t * cpicker, lv_color_t color)
 {
     LV_ASSERT_OBJ(cpicker, LV_OBJX_NAME);
 
@@ -282,7 +287,7 @@ void lv_cpicker_set_color_mode(lv_obj_t * cpicker, lv_cpicker_color_mode_t mode)
  * @param cpicker pointer to colorpicker object
  * @param fixed color mode cannot be changed on long press
  */
-void lv_cpicker_set_color_mode_fixed(lv_obj_t * cpicker, Boolean fixed)
+void lv_cpicker_set_color_mode_fixed(lv_obj_t * cpicker, bool fixed)
 {
     LV_ASSERT_OBJ(cpicker, LV_OBJX_NAME);
 
@@ -296,7 +301,7 @@ void lv_cpicker_set_color_mode_fixed(lv_obj_t * cpicker, Boolean fixed)
  * @param cpicker pointer to colorpicker object
  * @param en true: color the knob; false: not color the knob
  */
-void lv_cpicker_set_knob_colored(lv_obj_t * cpicker, Boolean en)
+void lv_cpicker_set_knob_colored(lv_obj_t * cpicker, bool en)
 {
     LV_ASSERT_OBJ(cpicker, LV_OBJX_NAME);
 
@@ -328,7 +333,7 @@ lv_cpicker_color_mode_t lv_cpicker_get_color_mode(lv_obj_t * cpicker)
  * @param cpicker pointer to colorpicker object
  * @return mode cannot be changed on long press
  */
-Boolean lv_cpicker_get_color_mode_fixed(lv_obj_t * cpicker)
+bool lv_cpicker_get_color_mode_fixed(lv_obj_t * cpicker)
 {
     LV_ASSERT_OBJ(cpicker, LV_OBJX_NAME);
 
@@ -412,7 +417,7 @@ lv_color_t lv_cpicker_get_color(lv_obj_t * cpicker)
  * @param cpicker pointer to color picker object
  * @return true: color the knob; false: not color the knob
  */
-Boolean lv_cpicker_get_knob_colored(lv_obj_t * cpicker)
+bool lv_cpicker_get_knob_colored(lv_obj_t * cpicker)
 {
     LV_ASSERT_OBJ(cpicker, LV_OBJX_NAME);
 
@@ -428,7 +433,6 @@ Boolean lv_cpicker_get_knob_colored(lv_obj_t * cpicker)
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-
 
 /**
  * Handle the drawing related tasks of the color_picker
@@ -483,6 +487,17 @@ static void draw_disc_grad(lv_obj_t * cpicker, const lv_area_t * mask)
     uint16_t i;
     lv_coord_t cir_w = lv_obj_get_style_scale_width(cpicker, LV_CPICKER_PART_MAIN);
 
+    /* Mask outer ring of widget to tidy up ragged edges of lines while drawing outer ring */
+    lv_area_t mask_area_out;
+    lv_area_copy(&mask_area_out, &cpicker->coords);
+    mask_area_out.x1 += OUTER_MASK_WIDTH;
+    mask_area_out.x2 -= OUTER_MASK_WIDTH;
+    mask_area_out.y1 += OUTER_MASK_WIDTH;
+    mask_area_out.y2 -= OUTER_MASK_WIDTH;
+    lv_draw_mask_radius_param_t mask_out_param;
+    lv_draw_mask_radius_init(&mask_out_param, &mask_area_out, LV_RADIUS_CIRCLE, false);
+    int16_t mask_out_id = lv_draw_mask_add(&mask_out_param, 0);
+
     /* The inner line ends will be masked out.
      * So make lines a little bit longer because the masking makes a more even result */
     lv_coord_t cir_w_extra = cir_w + line_dsc.width;
@@ -498,7 +513,8 @@ static void draw_disc_grad(lv_obj_t * cpicker, const lv_area_t * mask)
 
         lv_draw_line(&p[0], &p[1], mask, &line_dsc);
     }
-
+    /* Now remove mask to continue with inner part */
+    lv_draw_mask_remove_id(mask_out_id);
 
     /*Mask out the inner area*/
     lv_draw_rect_dsc_t bg_dsc;
@@ -562,6 +578,7 @@ static void draw_rect_grad(lv_obj_t * cpicker, const lv_area_t * mask)
     }
 
     lv_coord_t grad_w = lv_area_get_width(&grad_area);
+    if(grad_w < 1) return;
     uint16_t i_step = LV_MATH_MAX(LV_CPICKER_DEF_QF, 360 / grad_w);
     bg_dsc.radius = 0;
     bg_dsc.border_width = 0;
@@ -701,6 +718,7 @@ static lv_res_t lv_cpicker_signal(lv_obj_t * cpicker, lv_signal_t sign, void * p
         lv_obj_invalidate(cpicker);
     }
     else if(sign == LV_SIGNAL_CONTROL) {
+#if LV_USE_GROUP
         uint32_t c = *((uint32_t *)param); /*uint32_t because can be UTF-8*/
 
         if(c == LV_KEY_RIGHT || c == LV_KEY_UP) {
@@ -745,6 +763,7 @@ static lv_res_t lv_cpicker_signal(lv_obj_t * cpicker, lv_signal_t sign, void * p
                 if(res != LV_RES_OK) return res;
             }
         }
+#endif
     }
     else if(sign == LV_SIGNAL_PRESSED) {
         ext->last_change_time = lv_tick_get();
@@ -801,7 +820,7 @@ static lv_res_t lv_cpicker_signal(lv_obj_t * cpicker, lv_signal_t sign, void * p
             lv_coord_t r_in = w / 2;
             p.x -= r_in;
             p.y -= r_in;
-            Boolean on_ring = true;
+            bool on_ring = true;
             r_in -= scale_w;
             if(r_in > LV_DPI / 2) {
                 lv_style_int_t inner = lv_obj_get_style_pad_inner(cpicker, LV_CPICKER_PART_MAIN);
@@ -856,7 +875,6 @@ static lv_res_t lv_cpicker_signal(lv_obj_t * cpicker, lv_signal_t sign, void * p
     return res;
 }
 
-
 /**
  * Get the style_list descriptor of a part of the object
  * @param cpicker pointer the object
@@ -884,16 +902,15 @@ static lv_style_list_t * lv_cpicker_get_style(lv_obj_t * cpicker, uint8_t part)
     return style_dsc_p;
 }
 
-static Boolean lv_cpicker_hit(lv_obj_t * cpicker, const lv_point_t * p)
+static bool lv_cpicker_hit(lv_obj_t * cpicker, const lv_point_t * p)
 {
-    Boolean is_point_on_coords = lv_obj_is_point_on_coords(cpicker, p);
+    bool is_point_on_coords = lv_obj_is_point_on_coords(cpicker, p);
     if(!is_point_on_coords)
         return false;
 
     lv_cpicker_ext_t * ext = (lv_cpicker_ext_t *)lv_obj_get_ext_attr(cpicker);
     if(ext->type == LV_CPICKER_TYPE_RECT)
         return true;
-
 
     /*Valid clicks can be only in the circle*/
     if(_lv_area_is_point_on(&cpicker->coords, p, LV_RADIUS_CIRCLE)) return true;

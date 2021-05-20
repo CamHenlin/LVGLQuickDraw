@@ -1,5 +1,4 @@
-#include <MacTypes.h>
-#include <Types.h>
+
 #include <Quickdraw.h>
 #include <Scrap.h>
 #include <Serial.h>

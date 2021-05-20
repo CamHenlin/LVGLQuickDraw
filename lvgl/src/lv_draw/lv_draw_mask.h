@@ -13,7 +13,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include <MacTypes.h>
+#include <stdbool.h>
 #include "../lv_misc/lv_area.h"
 #include "../lv_misc/lv_color.h"
 
@@ -21,6 +21,7 @@ extern "C" {
  *      DEFINES
  *********************/
 #define LV_MASK_ID_INV  (-1)
+#define _LV_MASK_MAX_NUM     16
 
 /**********************
  *      TYPEDEFS
@@ -34,7 +35,6 @@ enum {
 };
 
 typedef uint8_t lv_draw_mask_res_t;
-
 
 enum {
     LV_DRAW_MASK_TYPE_LINE,
@@ -101,7 +101,6 @@ typedef struct {
     /*1: It's a flat line? (Near to horizontal)*/
     uint8_t flat : 1;
 
-
     /* Invert the mask. The default is: Keep the left part.
      * It is used to select left/right/top/bottom*/
     uint8_t inv: 1;
@@ -161,6 +160,13 @@ typedef struct _lv_draw_mask_map_param_t {
     } cfg;
 } lv_draw_mask_map_param_t;
 
+typedef struct {
+    void * param;
+    void * custom_id;
+} _lv_draw_mask_saved_t;
+
+typedef _lv_draw_mask_saved_t _lv_draw_mask_saved_arr_t[_LV_MASK_MAX_NUM];
+
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
@@ -173,7 +179,6 @@ typedef struct _lv_draw_mask_map_param_t {
  */
 int16_t lv_draw_mask_add(void * param, void * custom_id);
 
-
 //! @cond Doxygen_Suppress
 
 /**
@@ -182,14 +187,13 @@ int16_t lv_draw_mask_add(void * param, void * custom_id);
  * @param abs_x absolute X coordinate where the line to calculate start
  * @param abs_y absolute Y coordinate where the line to calculate start
  * @param len length of the line to calculate (in pixel count)
- * @return Oneof these values:
+ * @return One of these values:
  * - `LV_DRAW_MASK_RES_FULL_TRANSP`: the whole line is transparent. `mask_buf` is not set to zero
  * - `LV_DRAW_MASK_RES_FULL_COVER`: the whole line is fully visible. `mask_buf` is unchanged
  * - `LV_DRAW_MASK_RES_CHANGED`: `mask_buf` has changed, it shows the desired opacity of each pixel in the given line
  */
 LV_ATTRIBUTE_FAST_MEM lv_draw_mask_res_t lv_draw_mask_apply(lv_opa_t * mask_buf, lv_coord_t abs_x, lv_coord_t abs_y,
                                                             lv_coord_t len);
-
 
 //! @endcond
 
@@ -217,7 +221,6 @@ void * lv_draw_mask_remove_custom(void * custom_id);
  */
 LV_ATTRIBUTE_FAST_MEM uint8_t lv_draw_mask_get_cnt(void);
 
-
 //! @endcond
 
 /**
@@ -237,8 +240,8 @@ void lv_draw_mask_line_points_init(lv_draw_mask_line_param_t * param, lv_coord_t
 /**
  *Initialize a line mask from a point and an angle.
  * @param param pointer to a `lv_draw_mask_param_t` to initialize
- * @param px X coordiante of a point of the line
- * @param py X coordiante of a point of the line
+ * @param px X coordinate of a point of the line
+ * @param py X coordinate of a point of the line
  * @param angle right 0 deg, bottom: 90
  * @param side and element of `lv_draw_mask_line_side_t` to describe which side to keep.
  * With `LV_DRAW_MASK_LINE_SIDE_LEFT/RIGHT` and horizontal line all pixels are kept
@@ -263,9 +266,9 @@ void lv_draw_mask_angle_init(lv_draw_mask_angle_param_t * param, lv_coord_t vert
  * @param param param pointer to a `lv_draw_mask_param_t` to initialize
  * @param rect coordinates of the rectangle to affect (absolute coordinates)
  * @param radius radius of the rectangle
- * @param inv: true: keep the pixels inside teh rectangle; keep teh pixels outside of the rectangle
+ * @param inv: true: keep the pixels inside the rectangle; keep the pixels outside of the rectangle
  */
-void lv_draw_mask_radius_init(lv_draw_mask_radius_param_t * param, const lv_area_t * rect, lv_coord_t radius, Boolean inv);
+void lv_draw_mask_radius_init(lv_draw_mask_radius_param_t * param, const lv_area_t * rect, lv_coord_t radius, bool inv);
 
 /**
  * Initialize a fade mask.

@@ -39,7 +39,7 @@ typedef struct {
     lv_coord_t h;          /*Height of the image (Handled by the library)*/
     uint16_t angle;    /*rotation angle of the image*/
     lv_point_t pivot;     /*rotation center of the image*/
-    uint16_t zoom;         /*256 means no zoom, 512 double size, 128 hasl size*/
+    uint16_t zoom;         /*256 means no zoom, 512 double size, 128 half size*/
     uint8_t src_type : 2;  /*See: lv_img_src_t*/
     uint8_t auto_size : 1; /*1: automatically set the object size to the image size*/
     uint8_t cf : 5;        /*Color format from `lv_img_color_format_t`*/
@@ -81,7 +81,7 @@ void lv_img_set_src(lv_obj_t * img, const void * src_img);
  * @param img pointer to an image
  * @param en true: auto size enable, false: auto size disable
  */
-void lv_img_set_auto_size(lv_obj_t * img, Boolean autosize_en);
+void lv_img_set_auto_size(lv_obj_t * img, bool autosize_en);
 
 /**
  * Set an offset for the source of an image.
@@ -133,7 +133,7 @@ void lv_img_set_zoom(lv_obj_t * img, uint16_t zoom);
  * @param img pointer to an image object
  * @param antialias true: anti-aliased; false: not anti-aliased
  */
-void lv_img_set_antialias(lv_obj_t * img, Boolean antialias);
+void lv_img_set_antialias(lv_obj_t * img, bool antialias);
 
 /*=====================
  * Getter functions
@@ -158,7 +158,7 @@ const char * lv_img_get_file_name(const lv_obj_t * img);
  * @param img pointer to an image
  * @return true: auto size is enabled, false: auto size is disabled
  */
-Boolean lv_img_get_auto_size(const lv_obj_t * img);
+bool lv_img_get_auto_size(const lv_obj_t * img);
 
 /**
  * Get the offset.x attribute of the img object.
@@ -200,7 +200,7 @@ uint16_t lv_img_get_zoom(lv_obj_t * img);
  * @param img pointer to an image object
  * @return true: anti-aliased; false: not anti-aliased
  */
-Boolean lv_img_get_antialias(lv_obj_t * img);
+bool lv_img_get_antialias(lv_obj_t * img);
 
 /**********************
  *      MACROS

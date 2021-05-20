@@ -11,7 +11,7 @@
 #include "../lv_hal/lv_hal_disp.h"
 #include "../lv_core/lv_refr.h"
 #include "../lv_misc/lv_bidi.h"
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 
 /*********************
  *      DEFINES
@@ -40,7 +40,6 @@ LV_ATTRIBUTE_FAST_MEM static void draw_letter_normal(lv_coord_t pos_x, lv_coord_
                                                      const uint8_t * map_p, lv_color_t color, lv_opa_t opa, lv_blend_mode_t blend_mode);
 static void draw_letter_subpx(lv_coord_t pos_x, lv_coord_t pos_y, lv_font_glyph_dsc_t * g, const lv_area_t * clip_area,
                               const uint8_t * map_p, lv_color_t color, lv_opa_t opa, lv_blend_mode_t blend_mode);
-
 
 static uint8_t hex_char_to_num(char hex);
 
@@ -98,7 +97,8 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label_dsc_init(lv_draw_label_dsc_t * dsc)
     dsc->font = LV_THEME_DEFAULT_FONT_NORMAL;
     dsc->sel_start = LV_DRAW_LABEL_NO_TXT_SEL;
     dsc->sel_end = LV_DRAW_LABEL_NO_TXT_SEL;
-    dsc->sel_color = LV_COLOR_BLUE;
+    dsc->sel_color = LV_COLOR_BLACK;
+    dsc->sel_bg_color = LV_COLOR_BLUE;
     dsc->bidi_dir = LV_BIDI_DIR_LTR;
 }
 
@@ -111,8 +111,10 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label_dsc_init(lv_draw_label_dsc_t * dsc)
  * @param hint pointer to a `lv_draw_label_hint_t` variable.
  * It is managed by the drawer to speed up the drawing of very long texts (thousands of lines).
  */
-LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area_t * mask, lv_draw_label_dsc_t * dsc,
-                                         const char * txt, lv_draw_label_hint_t * hint)
+LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area_t * mask,
+                                         const lv_draw_label_dsc_t * dsc,
+                                         const char * txt,
+                                         lv_draw_label_hint_t * hint)
 {
 
     if(dsc->opa <= LV_OPA_MIN) return;
@@ -123,9 +125,8 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area
     if(txt[0] == '\0')  return;
 
     lv_area_t clipped_area;
-    Boolean clip_ok = _lv_area_intersect(&clipped_area, coords, mask);
+    bool clip_ok = _lv_area_intersect(&clipped_area, coords, mask);
     if(!clip_ok) return;
-
 
     if((dsc->flag & LV_TXT_FLAG_EXPAND) == 0) {
         /*Normally use the label's width as width*/
@@ -206,33 +207,32 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area
 
     lv_opa_t opa = dsc->opa;
 
-    uint16_t sel_start = dsc->sel_start;
-    uint16_t sel_end = dsc->sel_end;
+    uint32_t sel_start = dsc->sel_start;
+    uint32_t sel_end = dsc->sel_end;
     if(sel_start > sel_end) {
-        uint16_t tmp = sel_start;
+        uint32_t tmp = sel_start;
         sel_start = sel_end;
         sel_end = tmp;
     }
-
     lv_draw_line_dsc_t line_dsc;
+
     if((dsc->decor & LV_TEXT_DECOR_UNDERLINE) || (dsc->decor & LV_TEXT_DECOR_STRIKETHROUGH)) {
         lv_draw_line_dsc_init(&line_dsc);
         line_dsc.color = dsc->color;
-        line_dsc.width = (dsc->font->line_height + 5) / 10;    /*+5 for rounding*/
+        line_dsc.width = font->underline_thickness ? font->underline_thickness : 1;
         line_dsc.opa = dsc->opa;
         line_dsc.blend_mode = dsc->blend_mode;
     }
 
     cmd_state_t cmd_state = CMD_STATE_WAIT;
     uint32_t i;
-    uint16_t par_start = 0;
+    uint32_t par_start = 0;
     lv_color_t recolor;
     int32_t letter_w;
 
-
     lv_draw_rect_dsc_t draw_dsc_sel;
     lv_draw_rect_dsc_init(&draw_dsc_sel);
-    draw_dsc_sel.bg_color = dsc->sel_color;
+    draw_dsc_sel.bg_color = dsc->sel_bg_color;
 
     int32_t pos_x_start = pos.x;
     /*Write out all lines*/
@@ -250,11 +250,11 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area
 #endif
 
         while(i < line_end - line_start) {
-            uint16_t logical_char_pos = 0;
+            uint32_t logical_char_pos = 0;
             if(sel_start != 0xFFFF && sel_end != 0xFFFF) {
 #if LV_USE_BIDI
                 logical_char_pos = _lv_txt_encoded_get_char_id(txt, line_start);
-                uint16_t t = _lv_txt_encoded_get_char_id(bidi_txt, i);
+                uint32_t t = _lv_txt_encoded_get_char_id(bidi_txt, i);
                 logical_char_pos += _lv_bidi_get_logical_pos(bidi_txt, NULL, line_end - line_start, dsc->bidi_dir, t, NULL);
 #else
                 logical_char_pos = _lv_txt_encoded_get_char_id(txt, line_start + i);
@@ -318,6 +318,7 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area
                     sel_coords.x2 = pos.x + letter_w + dsc->letter_space - 1;
                     sel_coords.y2 = pos.y + line_height - 1;
                     lv_draw_rect(&sel_coords, mask, &draw_dsc_sel);
+                    color = dsc->sel_color;
                 }
             }
 
@@ -342,7 +343,7 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area
             lv_point_t p1;
             lv_point_t p2;
             p1.x = pos_x_start;
-            p1.y = pos.y + dsc->font->line_height - dsc->font->base_line + line_dsc.width / 2 + 1;
+            p1.y = pos.y + dsc->font->line_height - dsc->font->base_line - font->underline_position;
             p2.x = pos.x;
             p2.y = p1.y;
             lv_draw_line(&p1, &p2, mask, &line_dsc);
@@ -385,7 +386,6 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area
  *   STATIC FUNCTIONS
  **********************/
 
-
 /**
  * Draw a letter in the Virtual Display Buffer
  * @param pos_p left-top coordinate of the latter
@@ -409,9 +409,9 @@ LV_ATTRIBUTE_FAST_MEM static void lv_draw_letter(const lv_point_t * pos_p, const
     }
 
     lv_font_glyph_dsc_t g;
-    Boolean g_ret = lv_font_get_glyph_dsc(font_p, &g, letter, '\0');
+    bool g_ret = lv_font_get_glyph_dsc(font_p, &g, letter, '\0');
     if(g_ret == false)  {
-        /* Add waring if the dsc is not found
+        /* Add warning if the dsc is not found
          * but do not print warning for non printable ASCII chars (e.g. '\n')*/
         if(letter >= 0x20) {
             LV_LOG_WARN("lv_draw_letter: glyph dsc. not found");
@@ -420,7 +420,7 @@ LV_ATTRIBUTE_FAST_MEM static void lv_draw_letter(const lv_point_t * pos_p, const
     }
 
     /* Don't draw anything if the character is empty. E.g. space */
-    if((g.box_h == 0) && (g.box_w == 0)) return;
+    if((g.box_h == 0) || (g.box_w == 0)) return;
 
     int32_t pos_x = pos_p->x + g.ofs_x;
     int32_t pos_y = pos_p->y + (font_p->line_height - font_p->base_line) - g.box_h - g.ofs_y;
@@ -432,7 +432,6 @@ LV_ATTRIBUTE_FAST_MEM static void lv_draw_letter(const lv_point_t * pos_p, const
        pos_y > clip_area->y2)  {
         return;
     }
-
 
     const uint8_t * map_p = lv_font_get_glyph_bitmap(font_p, letter);
     if(map_p == NULL) {
@@ -447,7 +446,6 @@ LV_ATTRIBUTE_FAST_MEM static void lv_draw_letter(const lv_point_t * pos_p, const
         draw_letter_normal(pos_x, pos_y, &g, clip_area, map_p, color, opa, blend_mode);
     }
 }
-
 
 LV_ATTRIBUTE_FAST_MEM static void draw_letter_normal(lv_coord_t pos_x, lv_coord_t pos_y, lv_font_glyph_dsc_t * g,
                                                      const lv_area_t * clip_area,
@@ -520,7 +518,8 @@ LV_ATTRIBUTE_FAST_MEM static void draw_letter_normal(lv_coord_t pos_x, lv_coord_
     uint32_t col_bit;
     col_bit = bit_ofs & 0x7; /* "& 0x7" equals to "% 8" just faster */
 
-    uint32_t mask_buf_size = box_w * box_h > LV_HOR_RES_MAX ? LV_HOR_RES_MAX : box_w * box_h;
+    lv_coord_t hor_res = lv_disp_get_hor_res(_lv_refr_get_disp_refreshing());
+    uint32_t mask_buf_size = box_w * box_h > hor_res ? hor_res : box_w * box_h;
     lv_opa_t * mask_buf = _lv_mem_buf_get(mask_buf_size);
     int32_t mask_p = 0;
 
@@ -564,7 +563,6 @@ LV_ATTRIBUTE_FAST_MEM static void draw_letter_normal(lv_coord_t pos_x, lv_coord_
             mask_p++;
         }
 
-
         /*Apply masks if any*/
         if(other_mask_cnt) {
             lv_draw_mask_res_t mask_res = lv_draw_mask_apply(mask_buf + mask_p_start, fill_area.x1, fill_area.y2,
@@ -607,6 +605,7 @@ LV_ATTRIBUTE_FAST_MEM static void draw_letter_normal(lv_coord_t pos_x, lv_coord_
 static void draw_letter_subpx(lv_coord_t pos_x, lv_coord_t pos_y, lv_font_glyph_dsc_t * g, const lv_area_t * clip_area,
                               const uint8_t * map_p, lv_color_t color, lv_opa_t opa, lv_blend_mode_t blend_mode)
 {
+#if LV_USE_FONT_SUBPX
     const uint8_t * bpp_opa_table;
     uint32_t bitmask_init;
     uint32_t bitmask;
@@ -640,7 +639,6 @@ static void draw_letter_subpx(lv_coord_t pos_x, lv_coord_t pos_y, lv_font_glyph_
     int32_t box_w = g->box_w;
     int32_t box_h = g->box_h;
     int32_t width_bit = box_w * bpp; /*Letter width in bits*/
-
 
     /* Calculate the col/row start/end on the map*/
     int32_t col_start = pos_x >= clip_area->x1 ? 0 : (clip_area->x1 - pos_x) * 3;
@@ -758,7 +756,7 @@ static void draw_letter_subpx(lv_coord_t pos_x, lv_coord_t pos_y, lv_font_glyph_
             }
 
             /*Go to the next column*/
-            if(col_bit < 8 - bpp) {
+            if(col_bit < (int32_t)(8 - bpp)) {
                 col_bit += bpp;
                 bitmask = bitmask >> bpp;
             }
@@ -778,7 +776,7 @@ static void draw_letter_subpx(lv_coord_t pos_x, lv_coord_t pos_y, lv_font_glyph_
             }
         }
 
-        if((uint32_t) mask_p + (col_end - col_start) < mask_buf_size) {
+        if((int32_t) mask_p + (col_end - col_start) < mask_buf_size) {
             map_area.y2 ++;
         }
         else {
@@ -806,8 +804,10 @@ static void draw_letter_subpx(lv_coord_t pos_x, lv_coord_t pos_y, lv_font_glyph_
 
     _lv_mem_buf_release(mask_buf);
     _lv_mem_buf_release(color_buf);
+#else
+    LV_LOG_WARN("Can't draw sub-pixel rendered letter because LV_USE_FONT_SUBPX == 0 in lv_conf.h");
+#endif
 }
-
 
 /**
  * Convert a hexadecimal characters to a number (0..15)

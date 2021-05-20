@@ -13,8 +13,8 @@ file(GLOB_RECURSE SOURCES  "lv_drivers/*.c" "lv_examples/*.c"  "lvgl/*.c" )
 
 add_application(LVGLQuickDraw
     SerialHelper.c
-	Sample.c
-	Sample.r
     ${SOURCES}
     ${INCLUDES}
+	Sample.c
+	Sample.r
    )

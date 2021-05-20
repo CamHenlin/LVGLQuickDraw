@@ -7,7 +7,7 @@
  *      INCLUDES
  *********************/
 #include <stdio.h>
-#include <MacTypes.h>
+#include <stdbool.h>
 #include "lv_draw_mask.h"
 #include "lv_draw_blend.h"
 #include "../lv_core/lv_refr.h"
@@ -26,13 +26,13 @@
  **********************/
 LV_ATTRIBUTE_FAST_MEM static void draw_line_skew(const lv_point_t * point1, const lv_point_t * point2,
                                                  const lv_area_t * clip,
-                                                 lv_draw_line_dsc_t * dsc);
+                                                 const lv_draw_line_dsc_t * dsc);
 LV_ATTRIBUTE_FAST_MEM static void draw_line_hor(const lv_point_t * point1, const lv_point_t * point2,
                                                 const lv_area_t * clip,
-                                                lv_draw_line_dsc_t * dsc);
+                                                const lv_draw_line_dsc_t * dsc);
 LV_ATTRIBUTE_FAST_MEM static void draw_line_ver(const lv_point_t * point1, const lv_point_t * point2,
                                                 const lv_area_t * clip,
-                                                lv_draw_line_dsc_t * dsc);
+                                                const lv_draw_line_dsc_t * dsc);
 
 /**********************
  *  STATIC VARIABLES
@@ -58,12 +58,11 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_line_dsc_init(lv_draw_line_dsc_t * dsc)
  * Draw a line
  * @param point1 first point of the line
  * @param point2 second point of the line
- * @param mask the line will be drawn only on this area
- * @param style pointer to a line's style
- * @param opa_scale scale down all opacities by the factor
+ * @param clip the line will be drawn only in this area
+ * @param dsc pointer to an initialized `lv_draw_line_dsc_t` variable
  */
 LV_ATTRIBUTE_FAST_MEM void lv_draw_line(const lv_point_t * point1, const lv_point_t * point2, const lv_area_t * clip,
-                                        lv_draw_line_dsc_t * dsc)
+                                        const lv_draw_line_dsc_t * dsc)
 {
     if(dsc->width == 0) return;
     if(dsc->opa <= LV_OPA_MIN) return;
@@ -76,14 +75,13 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_line(const lv_point_t * point1, const lv_poin
     clip_line.y1 = LV_MATH_MIN(point1->y, point2->y) - dsc->width / 2;
     clip_line.y2 = LV_MATH_MAX(point1->y, point2->y) + dsc->width / 2;
 
-    Boolean is_common;
+    bool is_common;
     is_common = _lv_area_intersect(&clip_line, &clip_line, clip);
     if(!is_common) return;
 
     if(point1->y == point2->y) draw_line_hor(point1, point2, &clip_line, dsc);
     else if(point1->x == point2->x) draw_line_ver(point1, point2, &clip_line, dsc);
     else draw_line_skew(point1, point2, &clip_line, dsc);
-
 
     if(dsc->round_end || dsc->round_start) {
         lv_draw_rect_dsc_t cir_dsc;
@@ -120,7 +118,7 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_line(const lv_point_t * point1, const lv_poin
 
 LV_ATTRIBUTE_FAST_MEM static void draw_line_hor(const lv_point_t * point1, const lv_point_t * point2,
                                                 const lv_area_t * clip,
-                                                lv_draw_line_dsc_t * dsc)
+                                                const lv_draw_line_dsc_t * dsc)
 {
     lv_opa_t opa = dsc->opa;
 
@@ -133,9 +131,9 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_hor(const lv_point_t * point1, const
     int32_t w_half0 = w >> 1;
     int32_t w_half1 = w_half0 + (w & 0x1); /*Compensate rounding error*/
 
-    Boolean dashed = dsc->dash_gap && dsc->dash_width ? true : false;
+    bool dashed = dsc->dash_gap && dsc->dash_width ? true : false;
 
-    Boolean simple_mode = true;
+    bool simple_mode = true;
     if(lv_draw_mask_get_cnt()) simple_mode = false;
     else if(dashed) simple_mode = false;
 
@@ -155,7 +153,7 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_hor(const lv_point_t * point1, const
     else {
         /* Get clipped fill area which is the real draw area.
          * It is always the same or inside `fill_area` */
-        Boolean is_common;
+        bool is_common;
         is_common = _lv_area_intersect(&draw_area, clip, &draw_area);
         if(!is_common) return;
 
@@ -188,7 +186,7 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_hor(const lv_point_t * point1, const
             if(dashed) {
                 if(mask_res != LV_DRAW_MASK_RES_TRANSP) {
                     lv_style_int_t dash_cnt = dash_start;
-                    uint32_t i;
+                    lv_coord_t i;
                     for(i = 0; i < draw_area_w; i++, dash_cnt++) {
                         if(dash_cnt <= dsc->dash_width) {
                             int16_t diff = dsc->dash_width - dash_cnt;
@@ -218,10 +216,9 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_hor(const lv_point_t * point1, const
     }
 }
 
-
 LV_ATTRIBUTE_FAST_MEM static void draw_line_ver(const lv_point_t * point1, const lv_point_t * point2,
                                                 const lv_area_t * clip,
-                                                lv_draw_line_dsc_t * dsc)
+                                                const lv_draw_line_dsc_t * dsc)
 {
     lv_opa_t opa = dsc->opa;
 
@@ -234,9 +231,9 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_ver(const lv_point_t * point1, const
     int32_t w_half0 = w >> 1;
     int32_t w_half1 = w_half0 + (w & 0x1); /*Compensate rounding error*/
 
-    Boolean dashed = dsc->dash_gap && dsc->dash_width ? true : false;
+    bool dashed = dsc->dash_gap && dsc->dash_width ? true : false;
 
-    Boolean simple_mode = true;
+    bool simple_mode = true;
     if(lv_draw_mask_get_cnt()) simple_mode = false;
     else if(dashed) simple_mode = false;
 
@@ -256,7 +253,7 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_ver(const lv_point_t * point1, const
     else {
         /* Get clipped fill area which is the real draw area.
          * It is always the same or inside `fill_area` */
-        Boolean is_common;
+        bool is_common;
         is_common = _lv_area_intersect(&draw_area, clip, &draw_area);
         if(!is_common) return;
 
@@ -279,7 +276,7 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_ver(const lv_point_t * point1, const
 
         lv_style_int_t dash_start = 0;
         if(dashed) {
-            dash_start = (vdb->area.x1 + draw_area.x1) % (dsc->dash_gap + dsc->dash_width);
+            dash_start = (vdb->area.y1 + draw_area.y1) % (dsc->dash_gap + dsc->dash_width);
         }
 
         lv_style_int_t dash_cnt = dash_start;
@@ -313,10 +310,9 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_ver(const lv_point_t * point1, const
     }
 }
 
-
 LV_ATTRIBUTE_FAST_MEM static void draw_line_skew(const lv_point_t * point1, const lv_point_t * point2,
                                                  const lv_area_t * clip,
-                                                 lv_draw_line_dsc_t * dsc)
+                                                 const lv_draw_line_dsc_t * dsc)
 {
     /*Keep the great y in p1*/
     lv_point_t p1;
@@ -336,7 +332,7 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_skew(const lv_point_t * point1, cons
 
     int32_t xdiff = p2.x - p1.x;
     int32_t ydiff = p2.y - p1.y;
-    Boolean flat = LV_MATH_ABS(xdiff) > LV_MATH_ABS(ydiff) ? true : false;
+    bool flat = LV_MATH_ABS(xdiff) > LV_MATH_ABS(ydiff) ? true : false;
 
     static const uint8_t wcorr[] = {
         128, 128, 128, 129, 129, 130, 130, 131,
@@ -364,7 +360,7 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_skew(const lv_point_t * point1, cons
     /* Get the union of `coords` and `clip`*/
     /* `clip` is already truncated to the `vdb` size
      * in 'lv_refr_area' function */
-    Boolean is_common = _lv_area_intersect(&draw_area, &draw_area, clip);
+    bool is_common = _lv_area_intersect(&draw_area, &draw_area, clip);
     if(is_common == false) return;
 
     lv_draw_mask_line_param_t mask_left_param;
@@ -425,7 +421,8 @@ LV_ATTRIBUTE_FAST_MEM static void draw_line_skew(const lv_point_t * point1, cons
 
     /*Draw the background line by line*/
     int32_t h;
-    size_t mask_buf_size = LV_MATH_MIN(lv_area_get_size(&draw_area), LV_HOR_RES_MAX);
+    uint32_t hor_res = (uint32_t)lv_disp_get_hor_res(disp);
+    size_t mask_buf_size = LV_MATH_MIN(lv_area_get_size(&draw_area), hor_res);
     lv_opa_t * mask_buf = _lv_mem_buf_get(mask_buf_size);
 
     lv_area_t fill_area;

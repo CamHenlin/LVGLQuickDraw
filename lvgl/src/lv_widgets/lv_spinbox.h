@@ -19,7 +19,7 @@ extern "C" {
 
 /*Testing of dependencies*/
 #if LV_USE_TEXTAREA == 0
-#error "lv_spinbox: lv_ta is required. Enable it in lv_conf.h (LV_USE_TEXTAREA  1) "
+#error "lv_spinbox: lv_ta is required. Enable it in lv_conf.h (LV_USE_TEXTAREA 1)"
 #endif
 
 #include "../lv_core/lv_obj.h"
@@ -78,7 +78,7 @@ lv_obj_t * lv_spinbox_create(lv_obj_t * par, const lv_obj_t * copy);
  * @param spinbox pointer to spinbox
  * @param b true or false to enable or disable (default)
  */
-void lv_spinbox_set_rollover(lv_obj_t * spinbox, Boolean b);
+void lv_spinbox_set_rollover(lv_obj_t * spinbox, bool b);
 
 /**
  * Set spinbox value
@@ -126,7 +126,7 @@ void lv_spinbox_set_padding_left(lv_obj_t * spinbox, uint8_t padding);
  * Get spinbox rollover function status
  * @param spinbox pointer to spinbox
  */
-Boolean lv_spinbox_get_rollover(lv_obj_t * spinbox);
+bool lv_spinbox_get_rollover(lv_obj_t * spinbox);
 
 /**
  * Get the spinbox numeral value (user has to convert to float according to its digit format)
@@ -134,6 +134,18 @@ Boolean lv_spinbox_get_rollover(lv_obj_t * spinbox);
  * @return value integer value of the spinbox
  */
 int32_t lv_spinbox_get_value(lv_obj_t * spinbox);
+
+/**
+ * Get the spinbox step value (user has to convert to float according to its digit format)
+ * @param spinbox pointer to spinbox
+ * @return value integer step value of the spinbox
+ */
+static inline int32_t lv_spinbox_get_step(lv_obj_t * spinbox)
+{
+    lv_spinbox_ext_t * ext = (lv_spinbox_ext_t *)lv_obj_get_ext_attr(spinbox);
+
+    return ext->step;
+}
 
 /*=====================
  * Other functions

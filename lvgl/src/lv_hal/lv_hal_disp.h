@@ -16,7 +16,7 @@ extern "C" {
  *      INCLUDES
  *********************/
 #include <stdint.h>
-#include <MacTypes.h>
+#include <stdbool.h>
 #include "lv_hal.h"
 #include "../lv_misc/lv_color.h"
 #include "../lv_misc/lv_area.h"
@@ -52,13 +52,21 @@ typedef struct {
     void * buf_act;
     uint32_t size; /*In pixel count*/
     lv_area_t area;
-    volatile int
-    flushing;      /*1: flushing is in progress. (It can't be a bitfield because when it's cleared from IRQ Read-Modify-Write issue might occur)*/
-    volatile int
-    flushing_last; /*1: It was the last chunk to flush. (It can't be a bitfield because when it's cleared from IRQ Read-Modify-Write issue might occur)*/
+    /*1: flushing is in progress. (It can't be a bit field because when it's cleared from IRQ Read-Modify-Write issue might occur)*/
+    volatile int flushing;
+    /*1: It was the last chunk to flush. (It can't be a bi tfield because when it's cleared from IRQ Read-Modify-Write issue might occur)*/
+    volatile int flushing_last;
     volatile uint32_t last_area         : 1; /*1: the last area is being rendered*/
     volatile uint32_t last_part         : 1; /*1: the last part of the current area is being rendered*/
 } lv_disp_buf_t;
+
+
+typedef enum {
+    LV_DISP_ROT_NONE = 0,
+    LV_DISP_ROT_90,
+    LV_DISP_ROT_180,
+    LV_DISP_ROT_270
+} lv_disp_rot_t;
 
 /**
  * Display Driver structure to be registered by HAL
@@ -75,10 +83,11 @@ typedef struct _disp_drv_t {
 #if LV_ANTIALIAS
     uint32_t antialiasing : 1; /**< 1: antialiasing is enabled on this display. */
 #endif
-    uint32_t rotated : 1; /**< 1: turn the display by 90 degree. @warning Does not update coordinates for you!*/
+    uint32_t rotated : 2;
+    uint32_t sw_rotate : 1; /**< 1: use software rotation (slower) */
 
 #if LV_COLOR_SCREEN_TRANSP
-    /**Handle if the the screen doesn't have a solid (opa == LV_OPA_COVER) background.
+    /**Handle if the screen doesn't have a solid (opa == LV_OPA_COVER) background.
      * Use only if required because it's slower.*/
     uint32_t screen_transp : 1;
 #endif
@@ -111,7 +120,14 @@ typedef struct _disp_drv_t {
      * User can execute very simple tasks here or yield the task */
     void (*wait_cb)(struct _disp_drv_t * disp_drv);
 
+    /** OPTIONAL: Called when lvgl needs any CPU cache that affects rendering to be cleaned */
+    void (*clean_dcache_cb)(struct _disp_drv_t * disp_drv);
+
+    /** OPTIONAL: called to wait while the gpu is working */
+    void (*gpu_wait_cb)(struct _disp_drv_t * disp_drv);
+
 #if LV_USE_GPU
+
     /** OPTIONAL: Blend two memories using opacity (GPU only)*/
     void (*gpu_blend_cb)(struct _disp_drv_t * disp_drv, lv_color_t * dest, const lv_color_t * src, uint32_t length,
                          lv_opa_t opa);
@@ -146,9 +162,20 @@ typedef struct _disp_t {
 
     /** Screens of the display*/
     lv_ll_t scr_ll;
-    struct _lv_obj_t * act_scr; /**< Currently active screen on this display */
+    struct _lv_obj_t * act_scr;         /**< Currently active screen on this display */
+    struct _lv_obj_t * prev_scr;        /**< Previous screen. Used during screen animations */
+#if LV_USE_ANIMATION
+    struct _lv_obj_t * scr_to_load;     /**< The screen prepared to load in lv_scr_load_anim*/
+#endif
     struct _lv_obj_t * top_layer; /**< @see lv_disp_get_layer_top */
     struct _lv_obj_t * sys_layer; /**< @see lv_disp_get_layer_sys */
+
+uint8_t del_prev  :
+    1;        /**< 1: Automatically delete the previous screen when the screen load animation is ready */
+
+    lv_color_t bg_color;          /**< Default display color when screens are transparent*/
+    const void * bg_img;       /**< An image source to display as wallpaper*/
+    lv_opa_t bg_opa;              /**<Opacity of the background color or wallpaper */
 
     /** Invalidated (marked to redraw) areas*/
     lv_area_t inv_areas[LV_INV_BUF_SIZE];
@@ -158,7 +185,6 @@ typedef struct _disp_t {
     /*Miscellaneous data*/
     uint32_t last_activity_time; /**< Last time there was activity on this display */
 } lv_disp_t;
-
 
 typedef enum {
     LV_DISP_SIZE_SMALL,
@@ -248,14 +274,14 @@ lv_coord_t lv_disp_get_ver_res(lv_disp_t * disp);
  * @param disp pointer to a display (NULL to use the default display)
  * @return true: anti-aliasing is enabled; false: disabled
  */
-Boolean lv_disp_get_antialiasing(lv_disp_t * disp);
+bool lv_disp_get_antialiasing(lv_disp_t * disp);
 
 /**
  * Get the DPI of the display
  * @param disp pointer to a display (NULL to use the default display)
  * @return dpi of the display
  */
-uint32_t lv_disp_get_dpi(lv_disp_t * disp);
+lv_coord_t lv_disp_get_dpi(lv_disp_t * disp);
 
 /**
  * Get the size category of the display based on it's hor. res. and dpi.
@@ -263,6 +289,20 @@ uint32_t lv_disp_get_dpi(lv_disp_t * disp);
  * @return LV_DISP_SIZE_SMALL/MEDIUM/LARGE/EXTRA_LARGE
  */
 lv_disp_size_t lv_disp_get_size_category(lv_disp_t * disp);
+
+/**
+ * Set the rotation of this display.
+ * @param disp pointer to a display (NULL to use the default display)
+ * @param rotation rotation angle
+ */
+void lv_disp_set_rotation(lv_disp_t * disp, lv_disp_rot_t rotation);
+
+/**
+ * Get the current rotation of this display.
+ * @param disp pointer to a display (NULL to use the default display)
+ * @return rotation angle
+ */
+lv_disp_rot_t lv_disp_get_rotation(lv_disp_t * disp);
 
 //! @cond Doxygen_Suppress
 
@@ -278,7 +318,7 @@ LV_ATTRIBUTE_FLUSH_READY void lv_disp_flush_ready(lv_disp_drv_t * disp_drv);
  * @param disp_drv pointer to display driver
  * @return true: it's the last area to flush; false: there are other areas too which will be refreshed soon
  */
-LV_ATTRIBUTE_FLUSH_READY Boolean lv_disp_flush_is_last(lv_disp_drv_t * disp_drv);
+LV_ATTRIBUTE_FLUSH_READY bool lv_disp_flush_is_last(lv_disp_drv_t * disp_drv);
 
 //! @endcond
 
@@ -313,7 +353,7 @@ void _lv_disp_pop_from_inv_buf(lv_disp_t * disp, uint16_t num);
  * @param disp pointer to to display to check
  * @return true: double buffered; false: not double buffered
  */
-Boolean lv_disp_is_double_buf(lv_disp_t * disp);
+bool lv_disp_is_double_buf(lv_disp_t * disp);
 
 /**
  * Check the driver configuration if it's TRUE double buffered (both `buf1` and `buf2` are set and
@@ -321,7 +361,7 @@ Boolean lv_disp_is_double_buf(lv_disp_t * disp);
  * @param disp pointer to to display to check
  * @return true: double buffered; false: not double buffered
  */
-Boolean lv_disp_is_true_double_buf(lv_disp_t * disp);
+bool lv_disp_is_true_double_buf(lv_disp_t * disp);
 
 /**********************
  *      MACROS

@@ -19,11 +19,11 @@ extern "C" {
 
 /*Testing of dependencies*/
 #if LV_USE_PAGE == 0
-#error "lv_ddlist: lv_page is required. Enable it in lv_conf.h (LV_USE_PAGE  1) "
+#error "lv_ddlist: lv_page is required. Enable it in lv_conf.h (LV_USE_PAGE 1)"
 #endif
 
 #if LV_USE_LABEL == 0
-#error "lv_ddlist: lv_label is required. Enable it in lv_conf.h (LV_USE_LABEL  1) "
+#error "lv_ddlist: lv_label is required. Enable it in lv_conf.h (LV_USE_LABEL 1)"
 #endif
 
 #include "../lv_widgets/lv_page.h"
@@ -123,9 +123,9 @@ void lv_dropdown_set_options_static(lv_obj_t * ddlist, const char * options);
  * Add an options to a drop down list from a string.  Only works for dynamic options.
  * @param ddlist pointer to drop down list object
  * @param option a string without '\n'. E.g. "Four"
- * @param pos  the insert position, indexed from 0, LV_DROPDOWN_POS_LAST = end of string
+ * @param pos the insert position, indexed from 0, LV_DROPDOWN_POS_LAST = end of string
  */
-void lv_dropdown_add_option(lv_obj_t * ddlist, const char * option, uint16_t pos);
+void lv_dropdown_add_option(lv_obj_t * ddlist, const char * option, uint32_t pos);
 
 /**
  * Set the selected option
@@ -133,7 +133,6 @@ void lv_dropdown_add_option(lv_obj_t * ddlist, const char * option, uint16_t pos
  * @param sel_opt id of the selected option (0 ... number of option - 1);
  */
 void lv_dropdown_set_selected(lv_obj_t * ddlist, uint16_t sel_opt);
-
 
 /**
  * Set the direction of the a drop down list
@@ -161,7 +160,7 @@ void lv_dropdown_set_symbol(lv_obj_t * ddlist, const char * symbol);
  * @param ddlist pointer to a drop down list object
  * @param show true/false
  */
-void lv_dropdown_set_show_selected(lv_obj_t * ddlist, Boolean show);
+void lv_dropdown_set_show_selected(lv_obj_t * ddlist, bool show);
 
 /*=====================
  * Getter functions
@@ -201,7 +200,7 @@ uint16_t lv_dropdown_get_option_cnt(const lv_obj_t * ddlist);
  * @param buf pointer to an array to store the string
  * @param buf_size size of `buf` in bytes. 0: to ignore it.
  */
-void lv_dropdown_get_selected_str(const lv_obj_t * ddlist, char * buf, uint16_t buf_size);
+void lv_dropdown_get_selected_str(const lv_obj_t * ddlist, char * buf, uint32_t buf_size);
 
 /**
  * Get the fix height value.
@@ -229,7 +228,7 @@ lv_dropdown_dir_t lv_dropdown_get_dir(const lv_obj_t * ddlist);
  * @param ddlist pointer to a drop down list object
  * @return true/false
  */
-Boolean lv_dropdown_get_show_selected(lv_obj_t * ddlist);
+bool lv_dropdown_get_show_selected(lv_obj_t * ddlist);
 
 /*=====================
  * Other functions

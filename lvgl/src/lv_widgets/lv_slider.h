@@ -19,7 +19,7 @@ extern "C" {
 
 /*Testing of dependencies*/
 #if LV_USE_BAR == 0
-#error "lv_slider: lv_bar is required. Enable it in lv_conf.h (LV_USE_BAR  1) "
+#error "lv_slider: lv_bar is required. Enable it in lv_conf.h (LV_USE_BAR 1)"
 #endif
 
 #include "../lv_core/lv_obj.h"
@@ -49,6 +49,7 @@ typedef struct {
     lv_area_t right_knob_area;
     int16_t * value_to_set; /* Which bar value to set */
     uint8_t dragging : 1;       /*1: the slider is being dragged*/
+    uint8_t left_knob_focus : 1; /*1: with encoder now the right knob can be adjusted*/
 } lv_slider_ext_t;
 
 /** Built-in styles of slider*/
@@ -179,7 +180,7 @@ static inline int16_t lv_slider_get_max_value(const lv_obj_t * slider)
  * @param slider pointer to a slider object
  * @return true: drag in progress false: not dragged
  */
-Boolean lv_slider_is_dragged(const lv_obj_t * slider);
+bool lv_slider_is_dragged(const lv_obj_t * slider);
 
 /**
  * Get the animation time of the slider
