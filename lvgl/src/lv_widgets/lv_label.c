@@ -121,7 +121,6 @@ lv_obj_t * lv_label_create(lv_obj_t * par, const lv_obj_t * copy)
     ext->dot.tmp_ptr   = NULL;
     ext->dot_tmp_alloc = 0;
 
-
     lv_obj_set_design_cb(new_label, lv_label_design);
     lv_obj_set_signal_cb(new_label, lv_label_signal);
 

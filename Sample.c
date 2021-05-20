@@ -31,7 +31,7 @@
 #define WINDOW_WIDTH 510
 #define WINDOW_HEIGHT 302
 
-#define DISP_BUF_SIZE WINDOW_WIDTH * WINDOW_HEIGHT
+#define DISP_BUF_SIZE WINDOW_WIDTH * WINDOW_HEIGHT * 8
 /* GMac is used to hold the result of a SysEnvirons call. This makes
    it convenient for any routine to check the environment. */
 SysEnvRec	gMac;				/* set up by Initialize */
@@ -82,6 +82,22 @@ Boolean initialState = true;
 BitMap RealMap;
 int n;
 
+void my_log_cb(lv_log_level_t level, const char * file, uint32_t line, const char * fn_name, const char * dsc)
+{
+
+    char messageType[32];
+  /*Send the logs via serial port*/
+  if(level == LV_LOG_LEVEL_ERROR) sprintf(messageType, "ERROR: ");
+  if(level == LV_LOG_LEVEL_WARN)  sprintf(messageType, "WARNING: ");
+  if(level == LV_LOG_LEVEL_INFO)  sprintf(messageType, "INFO: ");
+  if(level == LV_LOG_LEVEL_TRACE) sprintf(messageType, "TRACE: ");
+
+  char log[255];
+  sprintf(log, "%s: file: %s, line: %d, fn_name: %s, dsc: %s", messageType, file, line, fn_name, dsc);
+  writeSerialPort(boutRefNum, log);
+}
+
+
 #pragma segment Main
 void main()
 {	
@@ -94,6 +110,9 @@ void main()
     quickdraw_init(WINDOW_WIDTH, WINDOW_HEIGHT);
 
     RealMap = qd.thePort->portBits;
+
+    writeSerialPort(boutRefNum, "call lv_log_register_print_cb");
+    lv_log_register_print_cb(my_log_cb);
 
     writeSerialPort(boutRefNum, "call lv_init");
     /*LittlevGL init*/
@@ -113,10 +132,13 @@ void main()
 
     /*Initialize and register a display driver*/
     lv_disp_drv_t disp_drv;
+    writeSerialPort(boutRefNum, "call lv_disp_drv_init");
     lv_disp_drv_init(&disp_drv);
     disp_drv.buffer = &disp_buf;
     disp_drv.flush_cb = fbdev_flush;
+    writeSerialPort(boutRefNum, "call lv_disp_drv_register");
     lv_disp_drv_register(&disp_drv);
+    writeSerialPort(boutRefNum, "call lv_label_create");
 
     /*Create a "Hello world!" label*/
     lv_obj_t * label = lv_label_create(lv_scr_act(), NULL);
