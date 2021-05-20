@@ -70,21 +70,34 @@ void fbdev_exit(void)
 }
 static void putpixel(unsigned char* screen, int x, int y, int color) {
 
-    if (color == 0) {
+    // if (color == 0) {
 
-        return;
-    }
-    char log[255];
-    sprintf(log, "in putpixel, x: %d, y: %d, c: %d", x, y, color);
-        writeSerialPort(boutRefNum, log);
+    //     return;
+    // }
+    // char log[255];
+    // sprintf(log, "in putpixel, x: %d, y: %d, c: %d", x, y, color);
+    //     writeSerialPort(boutRefNum, log);
     // unsigned where = x + y * 512;
     // screen[where] |= 1 << color;
 
-    // this should be the byte location of the pixel
-    unsigned char* location = screen + y * 64 + ((x / 8) | 0);
+    if (color == 1) {
 
-    // now we need to set the individual bit for the pixel
-    *location |= color << 7 - x % 8;
+
+        // this should be the byte location of the pixel
+        unsigned char* location = screen + y * 64 + ((x / 8) | 0);
+
+        // now we need to set the individual bit for the pixel
+        *location |= 0 << 7 - x % 8;
+    } else {
+
+
+
+        // this should be the byte location of the pixel
+        unsigned char* location = screen + y * 64 + ((x / 8) | 0);
+
+        // now we need to set the individual bit for the pixel
+        *location |= 1 << 7 - x % 8;
+    }
 
     // char log[255];
     // sprintf(log, "putpixel: x: %d, y: %d, color: %d, where: %d, x mod 8: %d, x / 8: %d", x, y, color, location, x % 8, (x / 8) | 0);
@@ -135,11 +148,11 @@ void fbdev_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color
             // fbp8[byte_location] |= ((uint8_t)(color_p->full)) << bit_location;
 
 
-            if (color_p->full != 0 || color_p->ch.red != 0 || color_p->ch.blue != 0 || color_p->ch.green != 0) {
-                char log[255];
-                sprintf(log, "about to put pixel: x: %d, y: %d, color full: %d, red: %d, blue: %d, green: %d ", x, y, color_p->full, color_p->ch.red, color_p->ch.blue, color_p->ch.green);
-                writeSerialPort(boutRefNum, log);
-            }
+            // if (color_p->full != 0 || color_p->ch.red != 0 || color_p->ch.blue != 0 || color_p->ch.green != 0) {
+            //     char log[255];
+            //     sprintf(log, "about to put pixel: x: %d, y: %d, color full: %d, red: %d, blue: %d, green: %d ", x, y, color_p->full, color_p->ch.red, color_p->ch.blue, color_p->ch.green);
+            //     writeSerialPort(boutRefNum, log);
+            // }
 
             putpixel((unsigned char *)window->portBits.baseAddr, -window->portBits.bounds.left + x, -window->portBits.bounds.top + y, color_p->full);
             color_p++;

@@ -18,7 +18,7 @@ extern "C" {
 #if LV_USE_FILESYSTEM
 
 #include <stdint.h>
-#include <MacTypes.h>
+#include <stdbool.h>
 #include "lv_mem.h"
 
 /*********************
@@ -64,7 +64,7 @@ typedef struct _lv_fs_drv_t {
     char letter;
     uint16_t file_size;
     uint16_t rddir_size;
-    Boolean (*ready_cb)(struct _lv_fs_drv_t * drv);
+    bool (*ready_cb)(struct _lv_fs_drv_t * drv);
 
     lv_fs_res_t (*open_cb)(struct _lv_fs_drv_t * drv, void * file_p, const char * path, lv_fs_mode_t mode);
     lv_fs_res_t (*close_cb)(struct _lv_fs_drv_t * drv, void * file_p);
@@ -129,12 +129,12 @@ void lv_fs_drv_register(lv_fs_drv_t * drv_p);
 lv_fs_drv_t * lv_fs_get_drv(char letter);
 
 /**
- * Test if a drive is rady or not. If the `ready` function was not initialized `true` will be
+ * Test if a drive is ready or not. If the `ready` function was not initialized `true` will be
  * returned.
  * @param letter letter of the drive
  * @return true: drive is ready; false: drive is not ready
  */
-Boolean lv_fs_is_ready(char letter);
+bool lv_fs_is_ready(char letter);
 
 /**
  * Open a file
@@ -148,14 +148,14 @@ lv_fs_res_t lv_fs_open(lv_fs_file_t * file_p, const char * path, lv_fs_mode_t mo
 /**
  * Close an already opened file
  * @param file_p pointer to a lv_fs_file_t variable
- * @return  LV_FS_RES_OK or any error from lv_fs_res_t enum
+ * @return LV_FS_RES_OK or any error from lv_fs_res_t enum
  */
 lv_fs_res_t lv_fs_close(lv_fs_file_t * file_p);
 
 /**
  * Delete a file
  * @param path path of the file to delete
- * @return  LV_FS_RES_OK or any error from lv_fs_res_t enum
+ * @return LV_FS_RES_OK or any error from lv_fs_res_t enum
  */
 lv_fs_res_t lv_fs_remove(const char * path);
 
@@ -221,7 +221,7 @@ lv_fs_res_t lv_fs_rename(const char * oldname, const char * newname);
 
 /**
  * Initialize a 'fs_dir_t' variable for directory reading
- * @param rddir_p pointer to a 'fs_read_dir_t' variable
+ * @param rddir_p pointer to a 'lv_fs_dir_t' variable
  * @param path path to a directory
  * @return LV_FS_RES_OK or any error from lv_fs_res_t enum
  */
@@ -230,7 +230,7 @@ lv_fs_res_t lv_fs_dir_open(lv_fs_dir_t * rddir_p, const char * path);
 /**
  * Read the next filename form a directory.
  * The name of the directories will begin with '/'
- * @param rddir_p pointer to an initialized 'fs_rdir_t' variable
+ * @param rddir_p pointer to an initialized 'fs_dir_t' variable
  * @param fn pointer to a buffer to store the filename
  * @return LV_FS_RES_OK or any error from lv_fs_res_t enum
  */
@@ -275,7 +275,7 @@ char * lv_fs_up(char * path);
 
 /**
  * Get the last element of a path (e.g. U:/folder/file -> file)
- * @param buf buffer to store the letters ('\0' added after the last letter)
+ * @param path pointer to a file name
  * @return pointer to the beginning of the last element in the path
  */
 const char * lv_fs_get_last(const char * path);

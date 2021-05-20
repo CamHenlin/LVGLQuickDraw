@@ -14,14 +14,10 @@
 #include "lv_hal.h"
 #include "../lv_misc/lv_mem.h"
 #include "../lv_misc/lv_gc.h"
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_core/lv_obj.h"
 #include "../lv_core/lv_refr.h"
 #include "../lv_themes/lv_theme.h"
-
-#if defined(LV_GC_INCLUDE)
-    #include LV_GC_INCLUDE
-#endif /* LV_ENABLE_GC */
 
 /*********************
  *      DEFINES
@@ -62,7 +58,8 @@ void lv_disp_drv_init(lv_disp_drv_t * driver)
     driver->hor_res          = LV_HOR_RES_MAX;
     driver->ver_res          = LV_VER_RES_MAX;
     driver->buffer           = NULL;
-    driver->rotated          = 0;
+    driver->rotated          = LV_DISP_ROT_NONE;
+    driver->sw_rotate        = 0;
     driver->color_chroma_key = LV_COLOR_TRANSP;
     driver->dpi = LV_DPI;
 
@@ -144,6 +141,15 @@ lv_disp_t * lv_disp_drv_register(lv_disp_drv_t * driver)
     disp->inv_p = 0;
     disp->last_activity_time = 0;
 
+    disp->bg_color = LV_COLOR_WHITE;
+    disp->bg_img = NULL;
+#if LV_COLOR_SCREEN_TRANSP
+    disp->bg_opa = LV_OPA_TRANSP;
+#else
+    disp->bg_opa = LV_OPA_COVER;
+#endif
+
+    disp->prev_scr  = NULL;
     disp->act_scr   = lv_obj_create(NULL, NULL); /*Create a default screen on the display*/
     disp->top_layer = lv_obj_create(NULL, NULL); /*Create top layer on the display*/
     disp->sys_layer = lv_obj_create(NULL, NULL); /*Create sys layer on the display*/
@@ -158,6 +164,11 @@ lv_disp_t * lv_disp_drv_register(lv_disp_drv_t * driver)
 
     lv_task_ready(disp->refr_task); /*Be sure the screen will be refreshed immediately on start up*/
 
+    /*Can't handle this case later so add an error*/
+    if(lv_disp_is_true_double_buf(disp) && disp->driver.set_px_cb) {
+        LV_LOG_ERROR("Can't handle 2 screen sized buffers with set_px_cb. Display will not be refreshed.");
+    }
+
     return disp;
 }
 
@@ -168,12 +179,25 @@ lv_disp_t * lv_disp_drv_register(lv_disp_drv_t * driver)
  */
 void lv_disp_drv_update(lv_disp_t * disp, lv_disp_drv_t * new_drv)
 {
-    memcpy(&disp->driver, new_drv, sizeof(lv_disp_drv_t));
+    if(new_drv != &disp->driver)
+        memcpy(&disp->driver, new_drv, sizeof(lv_disp_drv_t));
 
     lv_obj_t * scr;
     _LV_LL_READ(disp->scr_ll, scr) {
         lv_obj_set_size(scr, lv_disp_get_hor_res(disp), lv_disp_get_ver_res(disp));
     }
+
+    /*
+     * This method is usually called upon orientation change, thus the screen is now a
+     * different size.
+     * The object invalidated its previous area. That area is now out of the screen area
+     * so we reset all invalidated areas and invalidate the active screen's new area only.
+     */
+    _lv_memset_00(disp->inv_areas, sizeof(disp->inv_areas));
+    _lv_memset_00(disp->inv_area_joined, sizeof(disp->inv_area_joined));
+    disp->inv_p = 0;
+    if(disp->act_scr != NULL)
+        lv_obj_invalidate(disp->act_scr);
 }
 
 /**
@@ -182,7 +206,7 @@ void lv_disp_drv_update(lv_disp_t * disp, lv_disp_drv_t * new_drv)
  */
 void lv_disp_remove(lv_disp_t * disp)
 {
-    Boolean was_default = false;
+    bool was_default = false;
     if(disp == lv_disp_get_default()) was_default = true;
 
     /*Detach the input devices */
@@ -230,8 +254,15 @@ lv_coord_t lv_disp_get_hor_res(lv_disp_t * disp)
 
     if(disp == NULL)
         return LV_HOR_RES_MAX;
-    else
-        return disp->driver.rotated == 0 ? disp->driver.hor_res : disp->driver.ver_res;
+    else {
+        switch(disp->driver.rotated) {
+            case LV_DISP_ROT_90:
+            case LV_DISP_ROT_270:
+                return disp->driver.ver_res;
+            default:
+                return disp->driver.hor_res;
+        }
+    }
 }
 
 /**
@@ -245,8 +276,15 @@ lv_coord_t lv_disp_get_ver_res(lv_disp_t * disp)
 
     if(disp == NULL)
         return LV_VER_RES_MAX;
-    else
-        return disp->driver.rotated == 0 ? disp->driver.ver_res : disp->driver.hor_res;
+    else {
+        switch(disp->driver.rotated) {
+            case LV_DISP_ROT_90:
+            case LV_DISP_ROT_270:
+                return disp->driver.hor_res;
+            default:
+                return disp->driver.ver_res;
+        }
+    }
 }
 
 /**
@@ -254,9 +292,10 @@ lv_coord_t lv_disp_get_ver_res(lv_disp_t * disp)
  * @param disp pointer to a display (NULL to use the default display)
  * @return true: anti-aliasing is enabled; false: disabled
  */
-Boolean lv_disp_get_antialiasing(lv_disp_t * disp)
+bool lv_disp_get_antialiasing(lv_disp_t * disp)
 {
 #if LV_ANTIALIAS == 0
+    LV_UNUSED(disp);
     return false;
 #else
     if(disp == NULL) disp = lv_disp_get_default();
@@ -271,7 +310,7 @@ Boolean lv_disp_get_antialiasing(lv_disp_t * disp)
  * @param disp pointer to a display (NULL to use the default display)
  * @return dpi of the display
  */
-uint32_t lv_disp_get_dpi(lv_disp_t * disp)
+lv_coord_t lv_disp_get_dpi(lv_disp_t * disp)
 {
     if(disp == NULL) disp = lv_disp_get_default();
     if(disp == NULL) return LV_DPI;  /*Do not return 0 because it might be a divider*/
@@ -318,14 +357,13 @@ LV_ATTRIBUTE_FLUSH_READY void lv_disp_flush_ready(lv_disp_drv_t * disp_drv)
     disp_drv->buffer->flushing_last = 0;
 }
 
-
 /**
  * Tell if it's the last area of the refreshing process.
  * Can be called from `flush_cb` to execute some special display refreshing if needed when all areas area flushed.
  * @param disp_drv pointer to display driver
  * @return true: it's the last area to flush; false: there are other areas too which will be refreshed soon
  */
-LV_ATTRIBUTE_FLUSH_READY Boolean lv_disp_flush_is_last(lv_disp_drv_t * disp_drv)
+LV_ATTRIBUTE_FLUSH_READY bool lv_disp_flush_is_last(lv_disp_drv_t * disp_drv)
 {
     return disp_drv->buffer->flushing_last;
 }
@@ -380,7 +418,7 @@ void _lv_disp_pop_from_inv_buf(lv_disp_t * disp, uint16_t num)
  * @param disp pointer to to display to check
  * @return true: double buffered; false: not double buffered
  */
-Boolean lv_disp_is_double_buf(lv_disp_t * disp)
+bool lv_disp_is_double_buf(lv_disp_t * disp)
 {
     if(disp->driver.buffer->buf1 && disp->driver.buffer->buf2)
         return true;
@@ -394,7 +432,7 @@ Boolean lv_disp_is_double_buf(lv_disp_t * disp)
  * @param disp pointer to to display to check
  * @return true: double buffered; false: not double buffered
  */
-Boolean lv_disp_is_true_double_buf(lv_disp_t * disp)
+bool lv_disp_is_true_double_buf(lv_disp_t * disp)
 {
     uint32_t scr_size = disp->driver.hor_res * disp->driver.ver_res;
 
@@ -404,6 +442,31 @@ Boolean lv_disp_is_true_double_buf(lv_disp_t * disp)
     else {
         return false;
     }
+}
+
+/**
+ * Set the rotation of this display.
+ * @param disp pointer to a display (NULL to use the default display)
+ * @param rotation rotation angle
+ */
+void lv_disp_set_rotation(lv_disp_t * disp, lv_disp_rot_t rotation)
+{
+    if(disp == NULL) disp = lv_disp_get_default();
+
+    disp->driver.rotated = rotation;
+    lv_disp_drv_update(disp, &disp->driver);
+}
+
+/**
+ * Get the current rotation of this display.
+ * @param disp pointer to a display (NULL to use the default display)
+ * @return rotation angle
+ */
+lv_disp_rot_t lv_disp_get_rotation(lv_disp_t * disp)
+{
+    if(disp == NULL) disp = lv_disp_get_default();
+
+    return disp->driver.rotated;
 }
 
 /**********************

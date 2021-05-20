@@ -40,8 +40,6 @@ enum {
 };
 typedef uint8_t lv_cpicker_color_mode_t;
 
-
-
 /*Data of colorpicker*/
 typedef struct {
     lv_color_hsv_t hsv;
@@ -66,7 +64,6 @@ enum {
     _LV_CPICKER_PART_VIRTUAL_LAST,
     _LV_CPICKER_PART_REAL_LAST = _LV_OBJ_PART_REAL_LAST,
 };
-
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -97,7 +94,7 @@ void lv_cpicker_set_type(lv_obj_t * cpicker, lv_cpicker_type_t type);
  * @param hue current selected hue [0..360]
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_hue(lv_obj_t * cpicker, uint16_t hue);
+bool lv_cpicker_set_hue(lv_obj_t * cpicker, uint16_t hue);
 
 /**
  * Set the current saturation of a colorpicker.
@@ -105,7 +102,7 @@ Boolean lv_cpicker_set_hue(lv_obj_t * cpicker, uint16_t hue);
  * @param saturation current selected saturation [0..100]
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_saturation(lv_obj_t * cpicker, uint8_t saturation);
+bool lv_cpicker_set_saturation(lv_obj_t * cpicker, uint8_t saturation);
 
 /**
  * Set the current value of a colorpicker.
@@ -113,7 +110,7 @@ Boolean lv_cpicker_set_saturation(lv_obj_t * cpicker, uint8_t saturation);
  * @param val current selected value [0..100]
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_value(lv_obj_t * cpicker, uint8_t val);
+bool lv_cpicker_set_value(lv_obj_t * cpicker, uint8_t val);
 
 /**
  * Set the current hsv of a colorpicker.
@@ -121,7 +118,7 @@ Boolean lv_cpicker_set_value(lv_obj_t * cpicker, uint8_t val);
  * @param hsv current selected hsv
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_hsv(lv_obj_t * cpicker, lv_color_hsv_t hsv);
+bool lv_cpicker_set_hsv(lv_obj_t * cpicker, lv_color_hsv_t hsv);
 
 /**
  * Set the current color of a colorpicker.
@@ -129,7 +126,7 @@ Boolean lv_cpicker_set_hsv(lv_obj_t * cpicker, lv_color_hsv_t hsv);
  * @param color current selected color
  * @return true if changed, otherwise false
  */
-Boolean lv_cpicker_set_color(lv_obj_t * cpicker, lv_color_t color);
+bool lv_cpicker_set_color(lv_obj_t * cpicker, lv_color_t color);
 
 /**
  * Set the current color mode.
@@ -143,14 +140,14 @@ void lv_cpicker_set_color_mode(lv_obj_t * cpicker, lv_cpicker_color_mode_t mode)
  * @param cpicker pointer to colorpicker object
  * @param fixed color mode cannot be changed on long press
  */
-void lv_cpicker_set_color_mode_fixed(lv_obj_t * cpicker, Boolean fixed);
+void lv_cpicker_set_color_mode_fixed(lv_obj_t * cpicker, bool fixed);
 
 /**
  * Make the knob to be colored to the current color
  * @param cpicker pointer to colorpicker object
  * @param en true: color the knob; false: not color the knob
  */
-void lv_cpicker_set_knob_colored(lv_obj_t * cpicker, Boolean en);
+void lv_cpicker_set_knob_colored(lv_obj_t * cpicker, bool en);
 
 /*=====================
  * Getter functions
@@ -168,7 +165,7 @@ lv_cpicker_color_mode_t lv_cpicker_get_color_mode(lv_obj_t * cpicker);
  * @param cpicker pointer to colorpicker object
  * @return mode cannot be changed on long press
  */
-Boolean lv_cpicker_get_color_mode_fixed(lv_obj_t * cpicker);
+bool lv_cpicker_get_color_mode_fixed(lv_obj_t * cpicker);
 
 /**
  * Get the current hue of a colorpicker.
@@ -210,7 +207,7 @@ lv_color_t lv_cpicker_get_color(lv_obj_t * cpicker);
  * @param cpicker pointer to color picker object
  * @return true: color the knob; false: not color the knob
  */
-Boolean lv_cpicker_get_knob_colored(lv_obj_t * cpicker);
+bool lv_cpicker_get_knob_colored(lv_obj_t * cpicker);
 
 /*=====================
  * Other functions

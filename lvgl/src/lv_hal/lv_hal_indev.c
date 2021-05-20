@@ -8,16 +8,12 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_hal/lv_hal_indev.h"
 #include "../lv_core/lv_indev.h"
 #include "../lv_misc/lv_mem.h"
 #include "../lv_misc/lv_gc.h"
 #include "lv_hal_disp.h"
-
-#if defined(LV_GC_INCLUDE)
-    #include LV_GC_INCLUDE
-#endif /* LV_ENABLE_GC */
 
 /*********************
  *      DEFINES
@@ -73,7 +69,7 @@ lv_indev_t * lv_indev_drv_register(lv_indev_drv_t * driver)
     if(driver->disp == NULL) driver->disp = lv_disp_get_default();
 
     if(driver->disp == NULL) {
-        LV_LOG_WARN("lv_indev_drv_register: no display registered hence can't attache the indev to "
+        LV_LOG_WARN("lv_indev_drv_register: no display registered hence can't attach the indev to "
                     "a display");
         return NULL;
     }
@@ -127,9 +123,9 @@ lv_indev_t * lv_indev_get_next(lv_indev_t * indev)
  * @param data input device will write its data here
  * @return false: no more data; true: there more data to read (buffered)
  */
-Boolean _lv_indev_read(lv_indev_t * indev, lv_indev_data_t * data)
+bool _lv_indev_read(lv_indev_t * indev, lv_indev_data_t * data)
 {
-    Boolean cont = false;
+    bool cont = false;
 
     _lv_memset_00(data, sizeof(lv_indev_data_t));
 
@@ -139,15 +135,20 @@ Boolean _lv_indev_read(lv_indev_t * indev, lv_indev_data_t * data)
         data->point.x = indev->proc.types.pointer.act_point.x;
         data->point.y = indev->proc.types.pointer.act_point.y;
     }
-    /*Similarly set at least the last key in case of the  the user doesn't set it  on release*/
+    /*Similarly set at least the last key in case of the user doesn't set it on release*/
     else if(indev->driver.type == LV_INDEV_TYPE_KEYPAD) {
         data->key = indev->proc.types.keypad.last_key;
     }
+    /*For compatibility assume that used button was enter (encoder push) */
+    else if(indev->driver.type == LV_INDEV_TYPE_ENCODER) {
+        data->key = LV_KEY_ENTER;
+        data->enc_diff = 0;
+    }
 
     if(indev->driver.read_cb) {
-        LV_LOG_TRACE("idnev read started");
+        LV_LOG_TRACE("indev read started");
         cont = indev->driver.read_cb(&indev->driver, data);
-        LV_LOG_TRACE("idnev read finished");
+        LV_LOG_TRACE("indev read finished");
     }
     else {
         LV_LOG_WARN("indev function registered");

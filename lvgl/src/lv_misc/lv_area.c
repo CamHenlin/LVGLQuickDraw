@@ -23,7 +23,7 @@
  *  STATIC PROTOTYPES
  **********************/
 
-static Boolean lv_point_within_circle(const lv_area_t * area, const lv_point_t * p);
+static bool lv_point_within_circle(const lv_area_t * area, const lv_point_t * p);
 
 /**********************
  *  STATIC VARIABLES
@@ -110,7 +110,7 @@ uint32_t lv_area_get_size(const lv_area_t * area_p)
  * @param a2_p pointer to the second area
  * @return false: the two area has NO common parts, res_p is invalid
  */
-Boolean _lv_area_intersect(lv_area_t * res_p, const lv_area_t * a1_p, const lv_area_t * a2_p)
+bool _lv_area_intersect(lv_area_t * res_p, const lv_area_t * a1_p, const lv_area_t * a2_p)
 {
     /* Get the smaller area from 'a1_p' and 'a2_p' */
     res_p->x1 = LV_MATH_MAX(a1_p->x1, a2_p->x1);
@@ -119,7 +119,7 @@ Boolean _lv_area_intersect(lv_area_t * res_p, const lv_area_t * a1_p, const lv_a
     res_p->y2 = LV_MATH_MIN(a1_p->y2, a2_p->y2);
 
     /*If x1 or y1 greater then x2 or y2 then the areas union is empty*/
-    Boolean union_ok = true;
+    bool union_ok = true;
     if((res_p->x1 > res_p->x2) || (res_p->y1 > res_p->y2)) {
         union_ok = false;
     }
@@ -147,10 +147,10 @@ void _lv_area_join(lv_area_t * a_res_p, const lv_area_t * a1_p, const lv_area_t 
  * @param radius radius of area (e.g. for rounded rectangle)
  * @return false:the point is out of the area
  */
-Boolean _lv_area_is_point_on(const lv_area_t * a_p, const lv_point_t * p_p, lv_coord_t radius)
+bool _lv_area_is_point_on(const lv_area_t * a_p, const lv_point_t * p_p, lv_coord_t radius)
 {
     /*First check the basic area*/
-    Boolean is_on_rect = false;
+    bool is_on_rect = false;
     if((p_p->x >= a_p->x1 && p_p->x <= a_p->x2) && ((p_p->y >= a_p->y1 && p_p->y <= a_p->y2))) {
         is_on_rect = true;
     }
@@ -213,7 +213,7 @@ Boolean _lv_area_is_point_on(const lv_area_t * a_p, const lv_point_t * p_p, lv_c
  * @param a2_p pointer to an other area
  * @return false: a1_p and a2_p has no common parts
  */
-Boolean _lv_area_is_on(const lv_area_t * a1_p, const lv_area_t * a2_p)
+bool _lv_area_is_on(const lv_area_t * a1_p, const lv_area_t * a2_p)
 {
     if((a1_p->x1 <= a2_p->x2) && (a1_p->x2 >= a2_p->x1) && (a1_p->y1 <= a2_p->y2) && (a1_p->y2 >= a2_p->y1)) {
         return true;
@@ -230,16 +230,17 @@ Boolean _lv_area_is_on(const lv_area_t * a1_p, const lv_area_t * a2_p)
  * @param radius radius of `aholder_p` (e.g. for rounded rectangle)
  * @return true: `ain_p` is fully inside `aholder_p`
  */
-Boolean _lv_area_is_in(const lv_area_t * ain_p, const lv_area_t * aholder_p, lv_coord_t radius)
+bool _lv_area_is_in(const lv_area_t * ain_p, const lv_area_t * aholder_p, lv_coord_t radius)
 {
-    Boolean is_in = false;
+    bool is_in = false;
 
     if(ain_p->x1 >= aholder_p->x1 && ain_p->y1 >= aholder_p->y1 && ain_p->x2 <= aholder_p->x2 &&
        ain_p->y2 <= aholder_p->y2) {
         is_in = true;
     }
 
-    if(radius == 0) return is_in;
+    if(!is_in) return false;
+    if(radius == 0) return true;
 
     /*Check if the corner points are inside the radius or not*/
     lv_point_t p;
@@ -386,7 +387,7 @@ void _lv_area_align(const lv_area_t * base, const lv_area_t * to_align, lv_align
  *   STATIC FUNCTIONS
  **********************/
 
-static Boolean lv_point_within_circle(const lv_area_t * area, const lv_point_t * p)
+static bool lv_point_within_circle(const lv_area_t * area, const lv_point_t * p)
 {
     lv_coord_t r = (area->x2 - area->x1) / 2;
 
@@ -398,8 +399,8 @@ static Boolean lv_point_within_circle(const lv_area_t * area, const lv_point_t *
     lv_coord_t px = p->x - cx;
     lv_coord_t py = p->y - cy;
 
-    int32_t r_sqrd = r * r;
-    int32_t dist = (px * px) + (py * py);
+    uint32_t r_sqrd = r * r;
+    uint32_t dist = (px * px) + (py * py);
 
     if(dist <= r_sqrd)
         return true;

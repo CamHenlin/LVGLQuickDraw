@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include <MacTypes.h>
+#include <stdbool.h>
 
 #include "lv_utils.h"
 #include "lv_math.h"

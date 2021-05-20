@@ -61,8 +61,8 @@ static void window_update(monitor_t * m);
 int quit_filter(void * userdata, SDL_Event * event);
 static void monitor_sdl_clean_up(void);
 static void monitor_sdl_init(void);
-static void monitor_sdl_refr_core(void);
-static void monitor_sdl_refr_thread(lv_task_t * t);
+static void sdl_event_handler(lv_task_t * t);
+static void monitor_sdl_refr(lv_task_t * t);
 
 /***********************
  *   GLOBAL PROTOTYPES
@@ -95,7 +95,7 @@ static volatile bool sdl_quit_qry = false;
 void monitor_init(void)
 {
     monitor_sdl_init();
-    lv_task_create(monitor_sdl_refr_thread, 10, LV_TASK_PRIO_HIGH, NULL);
+    lv_task_create(sdl_event_handler, 10, LV_TASK_PRIO_HIGH, NULL);
 }
 
 /**
@@ -106,26 +106,20 @@ void monitor_init(void)
  */
 void monitor_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p)
 {
-    lv_coord_t hres = disp_drv->rotated == 0 ? disp_drv->hor_res : disp_drv->ver_res;
-    lv_coord_t vres = disp_drv->rotated == 0 ? disp_drv->ver_res : disp_drv->hor_res;
+    lv_coord_t hres = disp_drv->hor_res;
+    lv_coord_t vres = disp_drv->ver_res;
 
 //    printf("x1:%d,y1:%d,x2:%d,y2:%d\n", area->x1, area->y1, area->x2, area->y2);
 
     /*Return if the area is out the screen*/
     if(area->x2 < 0 || area->y2 < 0 || area->x1 > hres - 1 || area->y1 > vres - 1) {
-
         lv_disp_flush_ready(disp_drv);
         return;
     }
 
 #if MONITOR_DOUBLE_BUFFERED
     monitor.tft_fb_act = (uint32_t *)color_p;
-
-    monitor.sdl_refr_qry = true;
-
-    /*IMPORTANT! It must be called to tell the system the flush is ready*/
-    lv_disp_flush_ready(disp_drv);
-#else
+#else /*MONITOR_DOUBLE_BUFFERED*/
 
     int32_t y;
 #if LV_COLOR_DEPTH != 24 && LV_COLOR_DEPTH != 32    /*32 is valid but support 24 for backward compatibility too*/
@@ -144,12 +138,19 @@ void monitor_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t 
         color_p += w;
     }
 #endif
+#endif /*MONITOR_DOUBLE_BUFFERED*/
 
     monitor.sdl_refr_qry = true;
 
+    /* TYPICALLY YOU DO NOT NEED THIS
+     * If it was the last part to refresh update the texture of the window.*/
+    if(lv_disp_flush_is_last(disp_drv)) {
+        monitor_sdl_refr(NULL);
+    }
+
     /*IMPORTANT! It must be called to tell the system the flush is ready*/
     lv_disp_flush_ready(disp_drv);
-#endif
+
 }
 
 
@@ -163,8 +164,8 @@ void monitor_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t 
  */
 void monitor_flush2(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p)
 {
-    lv_coord_t hres = disp_drv->rotated == 0 ? disp_drv->hor_res : disp_drv->ver_res;
-    lv_coord_t vres = disp_drv->rotated == 0 ? disp_drv->ver_res : disp_drv->hor_res;
+    lv_coord_t hres = disp_drv->hor_res;
+    lv_coord_t vres = disp_drv->ver_res;
 
     /*Return if the area is out the screen*/
     if(area->x2 < 0 || area->y2 < 0 || area->x1 > hres - 1 || area->y1 > vres - 1) {
@@ -201,6 +202,12 @@ void monitor_flush2(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t
 
     monitor2.sdl_refr_qry = true;
 
+    /* TYPICALLY YOU DO NOT NEED THIS
+     * If it was the last part to refresh update the texture of the window.*/
+    if(lv_disp_flush_is_last(disp_drv)) {
+        monitor_sdl_refr(NULL);
+    }
+
     /*IMPORTANT! It must be called to tell the system the flush is ready*/
     lv_disp_flush_ready(disp_drv);
 #endif
@@ -211,23 +218,75 @@ void monitor_flush2(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t
  *   STATIC FUNCTIONS
  **********************/
 
+
 /**
  * SDL main thread. All SDL related task have to be handled here!
  * It initializes SDL, handles drawing and the mouse.
  */
 
-static void monitor_sdl_refr_thread(lv_task_t * t)
+static void sdl_event_handler(lv_task_t * t)
 {
     (void)t;
 
     /*Refresh handling*/
-    monitor_sdl_refr_core();
+    SDL_Event event;
+    while(SDL_PollEvent(&event)) {
+#if USE_MOUSE != 0
+        mouse_handler(&event);
+#endif
+
+#if USE_MOUSEWHEEL != 0
+        mousewheel_handler(&event);
+#endif
+
+#if USE_KEYBOARD
+        keyboard_handler(&event);
+#endif
+        if((&event)->type == SDL_WINDOWEVENT) {
+            switch((&event)->window.event) {
+#if SDL_VERSION_ATLEAST(2, 0, 5)
+                case SDL_WINDOWEVENT_TAKE_FOCUS:
+#endif
+                case SDL_WINDOWEVENT_EXPOSED:
+                    window_update(&monitor);
+#if MONITOR_DUAL
+                    window_update(&monitor2);
+#endif
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
     /*Run until quit event not arrives*/
     if(sdl_quit_qry) {
         monitor_sdl_clean_up();
         exit(0);
     }
+}
+
+/**
+ * SDL main thread. All SDL related task have to be handled here!
+ * It initializes SDL, handles drawing and the mouse.
+ */
+
+static void monitor_sdl_refr(lv_task_t * t)
+{
+    (void)t;
+
+    /*Refresh handling*/
+    if(monitor.sdl_refr_qry != false) {
+        monitor.sdl_refr_qry = false;
+        window_update(&monitor);
+    }
+
+#if MONITOR_DUAL
+    if(monitor2.sdl_refr_qry != false) {
+        monitor2.sdl_refr_qry = false;
+        window_update(&monitor2);
+    }
+#endif
 }
 
 int quit_filter(void * userdata, SDL_Event * event)
@@ -274,58 +333,13 @@ static void monitor_sdl_init(void)
     window_create(&monitor2);
     int x, y;
     SDL_GetWindowPosition(monitor2.window, &x, &y);
-    SDL_SetWindowPosition(monitor.window, x + MONITOR_HOR_RES / 2 + 10, y);
-    SDL_SetWindowPosition(monitor2.window, x - MONITOR_HOR_RES / 2 - 10, y);
+    SDL_SetWindowPosition(monitor.window, x + (MONITOR_HOR_RES * MONITOR_ZOOM) / 2 + 10, y);
+    SDL_SetWindowPosition(monitor2.window, x - (MONITOR_HOR_RES * MONITOR_ZOOM) / 2 - 10, y);
 #endif
 
     sdl_inited = true;
 }
 
-static void monitor_sdl_refr_core(void)
-{
-    if(monitor.sdl_refr_qry != false) {
-        monitor.sdl_refr_qry = false;
-        window_update(&monitor);
-    }
-
-#if MONITOR_DUAL
-    if(monitor2.sdl_refr_qry != false) {
-        monitor2.sdl_refr_qry = false;
-        window_update(&monitor2);
-    }
-#endif
-
-    SDL_Event event;
-    while(SDL_PollEvent(&event)) {
-#if USE_MOUSE != 0
-        mouse_handler(&event);
-#endif
-
-#if USE_MOUSEWHEEL != 0
-        mousewheel_handler(&event);
-#endif
-
-#if USE_KEYBOARD
-        keyboard_handler(&event);
-#endif
-        if((&event)->type == SDL_WINDOWEVENT) {
-            switch((&event)->window.event) {
-#if SDL_VERSION_ATLEAST(2, 0, 5)
-                case SDL_WINDOWEVENT_TAKE_FOCUS:
-#endif
-                case SDL_WINDOWEVENT_EXPOSED:
-                    window_update(&monitor);
-#if MONITOR_DUAL
-                    window_update(&monitor2);
-#endif
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-
-}
 
 static void window_create(monitor_t * m)
 {

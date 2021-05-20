@@ -12,10 +12,10 @@
 
 /*Testing of dependencies*/
 #if LV_USE_SLIDER == 0
-    #error "lv_sw: lv_slider is required. Enable it in lv_conf.h (LV_USE_SLIDER  1) "
+    #error "lv_sw: lv_slider is required. Enable it in lv_conf.h (LV_USE_SLIDER 1)"
 #endif
 
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_themes/lv_theme.h"
 #include "../lv_misc/lv_math.h"
 #include "../lv_core/lv_indev.h"
@@ -36,7 +36,6 @@
  **********************/
 static lv_res_t lv_switch_signal(lv_obj_t * sw, lv_signal_t sign, void * param);
 static lv_design_res_t lv_switch_design(lv_obj_t * sw, const lv_area_t * clip_area, lv_design_mode_t mode);
-static lv_style_list_t * lv_switch_get_style(lv_obj_t * sw, uint8_t part);
 static lv_style_list_t * lv_switch_get_style(lv_obj_t * sw, uint8_t part);
 
 /**********************
@@ -100,7 +99,7 @@ lv_obj_t * lv_switch_create(lv_obj_t * par, const lv_obj_t * copy)
         lv_switch_ext_t * copy_ext = lv_obj_get_ext_attr(copy);
 
         lv_style_list_copy(&ext->style_knob, &copy_ext->style_knob);
-        lv_obj_refresh_style(sw, LV_STYLE_PROP_ALL);
+        lv_obj_refresh_style(sw, LV_OBJ_PART_ALL, LV_STYLE_PROP_ALL);
     }
 
     /*Refresh the style with new signal function*/
@@ -116,8 +115,8 @@ lv_obj_t * lv_switch_create(lv_obj_t * par, const lv_obj_t * copy)
 
 /**
  * Turn ON the switch
- * @param sw pointer to a switch objec
- * @param anim LV_ANOM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately
+ * @param sw pointer to a switch object
+ * @param anim LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately
  */
 void lv_switch_on(lv_obj_t * sw, lv_anim_enable_t anim)
 {
@@ -126,8 +125,8 @@ void lv_switch_on(lv_obj_t * sw, lv_anim_enable_t anim)
 #if LV_USE_ANIMATION == 0
     anim = LV_ANIM_OFF;
 #endif
-    lv_switch_ext_t * ext = lv_obj_get_ext_attr(sw);
-    ext->state = 1;
+    if(lv_bar_get_value(sw) == 1)
+        return;
     lv_bar_set_value(sw, 1, anim);
     lv_obj_add_state(sw, LV_STATE_CHECKED);
 }
@@ -144,8 +143,8 @@ void lv_switch_off(lv_obj_t * sw, lv_anim_enable_t anim)
 #if LV_USE_ANIMATION == 0
     anim = LV_ANIM_OFF;
 #endif
-    lv_switch_ext_t * ext = lv_obj_get_ext_attr(sw);
-    ext->state = 0;
+    if(lv_bar_get_value(sw) == 0)
+        return;
     lv_bar_set_value(sw, 0, anim);
     lv_obj_clear_state(sw, LV_STATE_CHECKED);
 }
@@ -156,7 +155,7 @@ void lv_switch_off(lv_obj_t * sw, lv_anim_enable_t anim)
  * @param anim LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately
  * @return resulting state of the switch.
  */
-Boolean lv_switch_toggle(lv_obj_t * sw, lv_anim_enable_t anim)
+bool lv_switch_toggle(lv_obj_t * sw, lv_anim_enable_t anim)
 {
     LV_ASSERT_OBJ(sw, LV_OBJX_NAME);
 
@@ -164,7 +163,7 @@ Boolean lv_switch_toggle(lv_obj_t * sw, lv_anim_enable_t anim)
     anim = LV_ANIM_OFF;
 #endif
 
-    Boolean state = lv_switch_get_state(sw);
+    bool state = lv_switch_get_state(sw);
     if(state)
         lv_switch_off(sw, anim);
     else
@@ -255,7 +254,6 @@ static lv_design_res_t lv_switch_design(lv_obj_t * sw, const lv_area_t * clip_ar
     return LV_DESIGN_RES_OK;
 }
 
-
 /**
  * Signal function of the switch
  * @param sw pointer to a switch object
@@ -296,12 +294,14 @@ static lv_res_t lv_switch_signal(lv_obj_t * sw, lv_signal_t sign, void * param)
 
     }
     else if(sign == LV_SIGNAL_CONTROL) {
+#if LV_USE_GROUP
         char c = *((char *)param);
         if(c == LV_KEY_RIGHT || c == LV_KEY_UP) lv_switch_on(sw, LV_ANIM_ON);
         else if(c == LV_KEY_LEFT || c == LV_KEY_DOWN) lv_switch_off(sw, LV_ANIM_ON);
 
         res   = lv_event_send(sw, LV_EVENT_VALUE_CHANGED, NULL);
         if(res != LV_RES_OK) return res;
+#endif
     }
     else if(sign == LV_SIGNAL_REFR_EXT_DRAW_PAD) {
         lv_style_int_t knob_left = lv_obj_get_style_pad_left(sw,   LV_SWITCH_PART_KNOB);
@@ -320,8 +320,10 @@ static lv_res_t lv_switch_signal(lv_obj_t * sw, lv_signal_t sign, void * param)
         sw->ext_draw_pad = LV_MATH_MAX(sw->ext_draw_pad, knob_size);
     }
     else if(sign == LV_SIGNAL_GET_EDITABLE) {
-        Boolean * editable = (Boolean *)param;
+#if LV_USE_GROUP
+        bool * editable = (bool *)param;
         *editable       = false; /*The ancestor slider is editable the switch is not*/
+#endif
     }
 
     return res;

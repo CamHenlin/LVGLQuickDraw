@@ -61,6 +61,8 @@ src/lv_themes/lv_theme.h
 ../lvgl/src/lv_themes/lv_theme.h
 src/lv_font/lv_font.h
 ../lvgl/src/lv_font/lv_font.h
+src/lv_font/lv_font_loader.h
+../lvgl/src/lv_font/lv_font_loader.h
 src/lv_font/lv_font_fmt_txt.h
 ../lvgl/src/lv_font/lv_font_fmt_txt.h
 src/lv_misc/lv_printf.h
@@ -143,11 +145,21 @@ src/lv_api_map.h
 ../lvgl/src/lv_conf_internal.h
 stdint.h
 -
+lv_conf_kconfig.h
+../lvgl/src/lv_conf_kconfig.h
 lv_conf.h
 ../lvgl/src/lv_conf.h
 ../../lv_conf.h
 ../lv_conf.h
 stdint.h
+-
+
+../lvgl/src/lv_conf_kconfig.h
+sdkconfig.h
+../lvgl/src/sdkconfig.h
+esp_attr.h
+../lvgl/src/esp_attr.h
+nuttx/config.h
 -
 
 ../lvgl/src/lv_core/lv_disp.h
@@ -173,7 +185,7 @@ lv_obj.h
 ../lvgl/src/lv_conf_internal.h
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_style.h
 ../lvgl/src/lv_core/lv_style.h
@@ -183,6 +195,8 @@ lv_style.h
 ../lvgl/src/lv_misc/lv_area.h
 ../lv_misc/lv_color.h
 ../lvgl/src/lv_misc/lv_color.h
+../lv_misc/lv_debug.h
+../lvgl/src/lv_misc/lv_debug.h
 ../lv_hal/lv_hal.h
 ../lvgl/src/lv_hal/lv_hal.h
 ../lv_draw/lv_draw_rect.h
@@ -201,11 +215,11 @@ lv_obj_style_dec.h
 ../lvgl/src/lv_core/lv_refr.h
 lv_obj.h
 ../lvgl/src/lv_core/lv_obj.h
-MacTypes.h
+stdbool.h
 -
 
 ../lvgl/src/lv_core/lv_style.h
-MacTypes.h
+stdbool.h
 -
 ../lv_font/lv_font.h
 ../lvgl/src/lv_font/lv_font.h
@@ -217,6 +231,8 @@ MacTypes.h
 ../lvgl/src/lv_misc/lv_anim.h
 ../lv_misc/lv_types.h
 ../lvgl/src/lv_misc/lv_types.h
+../lv_misc/lv_debug.h
+../lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw_blend.h
 ../lvgl/src/lv_draw/lv_draw_blend.h
 
@@ -263,6 +279,8 @@ lv_img_decoder.h
 ../lvgl/src/lv_draw/lv_img_decoder.h
 lv_img_buf.h
 ../lvgl/src/lv_draw/lv_img_buf.h
+../lv_core/lv_style.h
+../lvgl/src/lv_core/lv_style.h
 
 ../lvgl/src/lv_draw/lv_draw_label.h
 ../lv_misc/lv_bidi.h
@@ -277,7 +295,7 @@ lv_img_buf.h
 ../lvgl/src/lv_core/lv_style.h
 
 ../lvgl/src/lv_draw/lv_draw_mask.h
-MacTypes.h
+stdbool.h
 -
 ../lv_misc/lv_area.h
 ../lvgl/src/lv_misc/lv_area.h
@@ -293,7 +311,7 @@ lv_draw_rect.h
 ../lvgl/src/lv_draw/lv_draw_rect.h
 
 ../lvgl/src/lv_draw/lv_img_buf.h
-MacTypes.h
+stdbool.h
 -
 ../lv_misc/lv_color.h
 ../lvgl/src/lv_misc/lv_color.h
@@ -317,8 +335,8 @@ lv_img_buf.h
 ../lvgl/src/lv_misc/lv_types.h
 ../lv_misc/lv_area.h
 ../lvgl/src/lv_misc/lv_area.h
-../lv_core/lv_style.h
-../lvgl/src/lv_core/lv_style.h
+../lv_misc/lv_color.h
+../lvgl/src/lv_misc/lv_color.h
 
 ../lvgl/src/lv_font/lv_font.h
 ../lv_conf_internal.h
@@ -327,7 +345,7 @@ stdint.h
 -
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_symbol_def.h
 ../lvgl/src/lv_font/lv_symbol_def.h
@@ -339,10 +357,12 @@ stdint.h
 -
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_font.h
 ../lvgl/src/lv_font/lv_font.h
+
+../lvgl/src/lv_font/lv_font_loader.h
 
 ../lvgl/src/lv_font/lv_symbol_def.h
 ../lv_conf_internal.h
@@ -359,7 +379,7 @@ lv_hal_tick.h
 ../lvgl/src/lv_hal/lv_hal_disp.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_hal.h
 ../lvgl/src/lv_hal/lv_hal.h
@@ -375,7 +395,7 @@ lv_hal.h
 ../lvgl/src/lv_hal/lv_hal_indev.h
 ../lv_conf_internal.h
 ../lvgl/src/lv_conf_internal.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -389,7 +409,7 @@ stdint.h
 ../lvgl/src/lv_conf_internal.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 
 ../lvgl/src/lv_misc/lv_anim.h
@@ -397,7 +417,7 @@ MacTypes.h
 ../lvgl/src/lv_conf_internal.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 string.h
 -
@@ -409,7 +429,7 @@ lv_mem.h
 ../lvgl/src/lv_conf_internal.h
 string.h
 -
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -425,7 +445,7 @@ lv_types.h
 ../lvgl/src/lv_misc/lv_bidi.h
 ../lv_conf_internal.h
 ../lvgl/src/lv_conf_internal.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -435,7 +455,15 @@ stdint.h
 ../lvgl/src/lv_conf_internal.h
 lv_math.h
 ../lvgl/src/lv_misc/lv_math.h
+lv_types.h
+../lvgl/src/lv_misc/lv_types.h
 stdint.h
+-
+
+../lvgl/src/lv_misc/lv_debug.h
+../lv_conf_internal.h
+../lvgl/src/lv_conf_internal.h
+stdbool.h
 -
 
 ../lvgl/src/lv_misc/lv_fs.h
@@ -443,7 +471,7 @@ stdint.h
 ../lvgl/src/lv_conf_internal.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_mem.h
 ../lvgl/src/lv_misc/lv_mem.h
@@ -455,7 +483,7 @@ stdint.h
 -
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 
 ../lvgl/src/lv_misc/lv_log.h
@@ -481,6 +509,8 @@ lv_log.h
 ../lvgl/src/lv_misc/lv_log.h
 lv_types.h
 ../lvgl/src/lv_misc/lv_types.h
+string.h
+-
 
 ../lvgl/src/lv_misc/lv_printf.h
 ../lv_conf_internal.h
@@ -495,6 +525,8 @@ stddef.h
 ../lvgl/src/lv_conf_internal.h
 stdint.h
 -
+stdbool.h
+-
 lv_mem.h
 ../lvgl/src/lv_misc/lv_mem.h
 lv_ll.h
@@ -503,14 +535,16 @@ lv_ll.h
 ../lvgl/src/lv_misc/lv_txt.h
 ../lv_conf_internal.h
 ../lvgl/src/lv_conf_internal.h
-MacTypes.h
+stdbool.h
 -
-lv_area.h
-../lvgl/src/lv_misc/lv_area.h
+stdarg.h
+-
 lv_area.h
 ../lvgl/src/lv_misc/lv_area.h
 ../lv_font/lv_font.h
 ../lvgl/src/lv_font/lv_font.h
+lv_printf.h
+../lvgl/src/lv_misc/lv_printf.h
 
 ../lvgl/src/lv_misc/lv_types.h
 stdint.h
@@ -855,8 +889,6 @@ lv_page.h
 ../lvgl/src/lv_widgets/lv_page.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/Sample.c
-Types.h
--
 Resources.h
 -
 Quickdraw.h
@@ -931,6 +963,46 @@ string.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_conf.h
 stdint.h
 -
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/GC9A01.c
+GC9A01.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/GC9A01.h
+stdbool.h
+-
+stddef.h
+-
+string.h
+-
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/GC9A01.h
+lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lv_drv_conf.h
+../../lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drv_conf.h
+lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/ILI9341.c
+ILI9341.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/ILI9341.h
+stdio.h
+-
+stdbool.h
+-
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/ILI9341.h
+stdbool.h
+-
+lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lv_drv_conf.h
+../../lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drv_conf.h
+lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl/lvgl.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/R61581.c
 R61581.h
@@ -1020,6 +1092,52 @@ lvgl.h
 lvgl/lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl/lvgl.h
 
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/drm.c
+drm.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/drm.h
+unistd.h
+-
+pthread.h
+-
+time.h
+-
+sys/time.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+errno.h
+-
+sys/mman.h
+-
+inttypes.h
+-
+xf86drm.h
+-
+xf86drmMode.h
+-
+drm_fourcc.h
+-
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/drm.h
+lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lv_drv_conf.h
+../../lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drv_conf.h
+lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl/lvgl.h
+
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/fbdev.c
 fbdev.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/fbdev.h
@@ -1063,6 +1181,34 @@ lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl.h
 lvgl/lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/gtkdrv.c
+gtkdrv.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/gtkdrv.h
+stdlib.h
+-
+unistd.h
+-
+gtk/gtk.h
+-
+gtk/gtkx.h
+-
+pthread.h
+-
+time.h
+-
+sys/time.h
+-
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/gtkdrv.h
+lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/lv_drv_conf.h
+../../lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drv_conf.h
+lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/lvgl.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/lvgl/lvgl.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/AD_touch.c
 AD_touch.h
@@ -1124,6 +1270,8 @@ stdio.h
 unistd.h
 -
 fcntl.h
+-
+dev/evdev/input.h
 -
 linux/input.h
 -
@@ -1209,6 +1357,30 @@ lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/lvgl.h
 lvgl/lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/win32drv.c
+win32drv.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/win32drv.h
+windowsx.h
+-
+VersionHelpers.h
+-
+stdbool.h
+-
+stdint.h
+-
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/win32drv.h
+lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/lv_drv_conf.h
+../../lv_drv_conf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drv_conf.h
+Windows.h
+-
+lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/lvgl.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/lvgl/lvgl.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win_drv.c
 win_drv.h
@@ -1776,6 +1948,30 @@ stdio.h
 ../../../lv_examples.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/lv_examples.h
 
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_disp_template.c
+lv_port_disp_template.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_disp_template.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_disp_template.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_fs_template.c
+lv_port_fs_template.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_fs_template.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_fs_template.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_indev_template.c
+lv_port_indev_template.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_indev_template.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_indev_template.h
+lvgl/lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lvgl/lvgl.h
+
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
 src/lv_misc/lv_log.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
@@ -1801,6 +1997,8 @@ src/lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 src/lv_font/lv_font.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font.h
+src/lv_font/lv_font_loader.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_loader.h
 src/lv_font/lv_font_fmt_txt.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_fmt_txt.h
 src/lv_misc/lv_printf.h
@@ -1876,30 +2074,6 @@ src/lv_draw/lv_img_cache.h
 src/lv_api_map.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_api_map.h
 
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_disp_template.c
-lv_port_disp_template.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_disp_template.h
-
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_disp_template.h
-lvgl/lvgl.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lvgl/lvgl.h
-
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_fs_template.c
-lv_port_fs_template.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_fs_template.h
-
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_fs_template.h
-lvgl/lvgl.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lvgl/lvgl.h
-
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_indev_template.c
-lv_port_indev_template.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_indev_template.h
-
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_indev_template.h
-lvgl/lvgl.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lvgl/lvgl.h
-
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_api_map.h
 ../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
@@ -1907,6 +2081,8 @@ lvgl/lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 stdint.h
 -
+lv_conf_kconfig.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_kconfig.h
 lv_conf.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf.h
 ../../lv_conf.h
@@ -1914,21 +2090,21 @@ lv_conf.h
 stdint.h
 -
 
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.c
-lv_obj.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
-lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
-
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
-lv_obj.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_kconfig.h
+sdkconfig.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/sdkconfig.h
+esp_attr.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/esp_attr.h
+nuttx/config.h
+-
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_disp.c
 lv_disp.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_disp.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
+../lv_core/lv_refr.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_disp.h
 ../lv_hal/lv_hal.h
@@ -1941,8 +2117,8 @@ lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 stddef.h
 -
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_misc/lv_gc.h
@@ -1989,8 +2165,8 @@ lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 lv_disp.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_disp.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_draw/lv_draw.h
@@ -2007,10 +2183,6 @@ lv_disp.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
-../lv_misc/lv_gc.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
-../lv_misc/lv_math.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 ../lv_misc/lv_log.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
 ../lv_hal/lv_hal.h
@@ -2019,15 +2191,19 @@ stdint.h
 -
 string.h
 -
-../../../SerialHelper.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/SerialHelper.h
+../lv_gpu/lv_gpu_nxp_pxp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h
+../lv_gpu/lv_gpu_nxp_pxp_osa.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.h
+../lv_gpu/lv_gpu_stm32_dma2d.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
 ../lv_conf_internal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_style.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_style.h
@@ -2037,6 +2213,8 @@ lv_style.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
 ../lv_misc/lv_color.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_hal/lv_hal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal.h
 ../lv_draw/lv_draw_rect.h
@@ -2075,27 +2253,25 @@ lv_disp.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_font/lv_font_fmt_txt.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_fmt_txt.h
+../lv_gpu/lv_gpu_stm32_dma2d.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h
 ../lv_widgets/lv_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_label.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.h
 lv_obj.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
-MacTypes.h
+stdbool.h
 -
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_style.c
-lv_obj.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+lv_style.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_style.h
 ../lv_misc/lv_mem.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
-../lv_misc/lv_anim.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_anim.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_style.h
-MacTypes.h
+stdbool.h
 -
 ../lv_font/lv_font.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font.h
@@ -2107,6 +2283,8 @@ MacTypes.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_anim.h
 ../lv_misc/lv_types.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_types.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw_blend.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_blend.h
 
@@ -2161,6 +2339,10 @@ lv_img_decoder.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_disp.h
 ../lv_core/lv_refr.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.h
+../lv_gpu/lv_gpu_nxp_pxp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h
+../lv_gpu/lv_gpu_nxp_vglite.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.h
 ../lv_gpu/lv_gpu_stm32_dma2d.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h
 
@@ -2189,12 +2371,16 @@ lv_img_cache.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 ../lv_gpu/lv_gpu_stm32_dma2d.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h
+../lv_gpu/lv_gpu_nxp_pxp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_img.h
 lv_img_decoder.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_decoder.h
 lv_img_buf.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_buf.h
+../lv_core/lv_style.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_style.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_label.c
 lv_draw_label.h
@@ -2207,8 +2393,8 @@ lv_draw_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.h
 ../lv_misc/lv_bidi.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_bidi.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_label.h
 ../lv_misc/lv_bidi.h
@@ -2221,7 +2407,7 @@ lv_draw_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_line.c
 stdio.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_draw_mask.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_mask.h
@@ -2243,11 +2429,13 @@ lv_draw_mask.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 ../lv_misc/lv_log.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
+../lv_misc/lv_gc.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_mask.h
-MacTypes.h
+stdbool.h
 -
 ../lv_misc/lv_area.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
@@ -2263,10 +2451,12 @@ lv_draw_mask.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_mask.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
+../lv_misc/lv_txt_ap.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt_ap.h
 ../lv_core/lv_refr.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_rect.h
 ../lv_core/lv_style.h
@@ -2301,7 +2491,7 @@ lv_draw_img.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_buf.h
-MacTypes.h
+stdbool.h
 -
 ../lv_misc/lv_color.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
@@ -2309,8 +2499,8 @@ MacTypes.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_cache.c
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 lv_img_cache.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_cache.h
 lv_img_decoder.h
@@ -2329,14 +2519,12 @@ lv_img_decoder.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_decoder.c
 lv_img_decoder.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_decoder.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw_img.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_img.h
 ../lv_misc/lv_ll.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_ll.h
-../lv_misc/lv_color.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
 ../lv_misc/lv_gc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 
@@ -2353,8 +2541,8 @@ lv_img_buf.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_types.h
 ../lv_misc/lv_area.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
-../lv_core/lv_style.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_style.h
+../lv_misc/lv_color.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font.c
 lv_font.h
@@ -2371,7 +2559,7 @@ stdint.h
 -
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_symbol_def.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_symbol_def.h
@@ -2387,12 +2575,12 @@ lv_font.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font.h
 lv_font_fmt_txt.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_fmt_txt.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
-../lv_draw/lv_draw.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_misc/lv_types.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_types.h
+../lv_misc/lv_gc.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 ../lv_misc/lv_log.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
 ../lv_misc/lv_utils.h
@@ -2405,10 +2593,28 @@ stdint.h
 -
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_font.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_loader.c
+stdint.h
+-
+stdbool.h
+-
+../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lvgl.h
+../lv_misc/lv_fs.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_fs.h
+lv_font_loader.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_loader.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_loader.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_10.c
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_12.c
 ../../lvgl.h
@@ -2494,7 +2700,15 @@ lv_font.h
 ../../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
 
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_8.c
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_simsun_16_cjk.c
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_unscii_16.c
 ../../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
 
@@ -2506,21 +2720,77 @@ lv_font.h
 ../lv_conf_internal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c
+../lv_conf_internal.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
+lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lvgl.h
+lv_gpu_nxp_pxp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h
+../lv_misc/lv_mem.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
+../lv_misc/lv_log.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
+fsl_pxp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/fsl_pxp.h
+fsl_cache.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/fsl_cache.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h
+../lv_misc/lv_area.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
+../lv_misc/lv_color.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c
+../lv_conf_internal.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
+lv_gpu_nxp_pxp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h
+fsl_pxp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/fsl_pxp.h
+FreeRTOS.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/FreeRTOS.h
+semphr.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/semphr.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.h
+../lv_conf_internal.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c
+../lv_conf_internal.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
+lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lvgl.h
+lv_gpu_nxp_vglite.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.h
+../lv_misc/lv_log.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
+fsl_cache.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/fsl_cache.h
+vg_lite.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/vg_lite.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.h
+lv_misc/lv_area.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_misc/lv_area.h
+
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c
 lv_gpu_stm32_dma2d.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h
+../lv_core/lv_disp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_disp.h
 ../lv_core/lv_refr.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.h
-stm32f4xx_hal.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/stm32f4xx_hal.h
-stm32f7xx_hal.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/stm32f7xx_hal.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h
 ../lv_misc/lv_area.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
 ../lv_misc/lv_color.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
+../lv_hal/lv_hal_disp.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_disp.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal.h
 lv_hal_disp.h
@@ -2541,8 +2811,8 @@ lv_hal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
 ../lv_misc/lv_gc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_obj.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
 ../lv_core/lv_refr.h
@@ -2553,7 +2823,7 @@ lv_hal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_disp.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_hal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal.h
@@ -2567,8 +2837,8 @@ lv_hal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_task.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_indev.c
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_hal/lv_hal_indev.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_indev.h
 ../lv_core/lv_indev.h
@@ -2583,7 +2853,7 @@ lv_hal_disp.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_indev.h
 ../lv_conf_internal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -2603,7 +2873,7 @@ stddef.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_anim.c
@@ -2613,8 +2883,8 @@ stddef.h
 -
 string.h
 -
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_hal/lv_hal_tick.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_tick.h
 lv_task.h
@@ -2629,7 +2899,7 @@ lv_gc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 string.h
 -
@@ -2649,7 +2919,7 @@ lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 string.h
 -
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -2679,7 +2949,7 @@ lv_txt.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_bidi.h
 ../lv_conf_internal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -2687,22 +2957,36 @@ stdint.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.c
 lv_color.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
-lv_math.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.h
 ../lv_conf_internal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
+lv_types.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_types.h
 stdint.h
+-
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.c
+lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
+lv_mem.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
+string.h
+-
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
+../lv_conf_internal.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
+stdbool.h
 -
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_fs.c
 lv_fs.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_fs.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 lv_ll.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_ll.h
 string.h
@@ -2715,7 +2999,7 @@ lv_gc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_mem.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
@@ -2729,7 +3013,7 @@ string.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 stdint.h
 -
-MacTypes.h
+stdbool.h
 -
 lv_mem.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
@@ -2739,8 +3023,8 @@ lv_task.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_task.h
 ../lv_draw/lv_img_cache.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_cache.h
-../lv_draw/lv_draw.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
+../lv_draw/lv_draw_mask.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_mask.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_ll.c
 stdint.h
@@ -2759,7 +3043,7 @@ stdint.h
 -
 stddef.h
 -
-MacTypes.h
+stdbool.h
 -
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.c
@@ -2783,7 +3067,7 @@ stdint.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.c
 lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
-MacTypes.h
+stdbool.h
 -
 stdlib.h
 -
@@ -2803,6 +3087,8 @@ lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 lv_gc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
+lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 string.h
 -
 
@@ -2817,11 +3103,13 @@ lv_log.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
 lv_types.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_types.h
+string.h
+-
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_printf.c
 lv_printf.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_printf.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -2841,8 +3129,8 @@ stddef.h
 -
 lv_task.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_task.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_hal/lv_hal_tick.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_tick.h
 lv_gc.h
@@ -2853,6 +3141,8 @@ lv_gc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
 stdint.h
 -
+stdbool.h
+-
 lv_mem.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.h
 lv_ll.h
@@ -2861,24 +3151,32 @@ lv_ll.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_templ.c
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt.c
+stdarg.h
+-
 lv_txt.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt.h
+lv_txt_ap.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt_ap.h
 lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 lv_log.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.h
+lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt.h
 ../lv_conf_internal.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_conf_internal.h
-MacTypes.h
+stdbool.h
 -
-lv_area.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
+stdarg.h
+-
 lv_area.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.h
 ../lv_font/lv_font.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font.h
+lv_printf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_printf.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt_ap.c
 stddef.h
@@ -2905,7 +3203,7 @@ stdint.h
 -
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_utils.c
-MacTypes.h
+stdbool.h
 -
 lv_utils.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_utils.h
@@ -2923,10 +3221,8 @@ stddef.h
 -
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.c
-lv_theme.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
-../lv_core/lv_obj.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_conf_internal.h
@@ -2945,10 +3241,10 @@ lv_theme_mono.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_mono.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_empty.c
-stdint.h
--
 ../../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+../lv_misc/lv_gc.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_empty.h
 ../lv_conf_internal.h
@@ -2957,6 +3253,8 @@ stdint.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_material.c
 ../../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+../lv_misc/lv_gc.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_material.h
 ../lv_conf_internal.h
@@ -2965,6 +3263,8 @@ stdint.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_mono.c
 ../../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+../lv_misc/lv_gc.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_mono.h
 ../lv_conf_internal.h
@@ -2973,6 +3273,8 @@ stdint.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_template.c
 ../../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+../lv_misc/lv_gc.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_template.h
 ../lv_conf_internal.h
@@ -2981,8 +3283,12 @@ stdint.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_arc.c
 lv_arc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_arc.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_core/lv_group.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
+../lv_core/lv_indev.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_indev.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 ../lv_draw/lv_draw_arc.h
@@ -2999,8 +3305,8 @@ lv_arc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_bar.c
 lv_bar.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_bar.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_themes/lv_theme.h
@@ -3033,8 +3339,8 @@ string.h
 -
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_themes/lv_theme.h
@@ -3057,8 +3363,8 @@ lv_cont.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_btnmatrix.c
 lv_btnmatrix.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_btnmatrix.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_draw/lv_draw.h
@@ -3069,6 +3375,8 @@ lv_btnmatrix.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_misc/lv_txt.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt.h
+../lv_misc/lv_txt_ap.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt_ap.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_btnmatrix.h
 ../lv_conf_internal.h
@@ -3083,8 +3391,8 @@ lv_btn.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_calendar.c
 lv_calendar.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_calendar.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_hal/lv_hal_indev.h
@@ -3109,8 +3417,8 @@ stdlib.h
 -
 lv_canvas.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_canvas.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 ../lv_draw/lv_draw.h
@@ -3133,8 +3441,8 @@ lv_canvas.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_chart.c
 lv_chart.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_chart.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_refr.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.h
 ../lv_draw/lv_draw.h
@@ -3155,8 +3463,8 @@ lv_line.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_checkbox.c
 lv_checkbox.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_checkbox.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_themes/lv_theme.h
@@ -3175,14 +3483,14 @@ lv_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cont.c
 lv_cont.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cont.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
 string.h
 -
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_draw/lv_draw_mask.h
@@ -3205,8 +3513,8 @@ string.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cpicker.c
 lv_cpicker.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cpicker.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw_arc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_arc.h
 ../lv_themes/lv_theme.h
@@ -3227,8 +3535,8 @@ lv_cpicker.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_dropdown.c
 lv_dropdown.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_dropdown.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_core/lv_group.h
@@ -3245,6 +3553,8 @@ lv_dropdown.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_anim.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
+../lv_misc/lv_txt_ap.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt_ap.h
 string.h
 -
 
@@ -3259,8 +3569,8 @@ string.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_gauge.c
 lv_gauge.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_gauge.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_themes/lv_theme.h
@@ -3293,8 +3603,8 @@ lv_line.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_img.c
 lv_img.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_img.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_draw/lv_img_decoder.h
@@ -3321,8 +3631,8 @@ lv_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_imgbtn.c
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 lv_imgbtn.h
@@ -3343,8 +3653,8 @@ lv_btn.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_keyboard.c
 lv_keyboard.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_keyboard.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 lv_textarea.h
@@ -3363,8 +3673,8 @@ lv_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_label.h
 ../lv_core/lv_obj.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_draw/lv_draw.h
@@ -3401,8 +3711,8 @@ stdarg.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_led.c
 lv_led.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_led.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_draw/lv_draw.h
@@ -3417,15 +3727,15 @@ lv_led.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_line.c
 lv_line.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_line.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -3441,8 +3751,8 @@ string.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_linemeter.c
 lv_linemeter.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_linemeter.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_themes/lv_theme.h
@@ -3451,8 +3761,6 @@ lv_linemeter.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
-stdlib.h
--
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_linemeter.h
 ../lv_conf_internal.h
@@ -3463,8 +3771,8 @@ stdlib.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_list.c
 lv_list.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_list.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_themes/lv_theme.h
@@ -3491,8 +3799,8 @@ lv_img.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_msgbox.c
 lv_msgbox.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_msgbox.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_core/lv_disp.h
@@ -3519,8 +3827,8 @@ lv_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_objmask.c
 lv_objmask.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_objmask.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_themes/lv_theme.h
@@ -3535,14 +3843,14 @@ lv_objmask.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cont.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_objx_templ.c
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_page.c
 ../lv_widgets/lv_page.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_page.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_draw/lv_draw.h
@@ -3569,8 +3877,8 @@ lv_cont.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_roller.c
 lv_roller.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_roller.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_draw/lv_draw.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw.h
 ../lv_core/lv_group.h
@@ -3591,8 +3899,8 @@ lv_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_slider.c
 lv_slider.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_slider.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_core/lv_indev.h
@@ -3617,8 +3925,8 @@ lv_bar.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_spinbox.c
 lv_spinbox.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_spinbox.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_misc/lv_math.h
@@ -3637,8 +3945,8 @@ lv_spinbox.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_spinner.c
 lv_spinner.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_spinner.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
 ../lv_draw/lv_draw_rect.h
@@ -3661,8 +3969,8 @@ lv_arc.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_switch.c
 lv_switch.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_switch.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_misc/lv_math.h
@@ -3685,14 +3993,18 @@ lv_bar.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_table.c
 lv_table.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_table.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
 ../lv_core/lv_indev.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_indev.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_misc/lv_txt.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt.h
+../lv_misc/lv_txt_ap.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt_ap.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
+../lv_misc/lv_printf.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_printf.h
 ../lv_draw/lv_draw_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_label.h
 ../lv_themes/lv_theme.h
@@ -3711,8 +4023,8 @@ lv_tabview.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_tabview.h
 lv_btnmatrix.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_btnmatrix.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_misc/lv_anim.h
@@ -3735,8 +4047,8 @@ lv_textarea.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_textarea.h
 string.h
 -
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_core/lv_group.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.h
 ../lv_core/lv_refr.h
@@ -3765,14 +4077,14 @@ lv_label.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_tileview.c
 lv_tileview.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_tileview.h
-MacTypes.h
+stdbool.h
 -
 lv_cont.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cont.h
 ../lv_misc/lv_math.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 
@@ -3785,8 +4097,8 @@ lv_cont.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_win.c
 lv_win.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_win.h
-../lv_core/lv_debug.h
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.h
+../lv_misc/lv_debug.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.h
 ../lv_themes/lv_theme.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.h
 ../lv_core/lv_disp.h
@@ -3808,6 +4120,10 @@ lv_img.h
 lv_page.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_page.h
 
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lvgl.h
+../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_assert.c
 lv_test_assert.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_assert.h
@@ -3827,7 +4143,7 @@ png.h
 -
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_assert.h
-MacTypes.h
+stdbool.h
 -
 stdint.h
 -
@@ -3843,8 +4159,26 @@ lv_test_obj.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_obj.h
 lv_test_style.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_style.h
+lv_test_font_loader.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_font_loader.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_core.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_font_loader.c
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+../lv_test_assert.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_assert.h
+../src/lv_font/lv_font_fmt_txt.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/src/lv_font/lv_font_fmt_txt.h
+../src/lv_font/lv_font.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/src/lv_font/lv_font.h
+../src/lv_font/lv_font_loader.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/src/lv_font/lv_font_loader.h
+lv_test_font_loader.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_font_loader.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_font_loader.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_obj.c
 ../../lvgl.h
@@ -3866,6 +4200,18 @@ lv_test_style.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_style.h
 
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_1.c
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_2.c
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_3.c
+../../lvgl.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
+
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_main.c
 ../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
@@ -3873,22 +4219,26 @@ stdio.h
 -
 stdlib.h
 -
-sys/time.h
--
 lv_test_core/lv_test_core.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_core.h
+lv_test_widgets/lv_test_label.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_widgets/lv_test_label.h
+sys/time.h
+-
+stdio.h
+-
 
-/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_objx/lv_test_cont.c
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_widgets/lv_test_label.c
 ../../lvgl.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/lvgl.h
 ../lv_test_assert.h
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_assert.h
+lv_test_label.h
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_widgets/lv_test_label.h
+
+/home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_widgets/lv_test_label.h
 
 /home/camh/Documents/Retro68kApps/LVGLQuickDraw/quickdraw_renderer.h
-MacTypes.h
--
-Types.h
--
 Quickdraw.h
 -
 Scrap.h

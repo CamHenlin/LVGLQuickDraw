@@ -19,15 +19,15 @@ extern "C" {
 
 /*Testing of dependencies*/
 #if LV_USE_PAGE == 0
-#error "lv_list: lv_page is required. Enable it in lv_conf.h (LV_USE_PAGE  1) "
+#error "lv_list: lv_page is required. Enable it in lv_conf.h (LV_USE_PAGE 1)"
 #endif
 
 #if LV_USE_BTN == 0
-#error "lv_list: lv_btn is required. Enable it in lv_conf.h (LV_USE_BTN  1) "
+#error "lv_list: lv_btn is required. Enable it in lv_conf.h (LV_USE_BTN 1)"
 #endif
 
 #if LV_USE_LABEL == 0
-#error "lv_list: lv_label is required. Enable it in lv_conf.h (LV_USE_LABEL  1) "
+#error "lv_list: lv_label is required. Enable it in lv_conf.h (LV_USE_LABEL 1)"
 #endif
 
 #include "../lv_core/lv_obj.h"
@@ -103,7 +103,7 @@ lv_obj_t * lv_list_add_btn(lv_obj_t * list, const void * img_src, const char * t
  * lv_list_ext_t.size
  * @return true: successfully deleted
  */
-Boolean lv_list_remove(const lv_obj_t * list, uint16_t index);
+bool lv_list_remove(const lv_obj_t * list, uint16_t index);
 
 /*=====================
  * Setter functions
@@ -133,7 +133,7 @@ static inline void lv_list_set_scrollbar_mode(lv_obj_t * list, lv_scrollbar_mode
  * @param list pointer to a List
  * @param en true or false to enable/disable scroll propagation
  */
-static inline void lv_list_set_scroll_propagation(lv_obj_t * list, Boolean en)
+static inline void lv_list_set_scroll_propagation(lv_obj_t * list, bool en)
 {
     lv_page_set_scroll_propagation(list, en);
 }
@@ -143,7 +143,7 @@ static inline void lv_list_set_scroll_propagation(lv_obj_t * list, Boolean en)
  * @param list pointer to a List
  * @param en true or false to enable/disable end flash
  */
-static inline void lv_list_set_edge_flash(lv_obj_t * list, Boolean en)
+static inline void lv_list_set_edge_flash(lv_obj_t * list, bool en)
 {
     lv_page_set_edge_flash(list, en);
 }
@@ -251,7 +251,7 @@ static inline lv_scrollbar_mode_t lv_list_get_scrollbar_mode(const lv_obj_t * li
  * @param list pointer to a List
  * @return true or false
  */
-static inline Boolean lv_list_get_scroll_propagation(lv_obj_t * list)
+static inline bool lv_list_get_scroll_propagation(lv_obj_t * list)
 {
     return lv_page_get_scroll_propagation(list);
 }
@@ -261,7 +261,7 @@ static inline Boolean lv_list_get_scroll_propagation(lv_obj_t * list)
  * @param list pointer to a List
  * @return true or false
  */
-static inline Boolean lv_list_get_edge_flash(lv_obj_t * list)
+static inline bool lv_list_get_edge_flash(lv_obj_t * list)
 {
     return lv_page_get_edge_flash(list);
 }
@@ -294,7 +294,7 @@ void lv_list_down(const lv_obj_t * list);
 /**
  * Focus on a list button. It ensures that the button will be visible on the list.
  * @param btn pointer to a list button to focus
- * @param anim LV_ANOM_ON: scroll with animation, LV_ANIM_OFF: without animation
+ * @param anim LV_ANIM_ON: scroll with animation, LV_ANIM_OFF: without animation
  */
 void lv_list_focus(const lv_obj_t * btn, lv_anim_enable_t anim);
 

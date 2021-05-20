@@ -59,6 +59,7 @@ typedef struct {
     uint16_t btn_id_act;    /*Index of the active button (being pressed/released etc) or LV_BTNMATRIX_BTN_NONE */
     uint8_t recolor : 1;    /*Enable button recoloring*/
     uint8_t one_check : 1;  /*Single button toggled at once*/
+    uint8_t align : 2;      /*Align type from 'lv_label_align_t'*/
 } lv_btnmatrix_ext_t;
 
 enum {
@@ -103,7 +104,7 @@ void lv_btnmatrix_set_map(lv_obj_t * btnm, const char * map[]);
  *                 the number and order of the individual buttons (i.e. excludes
  *                 newline entries).
  *                 An element of the map should look like e.g.:
- *                 `ctrl_map[0] = width | LV_BTNMATRIX_CTRL_NO_REPEAT |  LV_BTNMATRIX_CTRL_TGL_ENABLE`
+ *                 `ctrl_map[0] = width | LV_BTNMATRIX_CTRL_NO_REPEAT | LV_BTNMATRIX_CTRL_TGL_ENABLE`
  */
 void lv_btnmatrix_set_ctrl_map(lv_obj_t * btnm, const lv_btnmatrix_ctrl_t ctrl_map[]);
 
@@ -119,14 +120,14 @@ void lv_btnmatrix_set_focused_btn(lv_obj_t * btnm, uint16_t id);
  * @param btnm pointer to button matrix object
  * @param en true: enable recoloring; false: disable
  */
-void lv_btnmatrix_set_recolor(const lv_obj_t * btnm, Boolean en);
+void lv_btnmatrix_set_recolor(const lv_obj_t * btnm, bool en);
 
 /**
  * Set the attributes of a button of the button matrix
  * @param btnm pointer to button matrix object
  * @param btn_id 0 based index of the button to modify. (Not counting new lines)
  */
-void lv_btnmatrix_set_btn_ctrl(const lv_obj_t * btnm, uint16_t btn_id, lv_btnmatrix_ctrl_t ctrl);
+void lv_btnmatrix_set_btn_ctrl(lv_obj_t * btnm, uint16_t btn_id, lv_btnmatrix_ctrl_t ctrl);
 
 /**
  * Clear the attributes of a button of the button matrix
@@ -168,7 +169,14 @@ void lv_btnmatrix_set_btn_width(lv_obj_t * btnm, uint16_t btn_id, uint8_t width)
  * @param btnm Button matrix object
  * @param one_chk Whether "one check" mode is enabled
  */
-void lv_btnmatrix_set_one_check(lv_obj_t * btnm, Boolean one_chk);
+void lv_btnmatrix_set_one_check(lv_obj_t * btnm, bool one_chk);
+
+/**
+ * Set the align of the map text (left, right or center)
+ * @param btnm pointer to a btnmatrix object
+ * @param align LV_LABEL_ALIGN_LEFT, LV_LABEL_ALIGN_RIGHT or LV_LABEL_ALIGN_CENTER
+ */
+void lv_btnmatrix_set_align(lv_obj_t * btnm, lv_label_align_t align);
 
 /*=====================
  * Getter functions
@@ -186,19 +194,19 @@ const char ** lv_btnmatrix_get_map_array(const lv_obj_t * btnm);
  * @param btnm pointer to button matrix object
  * @return true: text recolor enable; false: disabled
  */
-Boolean lv_btnmatrix_get_recolor(const lv_obj_t * btnm);
+bool lv_btnmatrix_get_recolor(const lv_obj_t * btnm);
 
 /**
  * Get the index of the lastly "activated" button by the user (pressed, released etc)
- * Useful in the the `event_cb` to get the text of the button, check if hidden etc.
+ * Useful in the `event_cb` to get the text of the button, check if hidden etc.
  * @param btnm pointer to button matrix object
- * @return  index of the last released button (LV_BTNMATRIX_BTN_NONE: if unset)
+ * @return index of the last released button (LV_BTNMATRIX_BTN_NONE: if unset)
  */
 uint16_t lv_btnmatrix_get_active_btn(const lv_obj_t * btnm);
 
 /**
  * Get the text of the lastly "activated" button by the user (pressed, released etc)
- * Useful in the the `event_cb`
+ * Useful in the `event_cb`
  * @param btnm pointer to button matrix object
  * @return text of the last released button (NULL: if unset)
  */
@@ -207,7 +215,7 @@ const char * lv_btnmatrix_get_active_btn_text(const lv_obj_t * btnm);
 /**
  * Get the focused button's index.
  * @param btnm pointer to button matrix object
- * @return  index of the focused button (LV_BTNMATRIX_BTN_NONE: if unset)
+ * @return index of the focused button (LV_BTNMATRIX_BTN_NONE: if unset)
  */
 uint16_t lv_btnmatrix_get_focused_btn(const lv_obj_t * btnm);
 
@@ -216,7 +224,7 @@ uint16_t lv_btnmatrix_get_focused_btn(const lv_obj_t * btnm);
  * @param btnm pointer to button matrix object
  * @param btn_id the index a button not counting new line characters. (The return value of
  * lv_btnmatrix_get_pressed/released)
- * @return  text of btn_index` button
+ * @return text of btn_index` button
  */
 const char * lv_btnmatrix_get_btn_text(const lv_obj_t * btnm, uint16_t btn_id);
 
@@ -228,14 +236,22 @@ const char * lv_btnmatrix_get_btn_text(const lv_obj_t * btnm, uint16_t btn_id);
  * @param ctrl control values to check (ORed value can be used)
  * @return true: long press repeat is disabled; false: long press repeat enabled
  */
-Boolean lv_btnmatrix_get_btn_ctrl(lv_obj_t * btnm, uint16_t btn_id, lv_btnmatrix_ctrl_t ctrl);
+bool lv_btnmatrix_get_btn_ctrl(lv_obj_t * btnm, uint16_t btn_id, lv_btnmatrix_ctrl_t ctrl);
 
 /**
  * Find whether "one toggle" mode is enabled.
  * @param btnm Button matrix object
  * @return whether "one toggle" mode is enabled
  */
-Boolean lv_btnmatrix_get_one_check(const lv_obj_t * btnm);
+bool lv_btnmatrix_get_one_check(const lv_obj_t * btnm);
+
+/**
+ * Get the align attribute
+ * @param btnm pointer to a btnmatrix object
+ * @return LV_LABEL_ALIGN_LEFT, LV_LABEL_ALIGN_RIGHT or LV_LABEL_ALIGN_CENTER
+ */
+lv_label_align_t lv_btnmatrix_get_align(const lv_obj_t * btnm);
+
 /**********************
  *      MACROS
  **********************/

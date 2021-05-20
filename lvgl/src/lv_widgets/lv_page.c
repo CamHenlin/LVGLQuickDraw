@@ -9,7 +9,7 @@
 #include "../lv_widgets/lv_page.h"
 #if LV_USE_PAGE != 0
 
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_core/lv_group.h"
 #include "../lv_draw/lv_draw.h"
 #include "../lv_themes/lv_theme.h"
@@ -118,6 +118,7 @@ lv_obj_t * lv_page_create(lv_obj_t * par, const lv_obj_t * copy)
     /*Init the new page object*/
     if(copy == NULL) {
         ext->scrl = lv_cont_create(page, NULL);
+        lv_obj_set_focus_parent(ext->scrl, true);
         lv_obj_set_drag(ext->scrl, true);
         lv_obj_set_drag_throw(ext->scrl, true);
         lv_obj_add_protect(ext->scrl, LV_PROTECT_PARENT | LV_PROTECT_PRESS_LOST);
@@ -154,7 +155,6 @@ lv_obj_t * lv_page_create(lv_obj_t * par, const lv_obj_t * copy)
         lv_page_set_scrollbar_mode(page, copy_ext->scrlbar.mode);
     }
 
-
     scrlbar_refresh(page);
 
     LV_LOG_INFO("page created");
@@ -170,7 +170,7 @@ void lv_page_clean(lv_obj_t * page)
 {
     LV_ASSERT_OBJ(page, LV_OBJX_NAME);
 
-    lv_obj_t * scrl = lv_page_get_scrllable(page);
+    lv_obj_t * scrl = lv_page_get_scrollable(page);
     lv_obj_clean(scrl);
 }
 
@@ -232,7 +232,7 @@ void lv_page_set_anim_time(lv_obj_t * page, uint16_t anim_time)
  * @param page pointer to a Page
  * @param en true or false to enable/disable scroll propagation
  */
-void lv_page_set_scroll_propagation(lv_obj_t * page, Boolean en)
+void lv_page_set_scroll_propagation(lv_obj_t * page, bool en)
 {
     LV_ASSERT_OBJ(page, LV_OBJX_NAME);
 
@@ -248,7 +248,7 @@ void lv_page_set_scroll_propagation(lv_obj_t * page, Boolean en)
  * @param page pointer to a Page
  * @param en true or false to enable/disable end flash
  */
-void lv_page_set_edge_flash(lv_obj_t * page, Boolean en)
+void lv_page_set_edge_flash(lv_obj_t * page, bool en)
 {
     LV_ASSERT_OBJ(page, LV_OBJX_NAME);
 
@@ -270,7 +270,7 @@ void lv_page_set_edge_flash(lv_obj_t * page, Boolean en)
  * @param page pointer to a page object
  * @return pointer to a container which is the scrollable part of the page
  */
-lv_obj_t * lv_page_get_scrllable(const lv_obj_t * page)
+lv_obj_t * lv_page_get_scrollable(const lv_obj_t * page)
 {
     LV_ASSERT_OBJ(page, LV_OBJX_NAME);
 
@@ -315,7 +315,7 @@ lv_scrollbar_mode_t lv_page_get_scrollbar_mode(const lv_obj_t * page)
  * @param page pointer to a Page
  * @return true or false
  */
-Boolean lv_page_get_scroll_propagation(lv_obj_t * page)
+bool lv_page_get_scroll_propagation(lv_obj_t * page)
 {
     LV_ASSERT_OBJ(page, LV_OBJX_NAME);
 
@@ -328,7 +328,7 @@ Boolean lv_page_get_scroll_propagation(lv_obj_t * page)
  * @param page pointer to a Page
  * return true or false
  */
-Boolean lv_page_get_edge_flash(lv_obj_t * page)
+bool lv_page_get_edge_flash(lv_obj_t * page)
 {
     LV_ASSERT_OBJ(page, LV_OBJX_NAME);
 
@@ -380,10 +380,10 @@ lv_coord_t lv_page_get_height_fit(lv_obj_t * page)
 
 /**
  * Divide the width of the object and get the width of a given number of columns.
- * Take into account the paddings of the background and scrollbale too.
+ * Take into account the paddings of the background and scrollable too.
  * @param page pointer to an object
  * @param div indicates how many columns are assumed.
- * If 1 the width will be set the the parent's width
+ * If 1 the width will be set the parent's width
  * If 2 only half parent width - inner padding of the parent
  * If 3 only third parent width - 2 * inner padding of the parent
  * @param span how many columns are combined
@@ -402,11 +402,11 @@ lv_coord_t lv_page_get_width_grid(lv_obj_t * page, uint8_t div, uint8_t span)
 }
 
 /**
- * Divide the height of the object and get the width of a given number of columns.
- * Take into account the paddings of the background and scrollbale too.
+ * Divide the height of the object and get the height of a given number of rows.
+ * Take into account the paddings of the background and scrollable too.
  * @param obj pointer to an object
  * @param div indicates how many rows are assumed.
- * If 1 the height will be set the the parent's height
+ * If 1 the height will be set the parent's height
  * If 2 only half parent height - inner padding of the parent
  * If 3 only third parent height - 2 * inner padding of the parent
  * @param span how many rows are combined
@@ -433,9 +433,9 @@ lv_coord_t lv_page_get_height_grid(lv_obj_t * page, uint8_t div, uint8_t span)
  * @param edge Edge to check
  * @return true if the page is on the specified edge
  */
-Boolean lv_page_on_edge(lv_obj_t * page, lv_page_edge_t edge)
+bool lv_page_on_edge(lv_obj_t * page, lv_page_edge_t edge)
 {
-    lv_obj_t * scrl               = lv_page_get_scrllable(page);
+    lv_obj_t * scrl               = lv_page_get_scrollable(page);
     lv_area_t page_coords;
     lv_area_t scrl_coords;
 
@@ -460,7 +460,7 @@ Boolean lv_page_on_edge(lv_obj_t * page, lv_page_edge_t edge)
  * @param obj pointer to an object on a page
  * @param glue true: enable glue, false: disable glue
  */
-void lv_page_glue_obj(lv_obj_t * obj, Boolean glue)
+void lv_page_glue_obj(lv_obj_t * obj, bool glue)
 {
     lv_obj_set_drag_parent(obj, glue);
     lv_obj_set_drag(obj, glue);
@@ -478,13 +478,15 @@ void lv_page_focus(lv_obj_t * page, const lv_obj_t * obj, lv_anim_enable_t anim_
 
 #if LV_USE_ANIMATION
     /* Be sure there is no position changing animation in progress
-     * because it can overide the current changes*/
+     * because it can override the current changes*/
     lv_anim_del(page, (lv_anim_exec_xcb_t)lv_obj_set_x);
     lv_anim_del(page, (lv_anim_exec_xcb_t)lv_obj_set_y);
     lv_anim_del(ext->scrl, (lv_anim_exec_xcb_t)lv_obj_set_x);
     lv_anim_del(ext->scrl, (lv_anim_exec_xcb_t)lv_obj_set_y);
 #endif
 
+    /*if using focus mode, change target to parent*/
+    obj = lv_obj_get_focused_obj(obj);
 
     /*If obj is higher then the page focus where the "error" is smaller*/
     lv_coord_t obj_y      = obj->coords.y1 - ext->scrl->coords.y1;
@@ -492,13 +494,13 @@ void lv_page_focus(lv_obj_t * page, const lv_obj_t * obj, lv_anim_enable_t anim_
     lv_coord_t scrlable_y = lv_obj_get_y(ext->scrl);
     lv_coord_t page_h     = lv_obj_get_height(page);
 
-    lv_coord_t top_err = -(scrlable_y + obj_y);
-    lv_coord_t bot_err = scrlable_y + obj_y + obj_h - page_h;
-
     lv_style_int_t bg_top = lv_obj_get_style_pad_top(page, LV_PAGE_PART_BG);
     lv_style_int_t bg_bottom = lv_obj_get_style_pad_bottom(page, LV_PAGE_PART_BG);
     lv_style_int_t scrl_top = lv_obj_get_style_pad_top(ext->scrl, LV_CONT_PART_MAIN);
     lv_style_int_t scrl_bottom = lv_obj_get_style_pad_bottom(ext->scrl, LV_CONT_PART_MAIN);
+
+    lv_coord_t top_err = -((scrlable_y + obj_y) - bg_top);
+    lv_coord_t bot_err = scrlable_y + obj_y + obj_h - (page_h - bg_bottom);
 
     /*Out of the page on the top*/
     if((obj_h <= page_h && top_err > 0) || (obj_h > page_h && top_err < bot_err)) {
@@ -514,20 +516,19 @@ void lv_page_focus(lv_obj_t * page, const lv_obj_t * obj, lv_anim_enable_t anim_
         scrlable_y += page_h - obj_h;
     }
 
-
     /*If obj is wider then the page focus where the "error" is smaller*/
     lv_coord_t obj_x      = obj->coords.x1 - ext->scrl->coords.x1;
     lv_coord_t obj_w      = lv_obj_get_width(obj);
     lv_coord_t scrlable_x = lv_obj_get_x(ext->scrl);
     lv_coord_t page_w     = lv_obj_get_width(page);
 
-    lv_coord_t left_err  = -(scrlable_x + obj_x);
-    lv_coord_t right_err = scrlable_x + obj_x + obj_w - page_w;
-
     lv_style_int_t bg_left = lv_obj_get_style_pad_left(page, LV_PAGE_PART_BG);
     lv_style_int_t bg_right = lv_obj_get_style_pad_right(page, LV_PAGE_PART_BG);
     lv_style_int_t scrl_left = lv_obj_get_style_pad_top(ext->scrl, LV_CONT_PART_MAIN);
     lv_style_int_t scrl_right = lv_obj_get_style_pad_bottom(ext->scrl, LV_CONT_PART_MAIN);
+
+    lv_coord_t left_err  = -((scrlable_x + obj_x) - bg_left);
+    lv_coord_t right_err = scrlable_x + obj_x + obj_w - (page_w - bg_right);
 
     /*Out of the page on the left*/
     if((obj_w <= page_w && left_err > 0) || (obj_w > page_w && left_err < right_err)) {
@@ -535,9 +536,9 @@ void lv_page_focus(lv_obj_t * page, const lv_obj_t * obj, lv_anim_enable_t anim_
         scrlable_x = -(obj_x - scrl_left - bg_left);
         scrlable_x += scrl_left;
     }
-    /*Out of the page on the rigth*/
+    /*Out of the page on the right*/
     else if((obj_w <= page_w && right_err > 0) || (obj_w > page_w && left_err >= right_err)) {
-        /*Calculate a new position and let some space on teh side*/
+        /*Calculate a new position and let some space on the side*/
         scrlable_x = -(obj_x + scrl_right + bg_right);
         scrlable_x -= scrl_right;
         scrlable_x += page_w - obj_w;
@@ -571,7 +572,7 @@ void lv_page_focus(lv_obj_t * page, const lv_obj_t * obj, lv_anim_enable_t anim_
  */
 void lv_page_scroll_hor(lv_obj_t * page, lv_coord_t dist)
 {
-    lv_obj_t * scrl = lv_page_get_scrllable(page);
+    lv_obj_t * scrl = lv_page_get_scrollable(page);
 
 #if LV_USE_ANIMATION
     lv_anim_t a;
@@ -593,7 +594,7 @@ void lv_page_scroll_hor(lv_obj_t * page, lv_coord_t dist)
  */
 void lv_page_scroll_ver(lv_obj_t * page, lv_coord_t dist)
 {
-    lv_obj_t * scrl = lv_page_get_scrllable(page);
+    lv_obj_t * scrl = lv_page_get_scrollable(page);
 
 #if LV_USE_ANIMATION
     lv_anim_t a;
@@ -654,7 +655,8 @@ void lv_page_start_edge_flash(lv_obj_t * page, lv_page_edge_t edge)
     }
 
 #else
-    (void)page; /*Unused*/
+    LV_UNUSED(page);
+    LV_UNUSED(edge);
 #endif
 }
 
@@ -719,7 +721,6 @@ static lv_design_res_t lv_page_design(lv_obj_t * page, const lv_area_t * clip_ar
 #if LV_USE_ANIMATION
         {
 
-
             if(ext->edge_flash.left_ip || ext->edge_flash.right_ip || ext->edge_flash.top_ip ||
                ext->edge_flash.bottom_ip) {
                 lv_area_t flash_area;
@@ -758,7 +759,7 @@ static lv_res_t lv_page_signal(lv_obj_t * page, lv_signal_t sign, void * param)
     }
     else if(sign == LV_SIGNAL_GET_STATE_DSC) {
         lv_get_state_info_t * info = param;
-        if(info->part == LV_PAGE_PART_SCROLLABLE) info->result = lv_obj_get_state(lv_page_get_scrllable(page),
+        if(info->part == LV_PAGE_PART_SCROLLABLE) info->result = lv_obj_get_state(lv_page_get_scrollable(page),
                                                                                       LV_CONT_PART_MAIN);
         else info->result = lv_obj_get_state(page, info->part);
         return LV_RES_OK;
@@ -805,7 +806,7 @@ static lv_res_t lv_page_signal(lv_obj_t * page, lv_signal_t sign, void * param)
                 lv_obj_t * tmp = child;
                 child          = lv_obj_get_child(page, child); /*Get the next child before move this*/
 
-                /* Reposition the child to take padding into account (Only if it's on (0;0) or (widht;height) coordinates now)
+                /* Reposition the child to take padding into account
                  * It's required to keep new the object on the same coordinate if FIT is enabled.*/
                 if((tmp->coords.x1 == page->coords.x1)  &&
                    (fit_left == LV_FIT_TIGHT || fit_left == LV_FIT_MAX) &&
@@ -855,6 +856,7 @@ static lv_res_t lv_page_signal(lv_obj_t * page, lv_signal_t sign, void * param)
         refr_ext_draw_pad(page);
     }
     else if(sign == LV_SIGNAL_CONTROL) {
+#if LV_USE_GROUP
         uint32_t c = *((uint32_t *)param);
 
         if(c == LV_KEY_DOWN) {
@@ -879,10 +881,13 @@ static lv_res_t lv_page_signal(lv_obj_t * page, lv_signal_t sign, void * param)
             else
                 lv_page_scroll_hor(page, lv_obj_get_width(page) / 4);
         }
+#endif
     }
     else if(sign == LV_SIGNAL_GET_EDITABLE) {
-        Boolean * editable = (Boolean *)param;
+#if LV_USE_GROUP
+        bool * editable = (bool *)param;
         *editable       = true;
+#endif
     }
 
     return res;
@@ -969,7 +974,7 @@ static lv_res_t lv_page_scrollable_signal(lv_obj_t * scrl, lv_signal_t sign, voi
             lv_page_ext_t * scroller_page_ext      = lv_obj_get_ext_attr(scroller_page);
             page_ext->scroll_prop_obj = NULL;
             lv_obj_set_drag_parent(scroller_page, false);
-            lv_obj_set_drag_parent(lv_page_get_scrllable(scroller_page), false);
+            lv_obj_set_drag_parent(lv_page_get_scrollable(scroller_page), false);
 
             /*Hide scrollbars if required*/
             if(scroller_page_ext->scrlbar.mode == LV_SCROLLBAR_MODE_DRAG) {
@@ -1000,7 +1005,7 @@ static lv_res_t lv_page_scrollable_signal(lv_obj_t * scrl, lv_signal_t sign, voi
                 scroller_page = scroller_ext->scroll_prop_obj;
                 scroller_ext->scroll_prop_obj = NULL;
                 lv_obj_set_drag_parent(scroller_page, false);
-                lv_obj_set_drag_parent(lv_page_get_scrllable(scroller_page), false);
+                lv_obj_set_drag_parent(lv_page_get_scrollable(scroller_page), false);
 
                 /*Hide scrollbars if required*/
                 if(scroller_page_ext->scrlbar.mode == LV_SCROLLBAR_MODE_DRAG) {
@@ -1034,26 +1039,6 @@ static lv_res_t lv_page_scrollable_signal(lv_obj_t * scrl, lv_signal_t sign, voi
                 page_ext->scrlbar.ver_draw = 0;
             }
         }
-    }
-    else if(sign == LV_SIGNAL_FOCUS) {
-#if LV_USE_GROUP
-        if(lv_obj_get_group(page)) {
-            lv_group_focus_obj(page);
-        }
-        else
-#endif
-        {
-            res = lv_signal_send(page, LV_SIGNAL_FOCUS, NULL);
-            if(res != LV_RES_OK) return res;
-            res = lv_event_send(page, LV_EVENT_FOCUSED, NULL);
-            if(res != LV_RES_OK) return res;
-        }
-    }
-    else if(sign == LV_SIGNAL_DEFOCUS) {
-        res = lv_signal_send(page, LV_SIGNAL_DEFOCUS, NULL);
-        if(res != LV_RES_OK) return res;
-        res = lv_event_send(page, LV_EVENT_DEFOCUSED, NULL);
-        if(res != LV_RES_OK) return res;
     }
     else if(sign == LV_SIGNAL_CLEANUP) {
         page_ext->scrl = NULL;
@@ -1122,11 +1107,11 @@ static void scrl_reposition(lv_obj_t * page)
 {
     /*Limit the position of the scrollable object to be always visible
      * (Do not let its edge inner then its parent respective edge)*/
-    lv_obj_t * scrl = lv_page_get_scrllable(page);
+    lv_obj_t * scrl = lv_page_get_scrollable(page);
     lv_coord_t new_x = lv_obj_get_x(scrl);
     lv_coord_t new_y = lv_obj_get_y(scrl);
-    Boolean refr_x      = false;
-    Boolean refr_y      = false;
+    bool refr_x      = false;
+    bool refr_y      = false;
     lv_area_t page_coords;
     lv_area_t scrl_coords;
     lv_obj_get_coords(scrl, &scrl_coords);
@@ -1261,8 +1246,22 @@ static void scrlbar_refresh(lv_obj_t * page)
                          (scrl_w + bg_left + bg_right - obj_w),
                          obj_h - sb_width - sb_bottom);
 
-        if(ext->scrlbar.mode == LV_SCROLLBAR_MODE_AUTO ||
-           ext->scrlbar.mode == LV_SCROLLBAR_MODE_DRAG) ext->scrlbar.hor_draw = 1;
+        if(ext->scrlbar.mode == LV_SCROLLBAR_MODE_AUTO) ext->scrlbar.hor_draw = 1;
+        else if(ext->scrlbar.mode == LV_SCROLLBAR_MODE_DRAG) {
+            lv_indev_t * indev = lv_indev_get_next(NULL);
+            while(indev) {
+                if(indev->driver.type == LV_INDEV_TYPE_POINTER && (indev->proc.types.pointer.drag_dir & LV_DRAG_DIR_HOR)) {
+                    lv_obj_t * drag_obj = indev->proc.types.pointer.act_obj;
+                    while(drag_obj && drag_obj->drag_parent) drag_obj = lv_obj_get_parent(drag_obj);
+
+                    if(drag_obj && drag_obj == scrl) {
+                        ext->scrlbar.hor_draw = 1;
+                        break;
+                    }
+                }
+                indev = lv_indev_get_next(indev);
+            }
+        }
     }
 
     /*Full sized vertical scroll bar*/
@@ -1286,8 +1285,22 @@ static void scrlbar_refresh(lv_obj_t * page)
                                        (obj_h - size_tmp - 2 * sb_ver_pad)) /
                          (scrl_h + bg_top + bg_bottom - obj_h));
 
-        if(ext->scrlbar.mode == LV_SCROLLBAR_MODE_AUTO ||
-           ext->scrlbar.mode == LV_SCROLLBAR_MODE_DRAG) ext->scrlbar.ver_draw = 1;
+        if(ext->scrlbar.mode == LV_SCROLLBAR_MODE_AUTO) ext->scrlbar.ver_draw = 1;
+        else if(ext->scrlbar.mode == LV_SCROLLBAR_MODE_DRAG) {
+            lv_indev_t * indev = lv_indev_get_next(NULL);
+            while(indev) {
+                if(indev->driver.type == LV_INDEV_TYPE_POINTER && (indev->proc.types.pointer.drag_dir & LV_DRAG_DIR_VER)) {
+                    lv_obj_t * drag_obj = indev->proc.types.pointer.act_obj;
+                    while(drag_obj && drag_obj->drag_parent) drag_obj = lv_obj_get_parent(drag_obj);
+
+                    if(drag_obj && drag_obj == scrl) {
+                        ext->scrlbar.ver_draw = 1;
+                        break;
+                    }
+                }
+                indev = lv_indev_get_next(indev);
+            }
+        }
     }
 
     /*Invalidate the new scrollbar areas*/

@@ -1,4 +1,4 @@
-#include <Types.h>
+
 #include <Resources.h>
 #include <Quickdraw.h>
 #include <Fonts.h>

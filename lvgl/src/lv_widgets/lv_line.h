@@ -72,7 +72,7 @@ void lv_line_set_points(lv_obj_t * line, const lv_point_t point_a[], uint16_t po
  * @param line pointer to a line object
  * @param en true: auto size is enabled, false: auto size is disabled
  */
-void lv_line_set_auto_size(lv_obj_t * line, Boolean en);
+void lv_line_set_auto_size(lv_obj_t * line, bool en);
 
 /**
  * Enable (or disable) the y coordinate inversion.
@@ -81,12 +81,11 @@ void lv_line_set_auto_size(lv_obj_t * line, Boolean en);
  * @param line pointer to a line object
  * @param en true: enable the y inversion, false:disable the y inversion
  */
-void lv_line_set_y_invert(lv_obj_t * line, Boolean en);
+void lv_line_set_y_invert(lv_obj_t * line, bool en);
 
 #define lv_line_set_y_inv                                                                                              \
     lv_line_set_y_invert /*The name was inconsistent. In v.6.0 only `lv_line_set_y_invert`will                         \
 work */
-
 
 /*=====================
  * Getter functions
@@ -97,14 +96,14 @@ work */
  * @param line pointer to a line object
  * @return true: auto size is enabled, false: disabled
  */
-Boolean lv_line_get_auto_size(const lv_obj_t * line);
+bool lv_line_get_auto_size(const lv_obj_t * line);
 
 /**
  * Get the y inversion attribute
  * @param line pointer to a line object
  * @return true: y inversion is enabled, false: disabled
  */
-Boolean lv_line_get_y_invert(const lv_obj_t * line);
+bool lv_line_get_y_invert(const lv_obj_t * line);
 
 /**********************
  *      MACROS

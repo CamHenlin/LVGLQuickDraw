@@ -9,11 +9,11 @@
 #include "lv_line.h"
 
 #if LV_USE_LINE != 0
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_draw/lv_draw.h"
 #include "../lv_misc/lv_math.h"
 #include "../lv_themes/lv_theme.h"
-#include <MacTypes.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
 
@@ -95,7 +95,7 @@ lv_obj_t * lv_line_create(lv_obj_t * par, const lv_obj_t * copy)
         lv_line_set_points(line, copy_ext->point_array, copy_ext->point_num);
 
         /*Refresh the style with new signal function*/
-        lv_obj_refresh_style(line, LV_STYLE_PROP_ALL);
+        lv_obj_refresh_style(line, LV_OBJ_PART_ALL, LV_STYLE_PROP_ALL);
     }
 
     LV_LOG_INFO("line created");
@@ -144,7 +144,7 @@ void lv_line_set_points(lv_obj_t * line, const lv_point_t point_a[], uint16_t po
  * @param line pointer to a line object
  * @param en true: auto size is enabled, false: auto size is disabled
  */
-void lv_line_set_auto_size(lv_obj_t * line, Boolean en)
+void lv_line_set_auto_size(lv_obj_t * line, bool en)
 {
     LV_ASSERT_OBJ(line, LV_OBJX_NAME);
 
@@ -164,7 +164,7 @@ void lv_line_set_auto_size(lv_obj_t * line, Boolean en)
  * @param line pointer to a line object
  * @param en true: enable the y inversion, false:disable the y inversion
  */
-void lv_line_set_y_invert(lv_obj_t * line, Boolean en)
+void lv_line_set_y_invert(lv_obj_t * line, bool en)
 {
     LV_ASSERT_OBJ(line, LV_OBJX_NAME);
 
@@ -185,7 +185,7 @@ void lv_line_set_y_invert(lv_obj_t * line, Boolean en)
  * @param line pointer to a line object
  * @return true: auto size is enabled, false: disabled
  */
-Boolean lv_line_get_auto_size(const lv_obj_t * line)
+bool lv_line_get_auto_size(const lv_obj_t * line)
 {
     LV_ASSERT_OBJ(line, LV_OBJX_NAME);
 
@@ -199,7 +199,7 @@ Boolean lv_line_get_auto_size(const lv_obj_t * line)
  * @param line pointer to a line object
  * @return true: y inversion is enabled, false: disabled
  */
-Boolean lv_line_get_y_invert(const lv_obj_t * line)
+bool lv_line_get_y_invert(const lv_obj_t * line)
 {
     LV_ASSERT_OBJ(line, LV_OBJX_NAME);
 

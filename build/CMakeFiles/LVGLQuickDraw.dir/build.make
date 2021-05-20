@@ -70,22 +70,35 @@ CMakeFiles/LVGLQuickDraw.dir/SerialHelper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/SerialHelper.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/SerialHelper.c -o CMakeFiles/LVGLQuickDraw.dir/SerialHelper.c.s
 
-CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
-CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj: ../Sample.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/Sample.c
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.obj: ../lv_drivers/display/GC9A01.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/GC9A01.c
 
-CMakeFiles/LVGLQuickDraw.dir/Sample.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/Sample.c.i"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/Sample.c > CMakeFiles/LVGLQuickDraw.dir/Sample.c.i
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/GC9A01.c > CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.i
 
-CMakeFiles/LVGLQuickDraw.dir/Sample.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/Sample.c.s"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/Sample.c -o CMakeFiles/LVGLQuickDraw.dir/Sample.c.s
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/GC9A01.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.s
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.obj: ../lv_drivers/display/ILI9341.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/ILI9341.c
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/ILI9341.c > CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/ILI9341.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.s
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.obj: ../lv_drivers/display/R61581.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/R61581.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.obj: ../lv_drivers/display/SHARP_MIP.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/SHARP_MIP.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.obj: ../lv_drivers/display/SSD1963.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/SSD1963.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.obj: ../lv_drivers/display/ST7565.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/ST7565.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.obj: ../lv_drivers/display/UC1610.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/UC1610.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.i: cmake_force
@@ -148,9 +161,22 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/UC1610.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.obj: ../lv_drivers/display/drm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/drm.c
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/drm.c > CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/drm.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.obj: ../lv_drivers/display/fbdev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/fbdev.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.i: cmake_force
@@ -163,7 +189,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.obj: ../lv_drivers/display/monitor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/monitor.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.i: cmake_force
@@ -174,9 +200,22 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/display/monitor.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.obj: ../lv_drivers/gtkdrv/gtkdrv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/gtkdrv.c
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/gtkdrv.c > CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/gtkdrv/gtkdrv.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.obj: ../lv_drivers/indev/AD_touch.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/AD_touch.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.i: cmake_force
@@ -189,7 +228,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.obj: ../lv_drivers/indev/FT5406EE8.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/FT5406EE8.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.i: cmake_force
@@ -202,7 +241,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.obj: ../lv_drivers/indev/XPT2046.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/XPT2046.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.i: cmake_force
@@ -215,7 +254,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/evdev.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/evdev.c.obj: ../lv_drivers/indev/evdev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/evdev.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/evdev.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/evdev.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/evdev.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/evdev.c.i: cmake_force
@@ -228,7 +267,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/evdev.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c.obj: ../lv_drivers/indev/keyboard.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/keyboard.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c.i: cmake_force
@@ -241,7 +280,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.obj: ../lv_drivers/indev/libinput.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/libinput.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.i: cmake_force
@@ -254,7 +293,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.obj: ../lv_drivers/indev/mouse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/mouse.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.i: cmake_force
@@ -267,7 +306,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.obj: ../lv_drivers/indev/mousewheel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/mousewheel.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.i: cmake_force
@@ -278,9 +317,22 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/indev/mousewheel.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.obj: ../lv_drivers/win32drv/win32drv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/win32drv.c
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/win32drv.c > CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win32drv/win32drv.c -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.obj: ../lv_drivers/win_drv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_drivers/win_drv.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.i: cmake_force
@@ -293,7 +345,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.obj: ../lv_examples/assets/img_cogwheel_alpha16.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/img_cogwheel_alpha16.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.i: cmake_force
@@ -306,7 +358,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.s: cmake_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.obj: ../lv_examples/assets/img_cogwheel_argb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/img_cogwheel_argb.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.i: cmake_force
@@ -319,7 +371,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.s: cmake_for
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_chroma_keyed.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_chroma_keyed.c.obj: ../lv_examples/assets/img_cogwheel_chroma_keyed.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_chroma_keyed.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_chroma_keyed.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_chroma_keyed.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/img_cogwheel_chroma_keyed.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_chroma_keyed.c.i: cmake_force
@@ -332,7 +384,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_chroma_keyed.c.s: c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_indexed16.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_indexed16.c.obj: ../lv_examples/assets/img_cogwheel_indexed16.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_indexed16.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_indexed16.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_indexed16.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/img_cogwheel_indexed16.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_indexed16.c.i: cmake_force
@@ -345,7 +397,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_indexed16.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_rgb.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_rgb.c.obj: ../lv_examples/assets/img_cogwheel_rgb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_rgb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_rgb.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_rgb.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/img_cogwheel_rgb.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_rgb.c.i: cmake_force
@@ -358,7 +410,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_rgb.c.s: cmake_forc
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_12_compr_az.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_12_compr_az.c.obj: ../lv_examples/assets/lv_font_montserrat_12_compr_az.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_12_compr_az.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_12_compr_az.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_12_compr_az.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/lv_font_montserrat_12_compr_az.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_12_compr_az.c.i: cmake_force
@@ -371,7 +423,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_12_compr_az.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_16_compr_az.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_16_compr_az.c.obj: ../lv_examples/assets/lv_font_montserrat_16_compr_az.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_16_compr_az.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_16_compr_az.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_16_compr_az.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/lv_font_montserrat_16_compr_az.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_16_compr_az.c.i: cmake_force
@@ -384,7 +436,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_16_compr_az.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_28_compr_az.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_28_compr_az.c.obj: ../lv_examples/assets/lv_font_montserrat_28_compr_az.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_28_compr_az.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_28_compr_az.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_28_compr_az.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/assets/lv_font_montserrat_28_compr_az.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_28_compr_az.c.i: cmake_force
@@ -397,7 +449,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/lv_font_montserrat_28_compr_az.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.obj: ../lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.i: cmake_force
@@ -410,7 +462,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.obj: ../lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.i: cmake_force
@@ -423,7 +475,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keyp
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c.i: cmake_force
@@ -436,7 +488,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c.i: cmake_force
@@ -449,7 +501,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c.i: cmake_force
@@ -462,7 +514,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c.i: cmake_force
@@ -475,7 +527,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c.i: cmake_force
@@ -488,7 +540,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c.i: cmake_force
@@ -501,7 +553,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c.i: cmake_force
@@ -514,7 +566,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c.i: cmake_force
@@ -527,7 +579,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c.i: cmake_force
@@ -540,7 +592,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c.i: cmake_force
@@ -553,7 +605,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c.i: cmake_force
@@ -566,7 +618,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c.i: cmake_force
@@ -579,7 +631,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c.i: cmake_force
@@ -592,7 +644,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c.i: cmake_force
@@ -605,7 +657,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c.i: cmake_force
@@ -618,7 +670,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c.i: cmake_force
@@ -631,7 +683,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c.i: cmake_force
@@ -644,7 +696,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c.i: cmake_force
@@ -657,7 +709,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c.i: cmake_force
@@ -670,7 +722,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c.obj: ../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c.i: cmake_force
@@ -683,7 +735,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/images/lv_demo_prin
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer.c.obj: ../lv_examples/src/lv_demo_printer/lv_demo_printer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/lv_demo_printer.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer.c.i: cmake_force
@@ -696,7 +748,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer.c.s
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_home.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_home.c.obj: ../lv_examples/src/lv_demo_printer/lv_demo_printer_home.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_home.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_home.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_home.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/lv_demo_printer_home.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_home.c.i: cmake_force
@@ -709,7 +761,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_hom
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_print.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_print.c.obj: ../lv_examples/src/lv_demo_printer/lv_demo_printer_print.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_print.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_print.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_print.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/lv_demo_printer_print.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_print.c.i: cmake_force
@@ -722,7 +774,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_pri
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c.obj: ../lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_scr.c.i: cmake_force
@@ -735,7 +787,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_scr
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c.obj: ../lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c.i: cmake_force
@@ -748,7 +800,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_printer/lv_demo_printer_the
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.obj: ../lv_examples/src/lv_demo_stress/lv_demo_stress.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_stress/lv_demo_stress.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.i: cmake_force
@@ -761,7 +813,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.s: 
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.obj: ../lv_examples/src/lv_demo_widgets/lv_demo_widgets.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.i: cmake_force
@@ -774,7 +826,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c.obj: ../lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c.i: cmake_force
@@ -787,7 +839,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c.obj: ../lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c.i: cmake_force
@@ -800,7 +852,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c.obj: ../lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c.i: cmake_force
@@ -813,7 +865,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_get_started/lv_ex_get_started
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_1.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_1.c.i: cmake_force
@@ -826,7 +878,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_1.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_10.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_10.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_10.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_10.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_10.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_10.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_10.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_10.c.i: cmake_force
@@ -839,7 +891,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_10.c.s: cma
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_11.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_11.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_11.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_11.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_11.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_11.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_11.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_11.c.i: cmake_force
@@ -852,7 +904,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_11.c.s: cma
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_2.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_2.c.i: cmake_force
@@ -865,7 +917,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_2.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_3.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_3.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_3.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_3.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_3.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_3.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_3.c.i: cmake_force
@@ -878,7 +930,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_3.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_4.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_4.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_4.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_4.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_4.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_4.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_4.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_4.c.i: cmake_force
@@ -891,7 +943,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_4.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_5.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_5.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_5.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_5.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_5.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_5.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_5.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_5.c.i: cmake_force
@@ -904,7 +956,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_5.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_6.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_6.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_6.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_6.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_6.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_6.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_6.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_6.c.i: cmake_force
@@ -917,7 +969,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_6.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_7.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_7.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_7.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_7.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_7.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_7.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_7.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_7.c.i: cmake_force
@@ -930,7 +982,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_7.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_8.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_8.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_8.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_8.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_8.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_8.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_8.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_8.c.i: cmake_force
@@ -943,7 +995,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_8.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_9.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_9.c.obj: ../lv_examples/src/lv_ex_style/lv_ex_style_9.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_9.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_9.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_9.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_style/lv_ex_style_9.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_9.c.i: cmake_force
@@ -956,7 +1008,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_style/lv_ex_style_9.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c.i: cmake_force
@@ -969,7 +1021,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c.i: cmake_force
@@ -982,7 +1034,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c.i: cmake_force
@@ -995,7 +1047,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c.i: cmake_force
@@ -1008,7 +1060,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c.i: cmake_force
@@ -1021,7 +1073,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c.i: cmake_force
@@ -1034,7 +1086,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c.i: cmake_force
@@ -1047,7 +1099,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c.i: cmake_force
@@ -1060,7 +1112,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_ca
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c.i: cmake_force
@@ -1073,7 +1125,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_ca
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c.i: cmake_force
@@ -1086,7 +1138,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_cha
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c.i: cmake_force
@@ -1099,7 +1151,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_cha
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c.i: cmake_force
@@ -1112,7 +1164,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c.i: cmake_force
@@ -1125,7 +1177,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c.i: cmake_force
@@ -1138,7 +1190,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c.i: cmake_force
@@ -1151,7 +1203,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c.i: cmake_force
@@ -1164,7 +1216,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c.i: cmake_force
@@ -1177,7 +1229,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c.i: cmake_force
@@ -1190,7 +1242,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gau
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c.i: cmake_force
@@ -1203,7 +1255,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c.i: cmake_force
@@ -1216,7 +1268,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c.i: cmake_force
@@ -1229,7 +1281,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c.i: cmake_force
@@ -1242,7 +1294,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_b
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c.i: cmake_force
@@ -1255,7 +1307,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_g
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c.i: cmake_force
@@ -1268,7 +1320,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_im
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c.i: cmake_force
@@ -1281,7 +1333,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c.i: cmake_force
@@ -1294,7 +1346,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_lab
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c.i: cmake_force
@@ -1307,7 +1359,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_lab
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c.i: cmake_force
@@ -1320,7 +1372,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_lab
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c.i: cmake_force
@@ -1333,7 +1385,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c.i: cmake_force
@@ -1346,7 +1398,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c.i: cmake_force
@@ -1359,7 +1411,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c.i: cmake_force
@@ -1372,7 +1424,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c.i: cmake_force
@@ -1385,7 +1437,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_ms
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c.i: cmake_force
@@ -1398,7 +1450,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_ms
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c.i: cmake_force
@@ -1411,7 +1463,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c.i: cmake_force
@@ -1424,7 +1476,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_o
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c.i: cmake_force
@@ -1437,7 +1489,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_o
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c.i: cmake_force
@@ -1450,7 +1502,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c.i: cmake_force
@@ -1463,7 +1515,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_ro
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c.i: cmake_force
@@ -1476,7 +1528,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_sl
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c.i: cmake_force
@@ -1489,7 +1541,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_sl
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c.i: cmake_force
@@ -1502,7 +1554,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_s
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c.i: cmake_force
@@ -1515,7 +1567,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_s
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c.i: cmake_force
@@ -1528,7 +1580,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_sw
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c.i: cmake_force
@@ -1541,7 +1593,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_tab
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c.i: cmake_force
@@ -1554,7 +1606,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_t
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_templ.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_templ.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_templ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_templ.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_templ.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_templ.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_templ.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_templ.c.i: cmake_force
@@ -1567,7 +1619,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_templ.c.s: cmak
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c.i: cmake_force
@@ -1580,7 +1632,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.i: cmake_force
@@ -1593,7 +1645,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.i: cmake_force
@@ -1606,7 +1658,7 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.obj: ../lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c
 
 CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.i: cmake_force
@@ -1617,61 +1669,48 @@ CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c -o CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.s
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.obj: ../lvgl/porting/lv_port_disp_template.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.obj"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_disp_template.c
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.obj: ../lvgl/examples/porting/lv_port_disp_template.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_disp_template.c
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.i"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_disp_template.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.i
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_disp_template.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.i
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.s"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_disp_template.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.s
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_disp_template.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.s
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.obj: ../lvgl/porting/lv_port_fs_template.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.obj"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_fs_template.c
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.obj: ../lvgl/examples/porting/lv_port_fs_template.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_fs_template.c
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.i"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_fs_template.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.i
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_fs_template.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.i
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.s"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_fs_template.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.s
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_fs_template.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.s
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.obj: ../lvgl/porting/lv_port_indev_template.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.obj"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_indev_template.c
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.obj: ../lvgl/examples/porting/lv_port_indev_template.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_indev_template.c
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.i"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_indev_template.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.i
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_indev_template.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.i
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.s"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/porting/lv_port_indev_template.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.s
-
-CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
-CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.obj: ../lvgl/src/lv_core/lv_debug.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.obj"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.c
-
-CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.i"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.i
-
-CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.s"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_debug.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.s
+CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/examples/porting/lv_port_indev_template.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.s
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.obj: ../lvgl/src/lv_core/lv_disp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_disp.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.i: cmake_force
@@ -1684,7 +1723,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.obj: ../lvgl/src/lv_core/lv_group.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_group.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.i: cmake_force
@@ -1697,7 +1736,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.obj: ../lvgl/src/lv_core/lv_indev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_indev.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.i: cmake_force
@@ -1710,7 +1749,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_obj.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_obj.c.obj: ../lvgl/src/lv_core/lv_obj.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_obj.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_obj.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_obj.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_obj.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_obj.c.i: cmake_force
@@ -1723,7 +1762,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_obj.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_refr.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_refr.c.obj: ../lvgl/src/lv_core/lv_refr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_refr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_refr.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_refr.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_refr.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_refr.c.i: cmake_force
@@ -1736,7 +1775,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_refr.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_style.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_style.c.obj: ../lvgl/src/lv_core/lv_style.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_style.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_style.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_style.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_core/lv_style.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_style.c.i: cmake_force
@@ -1749,7 +1788,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_style.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_arc.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_arc.c.obj: ../lvgl/src/lv_draw/lv_draw_arc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_arc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_arc.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_arc.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_arc.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_arc.c.i: cmake_force
@@ -1762,7 +1801,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_arc.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_blend.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_blend.c.obj: ../lvgl/src/lv_draw/lv_draw_blend.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_blend.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_blend.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_blend.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_blend.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_blend.c.i: cmake_force
@@ -1775,7 +1814,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_blend.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_img.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_img.c.obj: ../lvgl/src/lv_draw/lv_draw_img.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_img.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_img.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_img.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_img.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_img.c.i: cmake_force
@@ -1788,7 +1827,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_img.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_label.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_label.c.obj: ../lvgl/src/lv_draw/lv_draw_label.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_label.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_label.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_label.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_label.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_label.c.i: cmake_force
@@ -1801,7 +1840,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_label.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_line.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_line.c.obj: ../lvgl/src/lv_draw/lv_draw_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_line.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_line.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_line.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_line.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_line.c.i: cmake_force
@@ -1814,7 +1853,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_line.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_mask.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_mask.c.obj: ../lvgl/src/lv_draw/lv_draw_mask.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_mask.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_mask.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_mask.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_mask.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_mask.c.i: cmake_force
@@ -1827,7 +1866,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_mask.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_rect.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_rect.c.obj: ../lvgl/src/lv_draw/lv_draw_rect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_rect.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_rect.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_rect.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_rect.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_rect.c.i: cmake_force
@@ -1840,7 +1879,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_rect.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_triangle.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_triangle.c.obj: ../lvgl/src/lv_draw/lv_draw_triangle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_triangle.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_triangle.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_triangle.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_draw_triangle.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_triangle.c.i: cmake_force
@@ -1853,7 +1892,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_draw_triangle.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_buf.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_buf.c.obj: ../lvgl/src/lv_draw/lv_img_buf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_buf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_buf.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_buf.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_buf.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_buf.c.i: cmake_force
@@ -1866,7 +1905,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_buf.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_cache.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_cache.c.obj: ../lvgl/src/lv_draw/lv_img_cache.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_cache.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_cache.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_cache.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_cache.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_cache.c.i: cmake_force
@@ -1879,7 +1918,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_cache.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_decoder.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_decoder.c.obj: ../lvgl/src/lv_draw/lv_img_decoder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_decoder.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_decoder.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_decoder.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_draw/lv_img_decoder.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_decoder.c.i: cmake_force
@@ -1892,7 +1931,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_decoder.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.obj: ../lvgl/src/lv_font/lv_font.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.i: cmake_force
@@ -1905,7 +1944,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.obj: ../lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.i: cmake_force
@@ -1918,7 +1957,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.obj: ../lvgl/src/lv_font/lv_font_fmt_txt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_fmt_txt.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.i: cmake_force
@@ -1929,9 +1968,35 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_fmt_txt.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.obj: ../lvgl/src/lv_font/lv_font_loader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_loader.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_loader.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_loader.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.s
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_10.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_10.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_10.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_10.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_12.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_12.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.i: cmake_force
@@ -1944,7 +2009,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_12_subpx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.i: cmake_force
@@ -1957,7 +2022,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.s: c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_14.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_14.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.i: cmake_force
@@ -1970,7 +2035,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_16.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_16.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_16.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_16.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_16.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_16.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_16.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_16.c.i: cmake_force
@@ -1983,7 +2048,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_16.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_18.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_18.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_18.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_18.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_18.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_18.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_18.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_18.c.i: cmake_force
@@ -1996,7 +2061,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_18.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_20.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_20.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_20.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_20.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_20.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_20.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_20.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_20.c.i: cmake_force
@@ -2009,7 +2074,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_20.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_22.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_22.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_22.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_22.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_22.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_22.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_22.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_22.c.i: cmake_force
@@ -2022,7 +2087,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_22.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_24.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_24.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_24.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_24.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_24.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_24.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_24.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_24.c.i: cmake_force
@@ -2035,7 +2100,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_24.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_26.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_26.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_26.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_26.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_26.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_26.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_26.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_26.c.i: cmake_force
@@ -2048,7 +2113,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_26.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_28.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_28.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28.c.i: cmake_force
@@ -2061,7 +2126,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_28_compressed.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c.i: cmake_force
@@ -2074,7 +2139,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_30.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_30.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_30.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_30.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_30.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_30.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_30.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_30.c.i: cmake_force
@@ -2087,7 +2152,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_30.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_32.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_32.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_32.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_32.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_32.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_32.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_32.c.i: cmake_force
@@ -2100,7 +2165,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_32.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_34.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_34.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_34.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_34.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_34.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_34.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_34.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_34.c.i: cmake_force
@@ -2113,7 +2178,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_34.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_36.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_36.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_36.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_36.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_36.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_36.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_36.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_36.c.i: cmake_force
@@ -2126,7 +2191,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_36.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_38.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_38.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_38.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_38.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_38.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_38.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_38.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_38.c.i: cmake_force
@@ -2139,7 +2204,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_38.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_40.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_40.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_40.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_40.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_40.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_40.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_40.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_40.c.i: cmake_force
@@ -2152,7 +2217,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_40.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_42.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_42.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_42.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_42.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_42.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_42.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_42.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_42.c.i: cmake_force
@@ -2165,7 +2230,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_42.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_44.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_44.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.i: cmake_force
@@ -2178,7 +2243,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_46.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_46.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.i: cmake_force
@@ -2191,7 +2256,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.s: cmake_f
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_48.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_48.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.i: cmake_force
@@ -2202,9 +2267,22 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_48.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.obj: ../lvgl/src/lv_font/lv_font_montserrat_8.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_8.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_8.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_montserrat_8.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj: ../lvgl/src/lv_font/lv_font_simsun_16_cjk.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_simsun_16_cjk.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.i: cmake_force
@@ -2215,9 +2293,22 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_simsun_16_cjk.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.obj: ../lvgl/src/lv_font/lv_font_unscii_16.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_unscii_16.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_unscii_16.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_unscii_16.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.obj: ../lvgl/src/lv_font/lv_font_unscii_8.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_unscii_8.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.i: cmake_force
@@ -2228,9 +2319,48 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_font/lv_font_unscii_8.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj: ../lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.s
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj: ../lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.s
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj: ../lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj: ../lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.i: cmake_force
@@ -2243,7 +2373,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.obj: ../lvgl/src/lv_hal/lv_hal_disp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_disp.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.i: cmake_force
@@ -2256,7 +2386,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.obj: ../lvgl/src/lv_hal/lv_hal_indev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_indev.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.i: cmake_force
@@ -2269,7 +2399,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_tick.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_tick.c.obj: ../lvgl/src/lv_hal/lv_hal_tick.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_tick.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_tick.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_tick.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_hal/lv_hal_tick.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_tick.c.i: cmake_force
@@ -2282,7 +2412,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_tick.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_anim.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_anim.c.obj: ../lvgl/src/lv_misc/lv_anim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_anim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_anim.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_anim.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_anim.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_anim.c.i: cmake_force
@@ -2295,7 +2425,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_anim.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.obj: ../lvgl/src/lv_misc/lv_area.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_area.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.i: cmake_force
@@ -2308,7 +2438,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.obj: ../lvgl/src/lv_misc/lv_async.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_async.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.i: cmake_force
@@ -2321,7 +2451,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.obj: ../lvgl/src/lv_misc/lv_bidi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_bidi.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.i: cmake_force
@@ -2334,7 +2464,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.obj: ../lvgl/src/lv_misc/lv_color.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.i: cmake_force
@@ -2345,9 +2475,22 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_color.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.obj: ../lvgl/src/lv_misc/lv_debug.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_debug.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.obj: ../lvgl/src/lv_misc/lv_fs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_fs.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.i: cmake_force
@@ -2360,7 +2503,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.obj: ../lvgl/src/lv_misc/lv_gc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_gc.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.i: cmake_force
@@ -2373,7 +2516,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.obj: ../lvgl/src/lv_misc/lv_ll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_ll.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.i: cmake_force
@@ -2386,7 +2529,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_log.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_log.c.obj: ../lvgl/src/lv_misc/lv_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_log.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_log.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_log.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_log.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_log.c.i: cmake_force
@@ -2399,7 +2542,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_log.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_math.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_math.c.obj: ../lvgl/src/lv_misc/lv_math.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_math.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_math.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_math.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_math.c.i: cmake_force
@@ -2412,7 +2555,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_math.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_mem.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_mem.c.obj: ../lvgl/src/lv_misc/lv_mem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_mem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_mem.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_mem.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_mem.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_mem.c.i: cmake_force
@@ -2425,7 +2568,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_mem.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_printf.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_printf.c.obj: ../lvgl/src/lv_misc/lv_printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_printf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_printf.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_printf.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_printf.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_printf.c.i: cmake_force
@@ -2438,7 +2581,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_printf.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_task.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_task.c.obj: ../lvgl/src/lv_misc/lv_task.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_task.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_task.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_task.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_task.c.i: cmake_force
@@ -2451,7 +2594,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_task.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_templ.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_templ.c.obj: ../lvgl/src/lv_misc/lv_templ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_templ.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_templ.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_templ.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_templ.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_templ.c.i: cmake_force
@@ -2464,7 +2607,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_templ.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt.c.obj: ../lvgl/src/lv_misc/lv_txt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt.c.i: cmake_force
@@ -2477,7 +2620,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt_ap.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt_ap.c.obj: ../lvgl/src/lv_misc/lv_txt_ap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt_ap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt_ap.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt_ap.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_txt_ap.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt_ap.c.i: cmake_force
@@ -2490,7 +2633,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_txt_ap.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_utils.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_utils.c.obj: ../lvgl/src/lv_misc/lv_utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_utils.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_utils.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_utils.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_misc/lv_utils.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_utils.c.i: cmake_force
@@ -2503,7 +2646,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_utils.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme.c.obj: ../lvgl/src/lv_themes/lv_theme.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme.c.i: cmake_force
@@ -2516,7 +2659,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_empty.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_empty.c.obj: ../lvgl/src/lv_themes/lv_theme_empty.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_empty.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_empty.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_empty.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_empty.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_empty.c.i: cmake_force
@@ -2529,7 +2672,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_empty.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_material.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_material.c.obj: ../lvgl/src/lv_themes/lv_theme_material.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_material.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_material.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_material.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_material.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_material.c.i: cmake_force
@@ -2542,7 +2685,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_material.c.s: cmake_for
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_mono.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_mono.c.obj: ../lvgl/src/lv_themes/lv_theme_mono.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_mono.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_mono.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_mono.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_mono.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_mono.c.i: cmake_force
@@ -2555,7 +2698,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_mono.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_template.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_template.c.obj: ../lvgl/src/lv_themes/lv_theme_template.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_template.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_template.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_template.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_themes/lv_theme_template.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_template.c.i: cmake_force
@@ -2568,7 +2711,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_themes/lv_theme_template.c.s: cmake_for
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_arc.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_arc.c.obj: ../lvgl/src/lv_widgets/lv_arc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_arc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_arc.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_arc.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_arc.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_arc.c.i: cmake_force
@@ -2581,7 +2724,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_arc.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_bar.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_bar.c.obj: ../lvgl/src/lv_widgets/lv_bar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_bar.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_bar.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_bar.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_bar.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_bar.c.i: cmake_force
@@ -2594,7 +2737,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_bar.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btn.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btn.c.obj: ../lvgl/src/lv_widgets/lv_btn.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btn.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btn.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btn.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_btn.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btn.c.i: cmake_force
@@ -2607,7 +2750,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btn.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btnmatrix.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btnmatrix.c.obj: ../lvgl/src/lv_widgets/lv_btnmatrix.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btnmatrix.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btnmatrix.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btnmatrix.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_btnmatrix.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btnmatrix.c.i: cmake_force
@@ -2620,7 +2763,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_btnmatrix.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_calendar.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_calendar.c.obj: ../lvgl/src/lv_widgets/lv_calendar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_calendar.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_calendar.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_calendar.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_calendar.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_calendar.c.i: cmake_force
@@ -2633,7 +2776,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_calendar.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_canvas.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_canvas.c.obj: ../lvgl/src/lv_widgets/lv_canvas.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_canvas.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_canvas.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_canvas.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_canvas.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_canvas.c.i: cmake_force
@@ -2646,7 +2789,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_canvas.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_chart.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_chart.c.obj: ../lvgl/src/lv_widgets/lv_chart.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_chart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_chart.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_chart.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_chart.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_chart.c.i: cmake_force
@@ -2659,7 +2802,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_chart.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_checkbox.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_checkbox.c.obj: ../lvgl/src/lv_widgets/lv_checkbox.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_checkbox.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_checkbox.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_checkbox.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_checkbox.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_checkbox.c.i: cmake_force
@@ -2672,7 +2815,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_checkbox.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cont.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cont.c.obj: ../lvgl/src/lv_widgets/lv_cont.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cont.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cont.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cont.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cont.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cont.c.i: cmake_force
@@ -2685,7 +2828,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cont.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cpicker.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cpicker.c.obj: ../lvgl/src/lv_widgets/lv_cpicker.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cpicker.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cpicker.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cpicker.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_cpicker.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cpicker.c.i: cmake_force
@@ -2698,7 +2841,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_cpicker.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_dropdown.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_dropdown.c.obj: ../lvgl/src/lv_widgets/lv_dropdown.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_dropdown.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_dropdown.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_dropdown.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_dropdown.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_dropdown.c.i: cmake_force
@@ -2711,7 +2854,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_dropdown.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_gauge.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_gauge.c.obj: ../lvgl/src/lv_widgets/lv_gauge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_gauge.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_gauge.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_gauge.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_gauge.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_gauge.c.i: cmake_force
@@ -2724,7 +2867,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_gauge.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_img.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_img.c.obj: ../lvgl/src/lv_widgets/lv_img.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_img.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_img.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_img.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_img.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_img.c.i: cmake_force
@@ -2737,7 +2880,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_img.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_imgbtn.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_imgbtn.c.obj: ../lvgl/src/lv_widgets/lv_imgbtn.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_imgbtn.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_imgbtn.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_imgbtn.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_imgbtn.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_imgbtn.c.i: cmake_force
@@ -2750,7 +2893,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_imgbtn.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_keyboard.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_keyboard.c.obj: ../lvgl/src/lv_widgets/lv_keyboard.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_keyboard.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_keyboard.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_keyboard.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_keyboard.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_keyboard.c.i: cmake_force
@@ -2763,7 +2906,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_keyboard.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_label.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_label.c.obj: ../lvgl/src/lv_widgets/lv_label.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_label.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_label.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_label.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_label.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_label.c.i: cmake_force
@@ -2776,7 +2919,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_label.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_led.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_led.c.obj: ../lvgl/src/lv_widgets/lv_led.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_led.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_led.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_led.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_led.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_led.c.i: cmake_force
@@ -2789,7 +2932,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_led.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_line.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_line.c.obj: ../lvgl/src/lv_widgets/lv_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_line.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_line.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_line.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_line.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_line.c.i: cmake_force
@@ -2802,7 +2945,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_line.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_linemeter.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_linemeter.c.obj: ../lvgl/src/lv_widgets/lv_linemeter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_linemeter.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_linemeter.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_linemeter.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_linemeter.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_linemeter.c.i: cmake_force
@@ -2815,7 +2958,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_linemeter.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_list.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_list.c.obj: ../lvgl/src/lv_widgets/lv_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_list.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_list.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_list.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_list.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_list.c.i: cmake_force
@@ -2828,7 +2971,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_list.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_msgbox.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_msgbox.c.obj: ../lvgl/src/lv_widgets/lv_msgbox.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_msgbox.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_msgbox.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_msgbox.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_msgbox.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_msgbox.c.i: cmake_force
@@ -2841,7 +2984,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_msgbox.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objmask.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objmask.c.obj: ../lvgl/src/lv_widgets/lv_objmask.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objmask.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objmask.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objmask.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_objmask.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objmask.c.i: cmake_force
@@ -2854,7 +2997,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objmask.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objx_templ.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objx_templ.c.obj: ../lvgl/src/lv_widgets/lv_objx_templ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objx_templ.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objx_templ.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objx_templ.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_objx_templ.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objx_templ.c.i: cmake_force
@@ -2867,7 +3010,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_objx_templ.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_page.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_page.c.obj: ../lvgl/src/lv_widgets/lv_page.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_page.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_page.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_page.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_page.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_page.c.i: cmake_force
@@ -2880,7 +3023,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_page.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_roller.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_roller.c.obj: ../lvgl/src/lv_widgets/lv_roller.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_roller.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_roller.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_roller.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_roller.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_roller.c.i: cmake_force
@@ -2893,7 +3036,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_roller.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_slider.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_slider.c.obj: ../lvgl/src/lv_widgets/lv_slider.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_slider.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_slider.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_slider.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_slider.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_slider.c.i: cmake_force
@@ -2906,7 +3049,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_slider.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinbox.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinbox.c.obj: ../lvgl/src/lv_widgets/lv_spinbox.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinbox.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinbox.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinbox.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_spinbox.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinbox.c.i: cmake_force
@@ -2919,7 +3062,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinbox.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinner.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinner.c.obj: ../lvgl/src/lv_widgets/lv_spinner.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinner.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinner.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinner.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_spinner.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinner.c.i: cmake_force
@@ -2932,7 +3075,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_spinner.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_switch.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_switch.c.obj: ../lvgl/src/lv_widgets/lv_switch.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_switch.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_switch.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_switch.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_switch.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_switch.c.i: cmake_force
@@ -2945,7 +3088,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_switch.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_table.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_table.c.obj: ../lvgl/src/lv_widgets/lv_table.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_table.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_table.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_table.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_table.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_table.c.i: cmake_force
@@ -2958,7 +3101,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_table.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tabview.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tabview.c.obj: ../lvgl/src/lv_widgets/lv_tabview.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tabview.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tabview.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tabview.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_tabview.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tabview.c.i: cmake_force
@@ -2971,7 +3114,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tabview.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_textarea.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_textarea.c.obj: ../lvgl/src/lv_widgets/lv_textarea.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_textarea.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_textarea.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_textarea.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_textarea.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_textarea.c.i: cmake_force
@@ -2984,7 +3127,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_textarea.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tileview.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tileview.c.obj: ../lvgl/src/lv_widgets/lv_tileview.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tileview.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tileview.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tileview.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_tileview.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tileview.c.i: cmake_force
@@ -2997,7 +3140,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tileview.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.obj: ../lvgl/src/lv_widgets/lv_win.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/src/lv_widgets/lv_win.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.i: cmake_force
@@ -3010,7 +3153,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.obj: ../lvgl/tests/lv_test_assert.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_assert.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.i: cmake_force
@@ -3023,7 +3166,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.s: cmake_force
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.obj: ../lvgl/tests/lv_test_core/lv_test_core.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_core.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.i: cmake_force
@@ -3034,9 +3177,22 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_core.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.obj: ../lvgl/tests/lv_test_core/lv_test_font_loader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_font_loader.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_font_loader.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_font_loader.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.obj: ../lvgl/tests/lv_test_core/lv_test_obj.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_obj.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.i: cmake_force
@@ -3049,7 +3205,7 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.s: cmake_forc
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.obj: ../lvgl/tests/lv_test_core/lv_test_style.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_style.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.i: cmake_force
@@ -3060,9 +3216,48 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_core/lv_test_style.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.s
 
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.obj: ../lvgl/tests/lv_test_fonts/font_1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_1.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_1.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_1.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.s
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.obj: ../lvgl/tests/lv_test_fonts/font_2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_2.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_2.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_2.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.s
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.obj: ../lvgl/tests/lv_test_fonts/font_3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_3.c
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_3.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_fonts/font_3.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.s
+
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.obj: ../lvgl/tests/lv_test_main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.obj"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_main.c
 
 CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.i: cmake_force
@@ -3073,30 +3268,46 @@ CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.s"
 	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_main.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.s
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
-CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.obj: ../lvgl/tests/lv_test_objx/lv_test_cont.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.obj"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_objx/lv_test_cont.c
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.obj: ../lvgl/tests/lv_test_widgets/lv_test_label.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building C object CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_widgets/lv_test_label.c
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.i"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_objx/lv_test_cont.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.i
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_widgets/lv_test_label.c > CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.i
 
-CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.s"
-	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_objx/lv_test_cont.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.s
+CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/lvgl/tests/lv_test_widgets/lv_test_label.c -o CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.s
+
+CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj: CMakeFiles/LVGLQuickDraw.dir/flags.make
+CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj: ../Sample.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building C object CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj   -c /home/camh/Documents/Retro68kApps/LVGLQuickDraw/Sample.c
+
+CMakeFiles/LVGLQuickDraw.dir/Sample.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LVGLQuickDraw.dir/Sample.c.i"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/camh/Documents/Retro68kApps/LVGLQuickDraw/Sample.c > CMakeFiles/LVGLQuickDraw.dir/Sample.c.i
+
+CMakeFiles/LVGLQuickDraw.dir/Sample.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LVGLQuickDraw.dir/Sample.c.s"
+	/home/camh/Retro68-build/toolchain/bin/m68k-apple-macos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/camh/Documents/Retro68kApps/LVGLQuickDraw/Sample.c -o CMakeFiles/LVGLQuickDraw.dir/Sample.c.s
 
 # Object files for target LVGLQuickDraw
 LVGLQuickDraw_OBJECTS = \
 "CMakeFiles/LVGLQuickDraw.dir/SerialHelper.c.obj" \
-"CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.obj" \
@@ -3105,6 +3316,7 @@ LVGLQuickDraw_OBJECTS = \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.obj" \
@@ -3208,10 +3420,9 @@ LVGLQuickDraw_OBJECTS = \
 "CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.obj" \
-"CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.obj" \
-"CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.obj" \
-"CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.obj" \
-"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.obj" \
@@ -3232,6 +3443,8 @@ LVGLQuickDraw_OBJECTS = \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.obj" \
@@ -3253,8 +3466,13 @@ LVGLQuickDraw_OBJECTS = \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.obj" \
@@ -3264,6 +3482,7 @@ LVGLQuickDraw_OBJECTS = \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.obj" \
@@ -3317,23 +3536,31 @@ LVGLQuickDraw_OBJECTS = \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.obj" \
 "CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.obj" \
-"CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.obj"
+"CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.obj" \
+"CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj"
 
 # External object files for target LVGLQuickDraw
 LVGLQuickDraw_EXTERNAL_OBJECTS =
 
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/SerialHelper.c.obj
-LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/GC9A01.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ILI9341.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/R61581.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SHARP_MIP.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/SSD1963.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/ST7565.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/UC1610.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/drm.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/fbdev.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/display/monitor.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/gtkdrv/gtkdrv.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/AD_touch.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/FT5406EE8.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/XPT2046.c.obj
@@ -3342,6 +3569,7 @@ LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/keyboard.c
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/libinput.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mouse.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/indev/mousewheel.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win32drv/win32drv.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_drivers/win_drv.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_alpha16.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_examples/assets/img_cogwheel_argb.c.obj
@@ -3445,10 +3673,9 @@ LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widge
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c.obj
-LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_disp_template.c.obj
-LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_fs_template.c.obj
-LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/porting/lv_port_indev_template.c.obj
-LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_debug.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_disp_template.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_fs_template.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/examples/porting/lv_port_indev_template.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_disp.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_group.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_core/lv_indev.c.obj
@@ -3469,6 +3696,8 @@ LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_draw/lv_img_dec
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_fmt_txt.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_loader.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_10.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_14.c.obj
@@ -3490,8 +3719,13 @@ LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_mo
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_44.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_46.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_48.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_montserrat_8.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_simsun_16_cjk.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_16.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_font/lv_font_unscii_8.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_disp.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_hal/lv_hal_indev.c.obj
@@ -3501,6 +3735,7 @@ LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_area.c.
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_async.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_bidi.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_color.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_debug.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_fs.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_gc.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_misc/lv_ll.c.obj
@@ -3554,13 +3789,18 @@ LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_tile
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/src/lv_widgets/lv_win.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_assert.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_core.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_obj.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_core/lv_test_style.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_1.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_2.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_fonts/font_3.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_main.c.obj
-LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_objx/lv_test_cont.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.obj
+LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/Sample.c.obj
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/build.make
 LVGLQuickDraw.code.bin: CMakeFiles/LVGLQuickDraw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Linking C executable LVGLQuickDraw.code.bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/camh/Documents/Retro68kApps/LVGLQuickDraw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Linking C executable LVGLQuickDraw.code.bin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LVGLQuickDraw.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

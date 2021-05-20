@@ -15,7 +15,7 @@ extern "C" {
  *********************/
 #include "../lv_conf_internal.h"
 #include <string.h>
-#include <MacTypes.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include "lv_mem.h"
 
@@ -49,8 +49,6 @@ typedef struct {
     lv_coord_t y2;
 } lv_area_t;
 
-
-
 /** Alignments */
 enum {
     LV_ALIGN_CENTER = 0,
@@ -76,7 +74,6 @@ enum {
     LV_ALIGN_OUT_RIGHT_BOTTOM,
 };
 typedef uint8_t lv_align_t;
-
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -158,7 +155,7 @@ uint32_t lv_area_get_size(const lv_area_t * area_p);
  * @param a2_p pointer to the second area
  * @return false: the two area has NO common parts, res_p is invalid
  */
-Boolean _lv_area_intersect(lv_area_t * res_p, const lv_area_t * a1_p, const lv_area_t * a2_p);
+bool _lv_area_intersect(lv_area_t * res_p, const lv_area_t * a1_p, const lv_area_t * a2_p);
 
 /**
  * Join two areas into a third which involves the other two
@@ -175,7 +172,7 @@ void _lv_area_join(lv_area_t * a_res_p, const lv_area_t * a1_p, const lv_area_t 
  * @param radius radius of area (e.g. for rounded rectangle)
  * @return false:the point is out of the area
  */
-Boolean _lv_area_is_point_on(const lv_area_t * a_p, const lv_point_t * p_p, lv_coord_t radius);
+bool _lv_area_is_point_on(const lv_area_t * a_p, const lv_point_t * p_p, lv_coord_t radius);
 
 /**
  * Check if two area has common parts
@@ -183,7 +180,7 @@ Boolean _lv_area_is_point_on(const lv_area_t * a_p, const lv_point_t * p_p, lv_c
  * @param a2_p pointer to an other area
  * @return false: a1_p and a2_p has no common parts
  */
-Boolean _lv_area_is_on(const lv_area_t * a1_p, const lv_area_t * a2_p);
+bool _lv_area_is_on(const lv_area_t * a1_p, const lv_area_t * a2_p);
 
 /**
  * Check if an area is fully on an other
@@ -192,8 +189,7 @@ Boolean _lv_area_is_on(const lv_area_t * a1_p, const lv_area_t * a2_p);
  * @param radius radius of `aholder_p` (e.g. for rounded rectangle)
  * @return true: `ain_p` is fully inside `aholder_p`
  */
-Boolean _lv_area_is_in(const lv_area_t * ain_p, const lv_area_t * aholder_p, lv_coord_t radius);
-
+bool _lv_area_is_in(const lv_area_t * ain_p, const lv_area_t * aholder_p, lv_coord_t radius);
 
 /**
  * Align an area to an other

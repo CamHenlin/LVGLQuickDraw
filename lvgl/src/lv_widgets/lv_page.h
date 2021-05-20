@@ -19,7 +19,7 @@ extern "C" {
 
 /*Testing of dependencies*/
 #if LV_USE_CONT == 0
-#error "lv_page: lv_cont is required. Enable it in lv_conf.h (LV_USE_CONT  1) "
+#error "lv_page: lv_cont is required. Enable it in lv_conf.h (LV_USE_CONT 1)"
 #endif
 
 #include "lv_cont.h"
@@ -41,7 +41,7 @@ enum {
     LV_SCROLLBAR_MODE_DRAG   = 0x2, /**< Show scroll bars when page is being dragged*/
     LV_SCROLLBAR_MODE_AUTO   = 0x3, /**< Show scroll bars when the scrollable container is large enough to be scrolled*/
     LV_SCROLLBAR_MODE_HIDE   = 0x4, /**< Hide the scroll bar temporally*/
-    LV_SCROLLBAR_MODE_UNHIDE = 0x5, /**< Unhide the previously hidden scroll bar. Recover original mode too*/
+    LV_SCROLLBAR_MODE_UNHIDE = 0x8, /**< Unhide the previously hidden scroll bar. Recover original mode too*/
 };
 typedef uint8_t lv_scrollbar_mode_t;
 
@@ -117,7 +117,7 @@ void lv_page_clean(lv_obj_t * page);
  * @param page pointer to a page object
  * @return pointer to a container which is the scrollable part of the page
  */
-lv_obj_t * lv_page_get_scrllable(const lv_obj_t * page);
+lv_obj_t * lv_page_get_scrollable(const lv_obj_t * page);
 
 /**
  * Get the animation time
@@ -152,14 +152,14 @@ void lv_page_set_anim_time(lv_obj_t * page, uint16_t anim_time);
  * @param page pointer to a Page
  * @param en true or false to enable/disable scroll propagation
  */
-void lv_page_set_scroll_propagation(lv_obj_t * page, Boolean en);
+void lv_page_set_scroll_propagation(lv_obj_t * page, bool en);
 
 /**
  * Enable the edge flash effect. (Show an arc when the an edge is reached)
  * @param page pointer to a Page
  * @param en true or false to enable/disable end flash
  */
-void lv_page_set_edge_flash(lv_obj_t * page, Boolean en);
+void lv_page_set_edge_flash(lv_obj_t * page, bool en);
 
 /**
  * Set the fit policy in all 4 directions separately.
@@ -170,10 +170,10 @@ void lv_page_set_edge_flash(lv_obj_t * page, Boolean en);
  * @param top bottom fit policy from `lv_fit_t`
  * @param bottom bottom fit policy from `lv_fit_t`
  */
-static inline void lv_page_set_scrllable_fit4(lv_obj_t * page, lv_fit_t left, lv_fit_t right, lv_fit_t top,
-                                              lv_fit_t bottom)
+static inline void lv_page_set_scrollable_fit4(lv_obj_t * page, lv_fit_t left, lv_fit_t right, lv_fit_t top,
+                                               lv_fit_t bottom)
 {
-    lv_cont_set_fit4(lv_page_get_scrllable(page), left, right, top, bottom);
+    lv_cont_set_fit4(lv_page_get_scrollable(page), left, right, top, bottom);
 }
 
 /**
@@ -183,20 +183,20 @@ static inline void lv_page_set_scrllable_fit4(lv_obj_t * page, lv_fit_t left, lv
  * @param hot horizontal fit policy from `lv_fit_t`
  * @param ver vertical fit policy from `lv_fit_t`
  */
-static inline void lv_page_set_scrllable_fit2(lv_obj_t * page, lv_fit_t hor, lv_fit_t ver)
+static inline void lv_page_set_scrollable_fit2(lv_obj_t * page, lv_fit_t hor, lv_fit_t ver)
 {
-    lv_cont_set_fit2(lv_page_get_scrllable(page), hor, ver);
+    lv_cont_set_fit2(lv_page_get_scrollable(page), hor, ver);
 }
 
 /**
- * Set the fit policyin all 4 direction at once.
+ * Set the fit policy in all 4 direction at once.
  * It tell how to change the page size automatically.
  * @param page pointer to a button object
  * @param fit fit policy from `lv_fit_t`
  */
-static inline void lv_page_set_scrllable_fit(lv_obj_t * page, lv_fit_t fit)
+static inline void lv_page_set_scrollable_fit(lv_obj_t * page, lv_fit_t fit)
 {
-    lv_cont_set_fit(lv_page_get_scrllable(page), fit);
+    lv_cont_set_fit(lv_page_get_scrollable(page), fit);
 }
 
 /**
@@ -206,7 +206,7 @@ static inline void lv_page_set_scrllable_fit(lv_obj_t * page, lv_fit_t fit)
  */
 static inline void lv_page_set_scrl_width(lv_obj_t * page, lv_coord_t w)
 {
-    lv_obj_set_width(lv_page_get_scrllable(page), w);
+    lv_obj_set_width(lv_page_get_scrollable(page), w);
 }
 
 /**
@@ -216,7 +216,7 @@ static inline void lv_page_set_scrl_width(lv_obj_t * page, lv_coord_t w)
  */
 static inline void lv_page_set_scrl_height(lv_obj_t * page, lv_coord_t h)
 {
-    lv_obj_set_height(lv_page_get_scrllable(page), h);
+    lv_obj_set_height(lv_page_get_scrollable(page), h);
 }
 
 /**
@@ -226,7 +226,7 @@ static inline void lv_page_set_scrl_height(lv_obj_t * page, lv_coord_t h)
  */
 static inline void lv_page_set_scrl_layout(lv_obj_t * page, lv_layout_t layout)
 {
-    lv_cont_set_layout(lv_page_get_scrllable(page), layout);
+    lv_cont_set_layout(lv_page_get_scrollable(page), layout);
 }
 
 /*=====================
@@ -245,14 +245,14 @@ lv_scrollbar_mode_t lv_page_get_scrollbar_mode(const lv_obj_t * page);
  * @param page pointer to a Page
  * @return true or false
  */
-Boolean lv_page_get_scroll_propagation(lv_obj_t * page);
+bool lv_page_get_scroll_propagation(lv_obj_t * page);
 
 /**
  * Get the edge flash effect property.
  * @param page pointer to a Page
  * return true or false
  */
-Boolean lv_page_get_edge_flash(lv_obj_t * page);
+bool lv_page_get_edge_flash(lv_obj_t * page);
 
 /**
  * Get that width which can be set to the children to still not cause overflow (show scrollbars)
@@ -270,10 +270,10 @@ lv_coord_t lv_page_get_height_fit(lv_obj_t * page);
 
 /**
  * Divide the width of the object and get the width of a given number of columns.
- * Take into account the paddings of the background and scrollbale too.
+ * Take into account the paddings of the background and scrollable too.
  * @param page pointer to an object
  * @param div indicates how many columns are assumed.
- * If 1 the width will be set the the parent's width
+ * If 1 the width will be set the parent's width
  * If 2 only half parent width - inner padding of the parent
  * If 3 only third parent width - 2 * inner padding of the parent
  * @param span how many columns are combined
@@ -283,10 +283,10 @@ lv_coord_t lv_page_get_width_grid(lv_obj_t * page, uint8_t div, uint8_t span);
 
 /**
  * Divide the height of the object and get the width of a given number of columns.
- * Take into account the paddings of the background and scrollbale too.
+ * Take into account the paddings of the background and scrollable too.
  * @param page pointer to an object
  * @param div indicates how many rows are assumed.
- * If 1 the height will be set the the parent's height
+ * If 1 the height will be set the parent's height
  * If 2 only half parent height - inner padding of the parent
  * If 3 only third parent height - 2 * inner padding of the parent
  * @param span how many rows are combined
@@ -301,7 +301,7 @@ lv_coord_t lv_page_get_height_grid(lv_obj_t * page, uint8_t div, uint8_t span);
  */
 static inline lv_coord_t lv_page_get_scrl_width(const lv_obj_t * page)
 {
-    return lv_obj_get_width(lv_page_get_scrllable(page));
+    return lv_obj_get_width(lv_page_get_scrollable(page));
 }
 
 /**
@@ -311,7 +311,7 @@ static inline lv_coord_t lv_page_get_scrl_width(const lv_obj_t * page)
  */
 static inline lv_coord_t lv_page_get_scrl_height(const lv_obj_t * page)
 {
-    return lv_obj_get_height(lv_page_get_scrllable(page));
+    return lv_obj_get_height(lv_page_get_scrollable(page));
 }
 
 /**
@@ -321,7 +321,7 @@ static inline lv_coord_t lv_page_get_scrl_height(const lv_obj_t * page)
  */
 static inline lv_layout_t lv_page_get_scrl_layout(const lv_obj_t * page)
 {
-    return lv_cont_get_layout(lv_page_get_scrllable(page));
+    return lv_cont_get_layout(lv_page_get_scrollable(page));
 }
 
 /**
@@ -331,7 +331,7 @@ static inline lv_layout_t lv_page_get_scrl_layout(const lv_obj_t * page)
  */
 static inline lv_fit_t lv_page_get_scrl_fit_left(const lv_obj_t * page)
 {
-    return lv_cont_get_fit_left(lv_page_get_scrllable(page));
+    return lv_cont_get_fit_left(lv_page_get_scrollable(page));
 }
 
 /**
@@ -341,7 +341,7 @@ static inline lv_fit_t lv_page_get_scrl_fit_left(const lv_obj_t * page)
  */
 static inline lv_fit_t lv_page_get_scrl_fit_right(const lv_obj_t * page)
 {
-    return lv_cont_get_fit_right(lv_page_get_scrllable(page));
+    return lv_cont_get_fit_right(lv_page_get_scrollable(page));
 }
 
 /**
@@ -351,7 +351,7 @@ static inline lv_fit_t lv_page_get_scrl_fit_right(const lv_obj_t * page)
  */
 static inline lv_fit_t lv_page_get_scrl_fit_top(const lv_obj_t * page)
 {
-    return lv_cont_get_fit_top(lv_page_get_scrllable(page));
+    return lv_cont_get_fit_top(lv_page_get_scrollable(page));
 }
 
 /**
@@ -361,7 +361,7 @@ static inline lv_fit_t lv_page_get_scrl_fit_top(const lv_obj_t * page)
  */
 static inline lv_fit_t lv_page_get_scrl_fit_bottom(const lv_obj_t * page)
 {
-    return lv_cont_get_fit_bottom(lv_page_get_scrllable(page));
+    return lv_cont_get_fit_bottom(lv_page_get_scrollable(page));
 }
 
 /*=====================
@@ -374,14 +374,14 @@ static inline lv_fit_t lv_page_get_scrl_fit_bottom(const lv_obj_t * page)
  * @param edge Edge to check
  * @return true if the page is on the specified edge
  */
-Boolean lv_page_on_edge(lv_obj_t * page, lv_page_edge_t edge);
+bool lv_page_on_edge(lv_obj_t * page, lv_page_edge_t edge);
 
 /**
  * Glue the object to the page. After it the page can be moved (dragged) with this object too.
  * @param obj pointer to an object on a page
  * @param glue true: enable glue, false: disable glue
  */
-void lv_page_glue_obj(lv_obj_t * obj, Boolean glue);
+void lv_page_glue_obj(lv_obj_t * obj, bool glue);
 
 /**
  * Focus on an object. It ensures that the object will be visible on the page.

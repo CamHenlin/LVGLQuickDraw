@@ -72,7 +72,7 @@ void lv_indev_reset_long_press(lv_indev_t * indev);
  * @param indev pointer to an input device
  * @param en true: enable; false: disable
  */
-void lv_indev_enable(lv_indev_t * indev, Boolean en);
+void lv_indev_enable(lv_indev_t * indev, bool en);
 
 /**
  * Set a cursor for a pointer input device (for LV_INPUT_TYPE_POINTER and LV_INPUT_TYPE_BUTTON)
@@ -125,7 +125,7 @@ uint32_t lv_indev_get_key(const lv_indev_t * indev);
  * @param indev pointer to an input device
  * @return true: drag is in progress
  */
-Boolean lv_indev_is_dragging(const lv_indev_t * indev);
+bool lv_indev_is_dragging(const lv_indev_t * indev);
 
 /**
  * Get the vector of dragging of an input device (for LV_INDEV_TYPE_POINTER and
@@ -149,7 +149,6 @@ lv_res_t lv_indev_finish_drag(lv_indev_t * indev);
  */
 void lv_indev_wait_release(lv_indev_t * indev);
 
-
 /**
  * Gets a pointer to the currently active object in indev proc functions.
  * NULL if no object is currently being handled or if groups aren't used.
@@ -160,7 +159,7 @@ lv_obj_t * lv_indev_get_obj_act(void);
 /**
  * Search the most top, clickable object by a point
  * @param obj pointer to a start object, typically the screen
- * @param point pointer to a point for searhing the most top child
+ * @param point pointer to a point for searching the most top child
  * @return pointer to the found object or NULL if there was no suitable object
  */
 lv_obj_t * lv_indev_search_obj(lv_obj_t * obj, lv_point_t * point);

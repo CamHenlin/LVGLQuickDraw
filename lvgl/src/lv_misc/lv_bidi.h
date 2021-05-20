@@ -1,5 +1,5 @@
 /**
- * @file lv_bifi.h
+ * @file lv_bidi.h
  *
  */
 
@@ -15,13 +15,13 @@ extern "C" {
  *********************/
 #include "../lv_conf_internal.h"
 
-#include <MacTypes.h>
+#include <stdbool.h>
 #include <stdint.h>
 
 /*********************
  *      DEFINES
  *********************/
-/* Special non printable  strong characters.
+/* Special non printable strong characters.
  * They can be inserted to texts to affect the run's direction*/
 #define LV_BIDI_LRO  "\xE2\x80\xAD" /*U+202D*/
 #define LV_BIDI_RLO  "\xE2\x80\xAE" /*U+202E*/
@@ -71,12 +71,12 @@ lv_bidi_dir_t _lv_bidi_detect_base_dir(const char * txt);
  * Can be `NULL` is unused
  * @param len length of the line in character count
  * @param base_dir base direction of the text: `LV_BIDI_DIR_LTR` or `LV_BIDI_DIR_RTL`
- * @param vicual_pos the visual character position which logical position should be get
- * @param is_rtl tell the the char at `viasual_pos` is RTL or LTR context
+ * @param visual_pos the visual character position which logical position should be get
+ * @param is_rtl tell the char at `visual_pos` is RTL or LTR context
  * @return the logical character position
  */
 uint16_t _lv_bidi_get_logical_pos(const char * str_in, char ** bidi_txt, uint32_t len, lv_bidi_dir_t base_dir,
-                                  uint32_t visual_pos, Boolean * is_rtl);
+                                  uint32_t visual_pos, bool * is_rtl);
 
 /**
  * Get the visual position of a character in a line
@@ -87,17 +87,17 @@ uint16_t _lv_bidi_get_logical_pos(const char * str_in, char ** bidi_txt, uint32_
  * @param len length of the line in character count
  * @param base_dir base direction of the text: `LV_BIDI_DIR_LTR` or `LV_BIDI_DIR_RTL`
  * @param logical_pos the logical character position which visual position should be get
- * @param is_rtl tell the the char at `logical_pos` is RTL or LTR context
+ * @param is_rtl tell the char at `logical_pos` is RTL or LTR context
  * @return the visual character position
  */
 uint16_t _lv_bidi_get_visual_pos(const char * str_in, char ** bidi_txt, uint16_t len, lv_bidi_dir_t base_dir,
-                                 uint32_t logical_pos, Boolean * is_rtl);
+                                 uint32_t logical_pos, bool * is_rtl);
 
 /**
  * Bidi process a paragraph of text
  * @param str_in the string to process
  * @param str_out store the result here
- * @param len length of teh text
+ * @param len length of the text
  * @param base_dir base dir of the text
  * @param pos_conv_out an `uint16_t` array to store the related logical position of the character.
  * Can be `NULL` is unused

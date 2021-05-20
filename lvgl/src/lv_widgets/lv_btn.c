@@ -12,7 +12,7 @@
 
 #include <string.h>
 #include "../lv_core/lv_group.h"
-#include "../lv_core/lv_debug.h"
+#include "../lv_misc/lv_debug.h"
 #include "../lv_draw/lv_draw.h"
 #include "../lv_themes/lv_theme.h"
 #include "../lv_misc/lv_area.h"
@@ -100,7 +100,7 @@ lv_obj_t * lv_btn_create(lv_obj_t * par, const lv_obj_t * copy)
         ext->checkable             = copy_ext->checkable;
 
         /*Refresh the style with new signal function*/
-        lv_obj_refresh_style(btn, LV_STYLE_PROP_ALL);
+        lv_obj_refresh_style(btn, LV_OBJ_PART_ALL, LV_STYLE_PROP_ALL);
     }
 
     LV_LOG_INFO("button created");
@@ -117,7 +117,7 @@ lv_obj_t * lv_btn_create(lv_obj_t * par, const lv_obj_t * copy)
  * @param btn pointer to a button object
  * @param tgl true: enable toggled states, false: disable
  */
-void lv_btn_set_checkable(lv_obj_t * btn, Boolean tgl)
+void lv_btn_set_checkable(lv_obj_t * btn, bool tgl)
 {
     LV_ASSERT_OBJ(btn, LV_OBJX_NAME);
 
@@ -137,24 +137,27 @@ void lv_btn_set_state(lv_obj_t * btn, lv_btn_state_t state)
 
     switch(state) {
         case LV_BTN_STATE_RELEASED:
-            lv_obj_clear_state(btn, LV_STATE_PRESSED | LV_STATE_CHECKED);
+            lv_obj_clear_state(btn, LV_STATE_PRESSED | LV_STATE_CHECKED | LV_STATE_DISABLED);
             break;
         case LV_BTN_STATE_PRESSED:
-            lv_obj_clear_state(btn, LV_STATE_CHECKED);
+            lv_obj_clear_state(btn, LV_STATE_CHECKED | LV_STATE_DISABLED);
             lv_obj_add_state(btn, LV_STATE_PRESSED);
             break;
         case LV_BTN_STATE_CHECKED_RELEASED:
             lv_obj_add_state(btn, LV_STATE_CHECKED);
-            lv_obj_clear_state(btn, LV_STATE_PRESSED);
+            lv_obj_clear_state(btn, LV_STATE_PRESSED | LV_STATE_DISABLED);
             break;
         case LV_BTN_STATE_CHECKED_PRESSED:
             lv_obj_add_state(btn, LV_STATE_PRESSED | LV_STATE_CHECKED);
+            lv_obj_clear_state(btn, LV_STATE_DISABLED);
             break;
         case LV_BTN_STATE_DISABLED:
+            lv_obj_clear_state(btn, LV_STATE_PRESSED | LV_STATE_CHECKED);
             lv_obj_add_state(btn, LV_STATE_DISABLED);
             break;
-        case LV_BTN_STATE_ACTIVE:
-            lv_obj_clear_state(btn, LV_STATE_DISABLED);
+        case LV_BTN_STATE_CHECKED_DISABLED:
+            lv_obj_clear_state(btn, LV_STATE_PRESSED);
+            lv_obj_add_state(btn, LV_STATE_DISABLED | LV_STATE_CHECKED);
             break;
     }
 }
@@ -166,8 +169,6 @@ void lv_btn_set_state(lv_obj_t * btn, lv_btn_state_t state)
 void lv_btn_toggle(lv_obj_t * btn)
 {
     LV_ASSERT_OBJ(btn, LV_OBJX_NAME);
-
-
 
     if(lv_obj_get_state(btn, LV_BTN_PART_MAIN) & LV_STATE_CHECKED) {
         lv_obj_clear_state(btn, LV_STATE_CHECKED);
@@ -192,16 +193,19 @@ lv_btn_state_t lv_btn_get_state(const lv_obj_t * btn)
     LV_ASSERT_OBJ(btn, LV_OBJX_NAME);
 
     lv_state_t obj_state = lv_obj_get_state(btn, LV_BTN_PART_MAIN);
-    lv_btn_state_t btn_state = 0;
-    if(obj_state & LV_STATE_DISABLED) btn_state = LV_BTN_STATE_DISABLED;
+
+    if(obj_state & LV_STATE_DISABLED) {
+        if(obj_state & LV_STATE_CHECKED) return LV_BTN_STATE_CHECKED_DISABLED;
+        else return LV_BTN_STATE_DISABLED;
+    }
 
     if(obj_state & LV_STATE_CHECKED) {
-        if(obj_state & LV_STATE_PRESSED) return btn_state | LV_BTN_STATE_CHECKED_PRESSED;
-        else return btn_state | LV_BTN_STATE_CHECKED_RELEASED;
+        if(obj_state & LV_STATE_PRESSED) return LV_BTN_STATE_CHECKED_PRESSED;
+        else return LV_BTN_STATE_CHECKED_RELEASED;
     }
     else {
-        if(obj_state & LV_STATE_PRESSED) return btn_state | LV_BTN_STATE_PRESSED;
-        else return btn_state | LV_BTN_STATE_RELEASED;
+        if(obj_state & LV_STATE_PRESSED) return LV_BTN_STATE_PRESSED;
+        else return LV_BTN_STATE_RELEASED;
     }
 }
 
@@ -210,7 +214,7 @@ lv_btn_state_t lv_btn_get_state(const lv_obj_t * btn)
  * @param btn pointer to a button object
  * @return true: toggle enabled, false: disabled
  */
-Boolean lv_btn_get_checkable(const lv_obj_t * btn)
+bool lv_btn_get_checkable(const lv_obj_t * btn)
 {
     LV_ASSERT_OBJ(btn, LV_OBJX_NAME);
 
@@ -264,7 +268,7 @@ static lv_res_t lv_btn_signal(lv_obj_t * btn, lv_signal_t sign, void * param)
     if(res != LV_RES_OK) return res;
     if(sign == LV_SIGNAL_GET_TYPE) return lv_obj_handle_get_type_signal(param, LV_OBJX_NAME);
 
-    Boolean tgl           = lv_btn_get_checkable(btn);
+    bool tgl           = lv_btn_get_checkable(btn);
 
     if(sign == LV_SIGNAL_RELEASED) {
         /*If not dragged and it was not long press action then
@@ -285,6 +289,7 @@ static lv_res_t lv_btn_signal(lv_obj_t * btn, lv_signal_t sign, void * param)
         }
     }
     else if(sign == LV_SIGNAL_CONTROL) {
+#if LV_USE_GROUP
         char c = *((char *)param);
         if(c == LV_KEY_RIGHT || c == LV_KEY_UP) {
             if(lv_btn_get_checkable(btn)) {
@@ -305,6 +310,7 @@ static lv_res_t lv_btn_signal(lv_obj_t * btn, lv_signal_t sign, void * param)
                 if(res != LV_RES_OK) return res;
             }
         }
+#endif
     }
 
     return res;

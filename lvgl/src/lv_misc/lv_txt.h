@@ -15,10 +15,11 @@ extern "C" {
  *********************/
 #include "../lv_conf_internal.h"
 
-#include <MacTypes.h>
-#include "lv_area.h"
+#include <stdbool.h>
+#include <stdarg.h>
 #include "lv_area.h"
 #include "../lv_font/lv_font.h"
+#include "lv_printf.h"
 
 /*********************
  *      DEFINES
@@ -84,7 +85,7 @@ void _lv_txt_get_size(lv_point_t * size_res, const char * text, const lv_font_t 
  * @return the index of the first char of the new line (in byte index not letter index. With UTF-8
  * they are different)
  */
-uint16_t _lv_txt_get_next_line(const char * txt, const lv_font_t * font, lv_coord_t letter_space, lv_coord_t max_width,
+uint32_t _lv_txt_get_next_line(const char * txt, const lv_font_t * font, lv_coord_t letter_space, lv_coord_t max_width,
                                lv_txt_flag_t flag);
 
 /**
@@ -97,18 +98,18 @@ uint16_t _lv_txt_get_next_line(const char * txt, const lv_font_t * font, lv_coor
  * @param flags settings for the text from 'txt_flag_t' enum
  * @return length of a char_num long text
  */
-lv_coord_t _lv_txt_get_width(const char * txt, uint16_t length, const lv_font_t * font, lv_coord_t letter_space,
+lv_coord_t _lv_txt_get_width(const char * txt, uint32_t length, const lv_font_t * font, lv_coord_t letter_space,
                              lv_txt_flag_t flag);
 
 /**
- * Check next character in a string and decide if te character is part of the command or not
+ * Check next character in a string and decide if the character is part of the command or not
  * @param state pointer to a txt_cmd_state_t variable which stores the current state of command
  * processing
  * @param c the current character
  * @return true: the character is part of a command and should not be written,
  *         false: the character should be written
  */
-Boolean _lv_txt_is_cmd(lv_txt_cmd_state_t * state, uint32_t c);
+bool _lv_txt_is_cmd(lv_txt_cmd_state_t * state, uint32_t c);
 
 /**
  * Insert a string into an other
@@ -127,8 +128,15 @@ void _lv_txt_ins(char * txt_buf, uint32_t pos, const char * ins_txt);
  */
 void _lv_txt_cut(char * txt, uint32_t pos, uint32_t len);
 
+/**
+ * return a new formatted text. Memory will be allocated to store the text.
+ * @param fmt `printf`-like format
+ * @return pointer to the allocated text string.
+ */
+char * _lv_txt_set_text_vfmt(const char * fmt, va_list ap);
+
 /***************************************************************
- *  GLOBAL FUNCTION POINTERS FOR CAHRACTER ENCODING INTERFACE
+ *  GLOBAL FUNCTION POINTERS FOR CHARACTER ENCODING INTERFACE
  ***************************************************************/
 
 /**
