@@ -141,9 +141,11 @@ void main()
     writeSerialPort(boutRefNum, "call lv_label_create");
 
     /*Create a "Hello world!" label*/
-    lv_obj_t * label = lv_label_create(lv_scr_act(), NULL);
-    lv_label_set_text(label, "Hello world!");
-    lv_obj_align(label, NULL, LV_ALIGN_CENTER, 0, 0);
+    // lv_obj_t * label = lv_label_create(lv_scr_act(), NULL);
+    // lv_label_set_text(label, "Hello world!");
+    // lv_obj_align(label, NULL, LV_ALIGN_CENTER, 0, 0);
+    
+    lv_demo_widgets();
 
     #ifdef MAC_APP_DEBUGGING
 
