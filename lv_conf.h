@@ -20,8 +20,8 @@
  *====================*/
 
 /* Maximal horizontal and vertical resolution to support by the library.*/
-#define LV_HOR_RES_MAX          (480)
-#define LV_VER_RES_MAX          (320)
+#define LV_HOR_RES_MAX          (510)
+#define LV_VER_RES_MAX          (302)
 
 /* Color depth:
  * - 1:  1 byte per pixel
@@ -41,7 +41,7 @@
 #define LV_COLOR_SCREEN_TRANSP    0
 
 /*Images pixels with this color will not be drawn (with chroma keying)*/
-#define LV_COLOR_TRANSP    LV_COLOR_LIME         /*LV_COLOR_LIME: pure green*/
+#define LV_COLOR_TRANSP    LV_COLOR_BLACK         /*LV_COLOR_LIME: pure green*/
 
 /* Enable anti-aliasing (lines, and radiuses will be smoothed) */
 #define LV_ANTIALIAS        1
@@ -53,7 +53,7 @@
 /* Dot Per Inch: used to initialize default sizes.
  * E.g. a button with width = LV_DPI / 2 -> half inch wide
  * (Not so important, you can adjust it to modify default sizes and spaces)*/
-#define LV_DPI              130     /*[px]*/
+#define LV_DPI              72     /*[px]*/
 
 /* The the real width of the display changes some default values:
  * default object sizes, layout of examples, etc.
@@ -433,7 +433,7 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
 #define LV_USE_FONT_COMPRESSED 1
 
 /* Enable subpixel rendering */
-#define LV_USE_FONT_SUBPX 1
+#define LV_USE_FONT_SUBPX 0
 #if LV_USE_FONT_SUBPX
 /* Set the pixel order of the display.
  * Important only if "subpx fonts" are used.
@@ -453,11 +453,11 @@ typedef void * lv_font_user_data_t;
 
 /* No theme, you can apply your styles as you need
  * No flags. Set LV_THEME_DEFAULT_FLAG 0 */
-#define LV_USE_THEME_EMPTY       1
+#define LV_USE_THEME_EMPTY       0
 
 /*Simple to the create your theme based on it
  * No flags. Set LV_THEME_DEFAULT_FLAG 0 */
-#define LV_USE_THEME_TEMPLATE    1
+#define LV_USE_THEME_TEMPLATE    0
 
 /* A fast and impressive theme.
  * Flags:
@@ -473,12 +473,12 @@ typedef void * lv_font_user_data_t;
  * texts and borders will be black and the background will be
  * white. Else the colors are inverted.
  * No flags. Set LV_THEME_DEFAULT_FLAG 0 */
-#define LV_USE_THEME_MONO        1
+#define LV_USE_THEME_MONO        0
 
 #define LV_THEME_DEFAULT_INCLUDE            <stdint.h>      /*Include a header for the init. function*/
-#define LV_THEME_DEFAULT_INIT               lv_theme_material_init
-#define LV_THEME_DEFAULT_COLOR_PRIMARY      lv_color_hex(0x000000)
-#define LV_THEME_DEFAULT_COLOR_SECONDARY    lv_color_hex(0xFFFFFF)
+#define LV_THEME_DEFAULT_INIT               lv_theme_material_init // lv_theme_mono_init
+#define LV_THEME_DEFAULT_COLOR_PRIMARY      LV_COLOR_BLACK //lv_color_hex(0x01a2b1)
+#define LV_THEME_DEFAULT_COLOR_SECONDARY    LV_COLOR_WHITE //lv_color_hex(0x44d1b6)
 #define LV_THEME_DEFAULT_FLAG               LV_THEME_MATERIAL_FLAG_LIGHT
 #define LV_THEME_DEFAULT_FONT_SMALL         &lv_font_montserrat_12
 #define LV_THEME_DEFAULT_FONT_NORMAL        &lv_font_montserrat_12
