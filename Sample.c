@@ -45,6 +45,7 @@ Boolean		gHasWaitNextEvent;	/* set up by Initialize */
 Boolean		gInBackground;		/* maintained by Initialize and DoEvent */
 
  #define MAC_APP_DEBUGGING
+#define QUICKDRAW_EVENTS_DEBUGGING
 /* The following globals are the state of the window. If we supported more than
    one window, they would be attatched to each document, rather than globals. */
 
@@ -82,6 +83,33 @@ Boolean initialState = true;
 BitMap RealMap;
 int n;
 
+WindowPtr window;
+
+static void putpixel(unsigned char* screen, int x, int y, int color) {
+
+    // if (color == 0) {
+
+    //     return;
+    // }
+    // char log[255];
+    // sprintf(log, "in putpixel, x: %d, y: %d, c: %d", x, y, color);
+    //     writeSerialPort(boutRefNum, log);
+    // unsigned where = x + y * 512;
+    // screen[where] |= 1 << color;
+
+
+
+    // this should be the byte location of the pixel
+    unsigned char* location = screen + y * 64 + ((x / 8) | 0);
+
+    // now we need to set the individual bit for the pixel
+    *location |= color << 7 - x % 8;
+    // char log[255];
+    // sprintf(log, "putpixel: x: %d, y: %d, color: %d, where: %d, x mod 8: %d, x / 8: %d", x, y, color, location, x % 8, (x / 8) | 0);
+    // writeSerialPort(boutRefNum,log);
+}
+
+
 void my_log_cb(lv_log_level_t level, const char * file, uint32_t line, const char * fn_name, const char * dsc)
 {
 
@@ -97,6 +125,42 @@ void my_log_cb(lv_log_level_t level, const char * file, uint32_t line, const cha
   writeSerialPort(boutRefNum, log);
 }
 
+int touchpad_x;
+int touchpad_y;
+bool mouse_pressed = false;
+
+bool my_input_read(lv_indev_drv_t * drv, lv_indev_data_t*data)
+{
+    writeSerialPort(boutRefNum, "in my_input_read (mouse)");
+    data->point.x = touchpad_x;
+    data->point.y = touchpad_y;
+
+    if (mouse_pressed) {
+        data->state = LV_INDEV_STATE_PR;
+        putpixel((unsigned char *)window->portBits.baseAddr, -window->portBits.bounds.left + touchpad_x, -window->portBits.bounds.top + touchpad_y, 1);
+    } else {
+        data->state = LV_INDEV_STATE_REL;
+    }
+
+    return false; /*No buffering now so no more data read*/
+}
+
+bool key_pressed = false;
+char last_key;
+
+bool keyboard_read(lv_indev_drv_t * drv, lv_indev_data_t*data){
+
+    writeSerialPort(boutRefNum, "in keyboard_read");
+  data->key = last_key;            /*Get the last pressed or released key*/
+
+  if (key_pressed) {
+    data->state = LV_INDEV_STATE_PR;
+  } else {
+    data->state = LV_INDEV_STATE_REL;
+  }
+
+  return false; /*No buffering now so no more data read*/
+}
 
 #pragma segment Main
 void main()
@@ -105,9 +169,10 @@ void main()
 
 	UnloadSeg((Ptr) Initialize);	/* note that Initialize must not be in Main! */
 
-    WindowPtr window = FrontWindow();
+    window = FrontWindow();
 
     quickdraw_init(WINDOW_WIDTH, WINDOW_HEIGHT);
+
 
     RealMap = qd.thePort->portBits;
 
@@ -140,11 +205,23 @@ void main()
     lv_disp_drv_register(&disp_drv);
     writeSerialPort(boutRefNum, "call lv_label_create");
 
+    lv_indev_drv_t indev_drv;
+    lv_indev_drv_init(&indev_drv);
+    indev_drv.type = LV_INDEV_TYPE_POINTER;
+    indev_drv.read_cb = my_input_read;  
+    lv_indev_t * my_indev = lv_indev_drv_register(&indev_drv);
+
+    lv_indev_drv_t indev_drv_k;
+    lv_indev_drv_init(&indev_drv_k);
+    indev_drv_k.type = LV_INDEV_TYPE_KEYPAD;
+    indev_drv_k.read_cb = keyboard_read;
+    lv_indev_t * my_indev2 = lv_indev_drv_register(&indev_drv_k);
+
     /*Create a "Hello world!" label*/
     // lv_obj_t * label = lv_label_create(lv_scr_act(), NULL);
     // lv_label_set_text(label, "Hello world!");
     // lv_obj_align(label, NULL, LV_ALIGN_CENTER, 0, 0);
-    
+
     lv_demo_widgets();
 
     #ifdef MAC_APP_DEBUGGING
@@ -194,7 +271,8 @@ void EventLoop()
 	    // CopyBits(&gMainOffScreen.bits->portBits, &window->portBits, &window->portRect, &window->portRect, srcCopy, 0L);
 
 		GetGlobalMouse(&mouse);
-
+        touchpad_x = mouse.h;
+        touchpad_y = mouse.v;
 
 		// as far as i can tell, there is no way to event on mouse movement with mac libraries,
 		// so we are just going to track on our own, and create our own events.
@@ -217,6 +295,10 @@ void EventLoop()
         	if (clicked) {
 
                 // UG_TouchUpdate(mouse.h, mouse.v, TOUCH_STATE_PRESSED);
+                mouse_pressed = true;
+            } else {
+
+                mouse_pressed = false;
             }
         }
 
@@ -245,7 +327,10 @@ void EventLoop()
 
         		writeSerialPort(boutRefNum, "done with DoEvent");
         	#endif
-		}
+		} else if (key_pressed) {
+
+            key_pressed = false;
+        }
 
         // only re-render if there is an event, prevents screen flickering
         //if (gotEvent || firstOrMouseMove) {
@@ -370,11 +455,12 @@ static int quickdraw_handle_event(EventRecord *event) {
                     if (event->what == mouseDown) {
 
                         clicked = true;
-
+                        mouse_pressed = true;
                         // UG_TouchUpdate(x, y, TOUCH_STATE_PRESSED);
                     } else {
 
                         clicked = false;
+                        mouse_pressed = false;
 
                         // UG_TouchUpdate(x, y, TOUCH_STATE_RELEASED);
                     }
@@ -387,109 +473,111 @@ static int quickdraw_handle_event(EventRecord *event) {
         case keyDown:
 		case autoKey: {/* check for menukey equivalents */
 
-                // char charKey = event->message & charCodeMask;
-                // int key = (int)charKey;
+                char charKey = event->message & charCodeMask;
+                int key = (int)charKey;
 
 
-                // #ifdef QUICKDRAW_EVENTS_DEBUGGING
+                #ifdef QUICKDRAW_EVENTS_DEBUGGING
 
-                //     writeSerialPort(boutRefNum, "keyDown/autoKey");
+                    writeSerialPort(boutRefNum, "keyDown/autoKey");
 
-                //     char logy[255];
-                //     sprintf(logy, "key pressed: key: '%c', 02x: '%02X', return: '%02X', %d == %d ??", key, key, returnKey, (int)(key), (int)(returnKey));
-                //     writeSerialPort(boutRefNum, logy);
-                // #endif
+                    char logy[255];
+                    sprintf(logy, "key pressed: key: '%c', 02x: '%02X', return: '%02X', %d == %d ??", key, key, returnKey, (int)(key), (int)(returnKey));
+                    writeSerialPort(boutRefNum, logy);
+                #endif
 
-                // const Boolean isKeyDown = event->what == keyDown;
+                const Boolean isKeyDown = event->what == keyDown;
 
-                // if (event->modifiers & cmdKey) {/* Command key down */
+                if (event->modifiers & cmdKey) {/* Command key down */
 
-                //     if (isKeyDown) {
+                    if (isKeyDown) {
 
-                //         // AdjustMenus();						/* enable/disable/check menu items properly */
-                //         // DoMenuCommand(MenuKey(key));
-                //     }
+                        // AdjustMenus();						/* enable/disable/check menu items properly */
+                        // DoMenuCommand(MenuKey(key));
+                    }
                     
-                //     if (key == 'c') {
+                    if (key == 'c') {
                         
-                //         // // input_key(ctx, KEY_COPY, 1);
-                //     } else if (key == 'v') {
+                        // // input_key(ctx, KEY_COPY, 1);
+                    } else if (key == 'v') {
                         
-                //         // // input_key(ctx, KEY_PASTE, 1);
-                //     } else if (key == 'x') {
+                        // // input_key(ctx, KEY_PASTE, 1);
+                    } else if (key == 'x') {
                         
-                //         // // input_key(ctx, KEY_CUT, 1);
-                //     } else if (key == 'z') {
+                        // // input_key(ctx, KEY_CUT, 1);
+                    } else if (key == 'z') {
                         
-                //         // // input_key(ctx, KEY_TEXT_UNDO, 1);
-                //     } else if (key == 'r') {
+                        // // input_key(ctx, KEY_TEXT_UNDO, 1);
+                    } else if (key == 'r') {
                         
-                //         // // input_key(ctx, KEY_TEXT_REDO, 1);
-                //     } 
-                // } else if (key == eitherShiftKey) {
+                        // // input_key(ctx, KEY_TEXT_REDO, 1);
+                    } 
+                } else if (key == eitherShiftKey) {
                     
-                //     // input_key(ctx, KEY_SHIFT, isKeyDown);
-                // } else if (key == deleteKey) {
+                    // input_key(ctx, KEY_SHIFT, isKeyDown);
+                } else if (key == deleteKey) {
                     
-                //     // input_key(ctx, KEY_DEL, isKeyDown);
-                // } else if (key == enterKey) {
+                    // input_key(ctx, KEY_DEL, isKeyDown);
+                } else if (key == enterKey) {
                     
-                //     // input_key(ctx, KEY_ENTER, isKeyDown);
-                // } else if (key == returnKey) {
+                    // input_key(ctx, KEY_ENTER, isKeyDown);
+                } else if (key == returnKey) {
                     
-                //     // input_key(ctx, KEY_ENTER, isKeyDown);
-                // } else if (key == tabKey) {
+                    // input_key(ctx, KEY_ENTER, isKeyDown);
+                } else if (key == tabKey) {
                     
-                //     // input_key(ctx, KEY_TAB, isKeyDown);
-                // } else if (key == leftArrowKey) {
+                    // input_key(ctx, KEY_TAB, isKeyDown);
+                } else if (key == leftArrowKey) {
                     
-                //     // input_key(ctx, KEY_LEFT, isKeyDown);
-                // } else if (key == rightArrowKey) {
+                    // input_key(ctx, KEY_LEFT, isKeyDown);
+                } else if (key == rightArrowKey) {
                     
-                //     // input_key(ctx, KEY_RIGHT, isKeyDown);
-                // } else if (key == upArrowKey) {
+                    // input_key(ctx, KEY_RIGHT, isKeyDown);
+                } else if (key == upArrowKey) {
                     
-                //     // input_key(ctx, KEY_UP, isKeyDown);
-                // } else if (key == downArrowKey) {
+                    // input_key(ctx, KEY_UP, isKeyDown);
+                } else if (key == downArrowKey) {
                     
-                //     // input_key(ctx, KEY_DOWN, isKeyDown);
-                // } else if (key == backspaceKey) {
+                    // input_key(ctx, KEY_DOWN, isKeyDown);
+                } else if (key == backspaceKey) {
                     
-                //     // input_key(ctx, KEY_BACKSPACE, isKeyDown);
-                // } else if (key == escapeKey) {
+                    // input_key(ctx, KEY_BACKSPACE, isKeyDown);
+                } else if (key == escapeKey) {
                     
-                //     // // input_key(ctx, KEY_TEXT_RESET_MODE, isKeyDown);
-                // } else if (key == pageUpKey) {
+                    // // input_key(ctx, KEY_TEXT_RESET_MODE, isKeyDown);
+                } else if (key == pageUpKey) {
                  
-                //     // input_key(ctx, KEY_SCROLL_UP, isKeyDown);
-                // } else if (key == pageDownKey) {
+                    // input_key(ctx, KEY_SCROLL_UP, isKeyDown);
+                } else if (key == pageDownKey) {
                     
-                //     // input_key(ctx, KEY_SCROLL_DOWN, isKeyDown);
-                // } else if (key == homeKey) {
+                    // input_key(ctx, KEY_SCROLL_DOWN, isKeyDown);
+                } else if (key == homeKey) {
 
-                //     // // input_key(ctx, KEY_TEXT_START, isKeyDown);
-                //     // input_key(ctx, KEY_SCROLL_START, isKeyDown);
-                // } else if (key == endKey) {
+                    // // input_key(ctx, KEY_TEXT_START, isKeyDown);
+                    // input_key(ctx, KEY_SCROLL_START, isKeyDown);
+                } else if (key == endKey) {
 
-                //     // // input_key(ctx, KEY_TEXT_END, isKeyDown);
-                //     // input_key(ctx, KEY_SCROLL_END, isKeyDown);
-                // } else {
+                    // // input_key(ctx, KEY_TEXT_END, isKeyDown);
+                    // input_key(ctx, KEY_SCROLL_END, isKeyDown);
+                } else {
 
-                //     #ifdef QUICKDRAW_EVENTS_DEBUGGING
+                    #ifdef QUICKDRAW_EVENTS_DEBUGGING
 
-                //         writeSerialPort(boutRefNum, "default keydown/autokey event");
-                //     #endif
+                        writeSerialPort(boutRefNum, "default keydown/autokey event");
+                    #endif
 
-                //     if (key > 127) {
-                //         // invalid char
-                //         mu_input_text(ctx, "?");
-                //     } else {
-                //         char ascii_c[2] = {(char)key, '\0'};
-                //         mu_input_text(ctx, ascii_c);
-                //     }
-                // }
+                    if (key > 127) {
+                        // invalid char
+                        // mu_input_text(ctx, "?");
+                    } else {
+                        // char ascii_c[2] = {(char)key, '\0'};
+                        // mu_input_text(ctx, ascii_c);
+                        last_key = (char)key;
+                        key_pressed = true;
+                    }
+                }
 
-                // return 1;
+                return 1;
             }
 			break;
         default: {
