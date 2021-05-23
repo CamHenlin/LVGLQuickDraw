@@ -98,12 +98,19 @@ static void putpixel(unsigned char* screen, int x, int y, int color) {
     // screen[where] |= 1 << color;
 
 
+    for (int xmod = -2; xmod < 3; xmod++) {
 
-    // this should be the byte location of the pixel
-    unsigned char* location = screen + y * 64 + ((x / 8) | 0);
+        for (int ymod = -2; ymod < 3; ymod++) {
 
-    // now we need to set the individual bit for the pixel
-    *location |= color << 7 - x % 8;
+            // this should be the byte location of the pixel
+            unsigned char* location = screen + (y + ymod) * 64 + (((x + xmod)/ 8) | 0);
+
+            // now we need to set the individual bit for the pixel
+            *location |= color << 7 - (x + xmod) % 8;
+
+        }
+    }
+
     // char log[255];
     // sprintf(log, "putpixel: x: %d, y: %d, color: %d, where: %d, x mod 8: %d, x / 8: %d", x, y, color, location, x % 8, (x / 8) | 0);
     // writeSerialPort(boutRefNum,log);
@@ -132,12 +139,13 @@ bool mouse_pressed = false;
 bool my_input_read(lv_indev_drv_t * drv, lv_indev_data_t*data)
 {
     writeSerialPort(boutRefNum, "in my_input_read (mouse)");
-    data->point.x = touchpad_x;
-    data->point.y = touchpad_y;
+    data->point.x = touchpad_x - window->portBits.bounds.left;
+    data->point.y = touchpad_y - window->portBits.bounds.top;
 
     if (mouse_pressed) {
         data->state = LV_INDEV_STATE_PR;
-        putpixel((unsigned char *)window->portBits.baseAddr, -window->portBits.bounds.left + touchpad_x, -window->portBits.bounds.top + touchpad_y, 1);
+        writeSerialPort(boutRefNum, "MOUSE PRESSED PUT PIXEL!");
+        putpixel((unsigned char *)window->portBits.baseAddr, touchpad_x, touchpad_y, 1);
     } else {
         data->state = LV_INDEV_STATE_REL;
     }

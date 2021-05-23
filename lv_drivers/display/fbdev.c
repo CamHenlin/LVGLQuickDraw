@@ -11,46 +11,6 @@
 
 #include <Windows.h>
 
-
-/*********************
- *      DEFINES
- *********************/
-
-/**********************
- *      TYPEDEFS
- **********************/
-
-/**********************
- *      STRUCTURES
- **********************/
-
-struct bsd_fb_var_info{
-    uint32_t xoffset;
-    uint32_t yoffset;
-    uint32_t xres;
-    uint32_t yres;
-    int bits_per_pixel;
- };
-
-struct bsd_fb_fix_info{
-    long int line_length;
-    long int smem_len;
-};
-
-/**********************
- *  STATIC PROTOTYPES
- **********************/
-
-/**********************
- *  STATIC VARIABLES
- **********************/
-
-// static struct fb_var_screeninfo vinfo;
-// static struct fb_fix_screeninfo finfo;
-static char *fbp = 0;
-static long int screensize = 0;
-static int fbfd = 0;
-
 /**********************
  *      MACROS
  **********************/
@@ -74,14 +34,13 @@ static void putpixel(unsigned char* screen, int x, int y, int color) {
 
     //     return;
     // }
-    // char log[255];
-    // sprintf(log, "in putpixel, x: %d, y: %d, c: %d", x, y, color);
-    //     writeSerialPort(boutRefNum, log);
+        // char log[255];
+        // sprintf(log, "else (black) in putpixel, x: %d, y: %d, c: %d", x, y, color);
+        // writeSerialPort(boutRefNum, log);
     // unsigned where = x + y * 512;
     // screen[where] |= 1 << color;
 
     if (color == 1) {
-
 
         // this should be the byte location of the pixel
         unsigned char* location = screen + y * 64 + ((x / 8) | 0);
@@ -116,14 +75,15 @@ static void putpixel(unsigned char* screen, int x, int y, int color) {
 void fbdev_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color_p)
 {
         writeSerialPort(boutRefNum, "in fbdev flush");
-    // if(fbp == NULL ||
-    //         area->x2 < 0 ||
-    //         area->y2 < 0 ||
-    //         area->x1 > (int32_t)vinfo.xres - 1 ||
-    //         area->y1 > (int32_t)vinfo.yres - 1) {
-    //     lv_disp_flush_ready(drv);
-    //     return;
-    // }
+    if (
+            area->x2 < 0 ||
+            area->y2 < 0 ||
+            area->x1 > (int32_t)WINDOW_WIDTH - 1 ||
+            area->y1 > (int32_t)WINDOW_HEIGHT - 1) {
+        lv_disp_flush_ready(drv);
+        writeSerialPort(boutRefNum, "flush bailout");
+        return;
+    }
 
     /*Truncate the area to the screen*/
     int32_t act_x1 = area->x1 < 0 ? 0 : area->x1;
@@ -132,11 +92,11 @@ void fbdev_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color
     int32_t act_y2 = area->y2 > (int32_t)WINDOW_HEIGHT - 1 ? (int32_t)WINDOW_HEIGHT - 1 : area->y2;
 
 
-    lv_coord_t w = (act_x2 - act_x1 + 1);
+    //lv_coord_t w = (act_x2 - act_x1 + 1);
     long int location = 0;
-    long int byte_location = 0;
+    //long int byte_location = 0;
 
-    uint8_t * fbp8 = (uint8_t *)fbp;
+    //uint8_t * fbp8 = (uint8_t *)fbp;
     int32_t x;
     int32_t y;
     for(y = act_y1; y <= act_y2; y++) {
@@ -154,7 +114,7 @@ void fbdev_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color
             //     writeSerialPort(boutRefNum, log);
             // }
 
-            putpixel((unsigned char *)window->portBits.baseAddr, -window->portBits.bounds.left + x, -window->portBits.bounds.top + y, color_p->full);
+            putpixel((unsigned char *)window->portBits.baseAddr, x - window->portBits.bounds.left, y - window->portBits.bounds.top, color_p->full);
             color_p++;
         }
 
